@@ -1,0 +1,27 @@
+================================================================================
+                    NOTAS - MODULO CXC
+================================================================================
+
+Ultima actualizacion: 10/06/2026
+
+Capturas pendientes:
+[ ] cxc_ventana_principal.png
+[ ] nuevo_cxc_dialog.png
+[ ] editar_cantidad_partida.png
+[ ] registrar_abono_dialog.png
+[ ] reportes_listado_general.png
+[ ] estado_cliente_tab.png
+[ ] arquitectura_cxc.png
+[ ] flujo_creacion_cxc.png
+
+Puntos relevantes del modulo:
+- Alta de CXC desde presupuestos aceptados.
+- Edicion de cantidad facturada por partida al crear el CXC.
+- Registro de pagos parciales y finiquitos.
+- Reportes PDF y Excel por listado general y estado de cliente.
+- Integracion con Concentrador por cantidad_facturada en cxc_detalle.
+
+Pendientes sugeridos:
+- Mejorar filtros avanzados por folio y rango de saldos.
+- Agregar auditoria de cambios en abonos.
+- Incorporar mas validaciones al eliminar CXC con pagos registrados.

@@ -1,0 +1,35 @@
+================================================================================
+                    ESTRUCTURA TECNICA - MODULO CXC
+================================================================================
+
+Rutas principales:
+- D:\vah\cxc\art\pantalla_cxc.py
+- D:\vah\cxc\art\dialogs\nuevo_cxc_dialog.py
+- D:\vah\cxc\art\dialogs\registrar_pago_dialog.py
+- D:\vah\cxc\art\dialogs\cxc_reportes.py
+- D:\vah\cxc\services\cxc_service.py
+- D:\vah\cxc\repositories\cxc_repository.py
+- D:\vah\cxc\repositories\detalle_repository.py
+- D:\vah\cxc\repositories\pago_repository.py
+- D:\vah\cxc\data\db.py
+
+Capas:
+1. Presentacion
+   - Pantalla principal CXC
+   - Dialogos de alta y pagos
+   - Tabs de resumen, detalle y todos los movimientos
+
+2. Servicios
+   - Calculo de subtotal, descuento, IVA y total
+   - Generacion de folio
+   - Coordinacion de persistencia del CXC y sus detalles
+
+3. Repositorios
+   - Lectura y actualizacion de cuentas_por_cobrar
+   - Insercion y consulta de cxc_detalle
+   - Insercion y consulta de pagos
+
+4. Integraciones
+   - Presupuestos: origen de partidas
+   - Clientes: origen de cliente asociado
+   - Concentrador de Materiales: uso de cantidad_facturada para explosion

@@ -1,0 +1,54 @@
+================================================================================
+                    NOTAS - MÓDULO HERRAJES
+================================================================================
+
+📅 ÚLTIMA ACTUALIZACIÓN: 13/05/2026
+
+================================================================================
+📸 CAPTURAS PENDIENTES
+================================================================================
+
+[ ] pantalla_principal.png       - Ventana completa en estado inicial
+[ ] botones_principales.png      - Fila de 8 botones
+[ ] campos_datos.png             - GroupBox "Datos del Herraje"
+[ ] tabla_registros.png          - Tabla con datos cargados
+[ ] barra_busqueda.png           - Barra de búsqueda con filtro
+[ ] mensaje_guardar.png          - QMessageBox "Información guardada con éxito"
+[ ] mensaje_editar.png           - QMessageBox "Registro actualizado con éxito"
+[ ] modo_eliminar.png            - Pantalla en modo eliminar
+[ ] mapeo_columnas.png           - Diálogo ImportDialog completo
+[ ] ventana_divisora.png         - VentanaDivisora con rechazados
+[ ] mensaje_final_importacion.png - QMessageBox resumen importación
+[ ] rl_pendientes.png            - Sección RL pendientes
+[ ] menu_imprimir.png            - QMessageBox Pantalla/PDF/Impresora
+[ ] pdf_generado.png             - PDF abierto en visor
+[ ] arquitectura_sistema.png     - Diagrama 3 capas
+[ ] estructura_modulos.png       - Árbol de archivos .py
+[ ] diagrama_bd.png              - Esquema tabla SQL
+[ ] flujo_importacion.png        - Diagrama de flujo importación
+
+================================================================================
+🔧 PENDIENTES / MEJORAS
+================================================================================
+
+-
+-
+-
+
+================================================================================
+🐛 ERRORES CONOCIDOS
+================================================================================
+
+-
+-
+-
+
+================================================================================
+💡 IDEAS FUTURAS
+================================================================================
+
+-
+-
+-
+
+================================================================================

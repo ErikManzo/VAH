@@ -1,0 +1,84 @@
+================================================================================
+                    PROMPT BASE - SOLICITUD DE MANUALES ERP VAH
+                            (Versión corregida - PDF funcional)
+================================================================================
+
+INSTRUCCIONES: Copia todo este texto, reemplaza los valores entre <...>
+y pégalo en el chat para solicitar un nuevo manual.
+
+⚠️ IMPORTANTE: Adjunta todos los archivos .py del módulo para que el manual
+sea preciso y completo.
+
+================================================================================
+
+Necesito que me generes dos manuales para el módulo <NOMBRE_DEL_MODULO>
+del ERP VAH, siguiendo la misma metodología y estilo que usamos para
+el módulo Herrajes.
+
+📁 UBICACIÓN DEL MÓDULO: D:\vah\<ruta_del_modulo>\
+📁 DESTINO DE MANUALES: D:\vah\manuales\pdf\
+📁 SCRIPTS GENERADORES: D:\vah\manuales\scripts_generadores\
+📁 IMÁGENES: D:\vah\manuales\imagenes\<nombre_modulo>\
+
+📋 DATOS DEL MÓDULO:
+- Nombre completo: <Nombre Completo del Módulo>
+- Descripción breve: <Qué hace este módulo>
+- Base de datos: <nombre_base_datos>
+- Tabla principal: <dbo.nombre_tabla>
+- Archivos principales:
+  • <archivo1.py> - <descripción>
+  • <archivo2.py> - <descripción>
+  • ...
+
+📋 REQUISITOS DEL MANUAL OPERATIVO:
+- Orientado al usuario final
+- Explicar cada pantalla, botón y función
+- Incluir flujos de trabajo paso a paso
+- Capturas de pantalla detalladas
+- Sección de solución de problemas comunes
+- Sección de atajos de teclado
+
+📋 REQUISITOS DEL MANUAL TÉCNICO:
+- Orientado a desarrolladores/administradores
+- Arquitectura del módulo (capas)
+- Base de datos (esquema, SQL, MERGE)
+- Dependencias (librerías, versiones)
+- Estructura de archivos del módulo
+- Procesos internos (parsers, workers, hilos)
+- Manejo de errores
+- Puntos de configuración
+
+📋 FORMATO DEL PDF:
+- Generar con ReportLab (archivos .py independientes)
+- Tamaño: Carta (Letter)
+- Marca de agua: logo VAH al 7% de opacidad centrado
+- Fuente: Helvetica
+- Color corporativo principal: #1f6feb (azul VAH)
+- Índice clickeable: usar <a name="ancla"/> y <a href="#ancla">
+- Buscador de palabras habilitado (PDF searchable)
+- Encabezado: "VAH - Manual <Operativo/Técnico> - <Nombre Módulo>"
+- Pie de página: Versión + fecha + "Página X"
+- Numeración: "Página X" (no requiere total de páginas)
+
+📋 ESTRUCTURA DE ARCHIVOS A ENTREGAR:
+1. generar_manual_operativo_<modulo>.py  (script completo)
+2. generar_manual_tecnico_<modulo>.py   (script completo)
+3. Lista de capturas de pantalla necesarias
+4. Instrucciones de ejecución
+
+📋 NOTAS TÉCNICAS IMPORTANTES:
+- NO usar canvas.bookmarkPage() (no funciona con Platypus)
+- Para anclas usar: Paragraph('<a name="nombre"/>', estilo_invisible)
+- Para enlaces: Paragraph('<a href="#nombre">texto</a>', estilo_link)
+- El estilo del ancla debe tener fontSize=0, leading=0
+- Las funciones auxiliares (_imagen, _tabla, _lista, _nota, _codigo, _ancla)
+  deben estar definidas en el script operativo
+- El script técnico puede importar las funciones auxiliares del operativo
+- Ambos scripts deben compartir PlantillaPagina y DocManual
+
+📋 INTEGRACIÓN CON MENÚ DE AYUDA:
+- Ruta final de PDFs: D:\vah\manuales\pdf\VAH_Manual_<Tipo>_<Modulo>.pdf
+- Llamar con: os.startfile(ruta_completa)
+- El menú de Ayuda debe tener dos opciones: Manual Operativo y Manual Técnico
+
+================================================================================

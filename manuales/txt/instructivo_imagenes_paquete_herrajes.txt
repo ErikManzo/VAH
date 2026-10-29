@@ -1,0 +1,47 @@
+Lista de imágenes a capturar y dónde pegarlas
+===============================================
+
+Carpeta: D:\vah\manuales\imagenes\paquete_herrajes\
+
+Logo VAH: D:\vah\manuales\imagenes\comunes\logo_vah.png
+
+# | Nombre archivo                          | Sección del manual                    | Qué capturar
+---|-----------------------------------------|---------------------------------------|-----------------------------------------------------------------------------------------
+1  | pantalla_principal.png                 | 3. Inicio del Módulo                  | Ventana completa del módulo recién abierta (estado inicial, campos vacíos)
+2  | botones_principales.png                 | 4.1 Barra de Botones                  | Recortar la fila de 10 botones (Guardar, Agregar, Editar, Eliminar, Limpiar, Refresh, Imprimir, Quitar item, Herraje, Salir)
+3  | campos_paquete.png                      | 4.2 Campos de Datos del Paquete       | GroupBox "Datos del Paquete" con Clave y Descripción
+4  | campos_herrajes.png                     | 4.3 Campos de Agregar Herrajes        | GroupBox "Agregar herrajes al paquete" con Clave Herraje, Descripción Herraje, Cantidad
+5  | tabla_items.png                         | 4.4 Tabla de Herrajes                 | Tabla con 3 columnas (CLAVE HERRAJE, DESCRIPCIÓN, CANTIDAD) y datos cargados
+6  | autocompletado.png                      | 6. Búsqueda y Autocompletado          | Popup de autocompletado mostrando opciones al escribir en Clave Herraje
+7  | agregar_herraje.png                     | 5.2 Agregar Herrajes                  | Captura mostrando el mensaje "¿Quieres insertar otro herraje al paquete?"
+8  | mensaje_guardar.png                     | 5.1 Crear Nuevo Paquete               | QMessageBox "Paquete guardado con éxito"
+9  | selector_paquetes.png                   | 5.3 Editar Paquete Existente          | Diálogo "Seleccionar paquete" con tabla de paquetes
+10 | impresion_dialog.png                    | 5.6 Imprimir Listado                  | Diálogo "Opciones de impresión" con Destino (Pantalla/PDF/Impresora) y Tipo (General/Desglosado)
+11 | boton_herraje.png                       | 5.7 Consultar Herrajes                | Captura mostrando el botón "Herraje" (puede ser recorte del botón)
+12 | arquitectura_sistema.png                | 1. Arquitectura (Técnico)             | Diagrama de 3 capas (Presentación, Lógica, Datos)
+13 | estructura_modulos.png                  | 2. Estructura Archivos (Técnico)      | Árbol de carpetas/archivos del módulo Paquete Herrajes
+14 | diagrama_bd.png                         | 3.3 Relaciones (Técnico)              | Diagrama ER con tablas: paquetes_herrajes, paquete_herraje_items, materiales_herraje
+15 | flujo_datos_crear.png                   | 6.1 Creación de Paquete (Técnico)     | Diagrama de flujo del proceso de creación de paquete
+
+================================================================================
+NOTAS PARA LA CAPTURA DE IMÁGENES
+================================================================================
+
+1. Use la herramienta "Recortes" de Windows (Win + Shift + S) o similar.
+2. Para ventanas completas: recorte toda la pantalla del módulo.
+3. Para botones/campos: recorte SOLO el área relevante (sin bordes innecesarios).
+4. Para diálogos: asegúrese de que el diálogo esté visible y enfocado.
+5. Guarde cada imagen con el nombre exacto indicado en la columna "Nombre archivo".
+6. Formato recomendado: PNG (fondo transparente o blanco, alta calidad).
+7. Las imágenes se insertan automáticamente en los PDF generados.
+8. Si falta una imagen, el manual mostrará "[Imagen pendiente: nombre.png]".
+
+================================================================================
+CARACTERÍSTICAS ÚNICAS A CAPTURAR
+================================================================================
+
+- Autocompletado: Muestre el popup con opciones al escribir en Clave Herraje.
+- Suma de cantidades: Muestre cómo al agregar un herraje ya existente, la cantidad se suma.
+- Edición de ítem: Muestre cómo al seleccionar una fila, los datos se cargan para edición.
+- Diálogo de impresión: Muestre las 2 opciones (Destino y Tipo).
+- Filtrado de impresoras: (Técnico) Muestre cómo se filtran impresoras virtuales.

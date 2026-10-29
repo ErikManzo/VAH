@@ -1,0 +1,15 @@
+model:
+  name: "XGenerationLab/XiYanSQL-QwenCoder-32B-2412"
+  key: "TU_API_KEY_DE_MODELSCOPE_AQUI"  # <-- Reemplaza con tu API Key
+  url: "https://api-inference.modelscope.cn/v1/"
+
+database:
+  dialect: "postgresql"  # Cambiamos a postgresql (soportado)
+  host: "localhost"
+  port: 5432  # Puerto de PostgreSQL (aunque no lo usaremos directamente)
+  user: "sa"
+  password: ""
+  database: "vah"
+  driver: "ODBC Driver 17 for SQL Server"
+  # Parámetros específicos para SQL Server
+  odbc_connection: "DRIVER={ODBC Driver 17 for SQL Server};SERVER=DESKTOP-AE60PIU\\SQLEXPRESS;DATABASE=vah;Trusted_Connection=yes;TrustServerCertificate=yes;Encrypt=yes;"

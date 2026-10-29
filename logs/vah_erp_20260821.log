@@ -1,0 +1,25 @@
+2026-08-21 08:09:09 - presupuestos.services.config_service - WARNING - No hay configuracion de correo definida en config.json
+2026-08-21 10:55:15 - presupuestos.services.config_service - WARNING - No hay configuracion de correo definida en config.json
+2026-08-21 11:14:01 - presupuestos.services.config_service - WARNING - No hay configuracion de correo definida en config.json
+2026-08-21 11:14:18 - presupuestos.controllers.presupuesto_controller - ERROR - Error persistiendo color_global: 'PresupuestoRepository' object has no attribute 'actualizar_color_global'
+2026-08-21 11:35:09 - presupuestos.services.config_service - WARNING - No hay configuracion de correo definida en config.json
+2026-08-21 11:40:20 - presupuestos.services.config_service - WARNING - No hay configuracion de correo definida en config.json
+2026-08-21 11:51:58 - presupuestos.services.config_service - WARNING - No hay configuracion de correo definida en config.json
+2026-08-21 12:47:26 - presupuestos.services.config_service - WARNING - No hay configuracion de correo definida en config.json
+2026-08-21 12:49:37 - presupuestos.services.config_service - WARNING - No hay configuracion de correo definida en config.json
+2026-08-21 12:59:45 - presupuestos.services.config_service - WARNING - No hay configuracion de correo definida en config.json
+2026-08-21 12:59:56 - presupuestos.services.config_service - WARNING - No hay configuracion de correo definida en config.json
+2026-08-21 13:00:27 - presupuestos.services.config_service - WARNING - No hay configuracion de correo definida en config.json
+2026-08-21 13:17:00 - presupuestos.services.config_service - WARNING - No hay configuracion de correo definida en config.json
+2026-08-21 13:19:14 - presupuestos.services.config_service - WARNING - No hay configuracion de correo definida en config.json
+2026-08-21 13:33:39 - presupuestos.services.config_service - WARNING - No hay configuracion de correo definida en config.json
+2026-08-21 15:01:39 - presupuestos.services.config_service - WARNING - No hay configuracion de correo definida en config.json
+2026-08-21 15:04:51 - presupuestos.services.config_service - WARNING - No hay configuracion de correo definida en config.json
+2026-08-21 15:24:01 - presupuestos.services.config_service - WARNING - No hay configuracion de correo definida en config.json
+2026-08-21 15:24:58 - presupuestos.services.config_service - WARNING - No hay configuracion de correo definida en config.json
+2026-08-21 15:24:58 - presupuestos.services.config_service - WARNING - No hay configuracion de correo definida en config.json
+2026-08-21 15:27:13 - presupuestos.services.config_service - WARNING - No hay configuracion de correo definida en config.json
+2026-08-21 16:02:36 - presupuestos.services.config_service - WARNING - No hay configuracion de correo definida en config.json
+2026-08-21 16:16:58 - presupuestos.services.config_service - WARNING - No hay configuracion de correo definida en config.json
+2026-08-21 16:17:42 - presupuestos.services.config_service - WARNING - No hay configuracion de correo definida en config.json
+2026-08-21 16:17:57 - presupuestos.services.config_service - WARNING - No hay configuracion de correo definida en config.json

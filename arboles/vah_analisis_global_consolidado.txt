@@ -1,0 +1,1633 @@
+====================================================================================================
+📊 RESUMEN EJECUTIVO
+====================================================================================================
+
+  ├─ Archivos Python analizados: 237
+  ├─ Líneas de código: 58,906
+  ├─ Clases: 246
+  ├─ Funciones globales duplicadas: 262
+  ├─ Métodos duplicados: 166
+  ├─ Archivos críticos (>2000 líneas): 0
+  ├─ Tablas en Base de Datos: 86
+  └─ Dependencias en requirements: 13
+
+====================================================================================================
+
+====================================================================================================
+1. ESTRUCTURA DE DIRECTORIOS Y CONFIGURACIÓN
+====================================================================================================
+
+1.1 Archivos de configuración
+  📄 requirements.txt (0.5 KB)
+  📄 .env (0.1 KB)
+  📄 config.json (0.4 KB)
+
+1.2 Directorios principales
+  📁 clientes/  (8 elementos)
+  📁 common/  (10 elementos)
+  📁 concentrador_materiales/  (8 elementos)
+  📁 cxc/  (11 elementos)
+  📁 db/  (22 elementos)
+  📁 manuales/  (4 elementos)
+  📁 materiales/  (9 elementos)
+  📁 paquetes/  (3 elementos)
+  📁 presupuestos/  (23 elementos)
+  📁 principal/  (3 elementos)
+  📁 proveedores/  (10 elementos)
+  📁 scripts/  (1 elementos)
+  📁 soporteria/  (2 elementos)
+  📁 tests/  (1 elementos)
+  📁 tools/  (2 elementos)
+
+1.3 Recursos UI
+  🖼️  .ui: 0   .qrc: 0
+
+====================================================================================================
+2. ANÁLISIS DE ARQUITECTURA Y CÓDIGO
+====================================================================================================
+
+2.1 Estadísticas
+  📊 Archivos: 237  |  Líneas: 58,906  |  Clases: 246
+2.2 Métodos duplicados en clases (top 15)
+  🔴 _read_workspace_env() en 9 clases
+       → RegistroClientes -> clientes\art\pantalla_clientes.py
+       → PantallaMaterialesAluminio -> materiales\aluminio\pantalla_materiales_aluminio.py
+       → PantallaHerrajes -> materiales\herrajes\pantalla_herrajes.py
+       → PantallaHerreria -> materiales\herreria\pantalla_herreria.py
+  🔴 showEvent() en 12 clases
+       → RegistroClientes -> clientes\art\pantalla_clientes.py
+       → PantallaMaterialesAluminio -> materiales\aluminio\pantalla_materiales_aluminio.py
+       → PantallaHerrajes -> materiales\herrajes\pantalla_herrajes.py
+       → PantallaHerreria -> materiales\herreria\pantalla_herreria.py
+  🔴 _setup_shortcuts() en 9 clases
+       → RegistroClientes -> clientes\art\pantalla_clientes.py
+       → PantallaMaterialesAluminio -> materiales\aluminio\pantalla_materiales_aluminio.py
+       → PantallaHerrajes -> materiales\herrajes\pantalla_herrajes.py
+       → PantallaHerreria -> materiales\herreria\pantalla_herreria.py
+  🔴 _setup_simple_navigation() en 5 clases
+       → RegistroClientes -> clientes\art\pantalla_clientes.py
+       → PantallaMaterialesAluminio -> materiales\aluminio\pantalla_materiales_aluminio.py
+       → PantallaHerrajes -> materiales\herrajes\pantalla_herrajes.py
+       → PantallaHerreria -> materiales\herreria\pantalla_herreria.py
+  🔴 _setup_search_keys() en 5 clases
+       → RegistroClientes -> clientes\art\pantalla_clientes.py
+       → PantallaOtros -> materiales\otros\pantalla_otros.py
+       → PantallaPlasticos -> materiales\plasticos\pantalla_plasticos.py
+       → PantallaVidrio -> materiales\vidrio\pantalla_vidrio.py
+  🔴 _configurar_tabla_columnas() en 2 clases
+       → RegistroClientes -> clientes\art\pantalla_clientes.py
+       → PantallaProveedores -> proveedores\art\pantalla_proveedores.py
+  🔴 _llenar_tabla() en 10 clases
+       → RegistroClientes -> clientes\art\pantalla_clientes.py
+       → AdvertenciasDialog -> concentrador_materiales\ui\dialogs\advertencias_dialog.py
+       → PantallaMaterialesAluminio -> materiales\aluminio\pantalla_materiales_aluminio.py
+       → PantallaHerrajes -> materiales\herrajes\pantalla_herrajes.py
+  🔴 _s() en 2 clases
+       → RegistroClientes -> clientes\art\pantalla_clientes.py
+       → PantallaProveedores -> proveedores\art\pantalla_proveedores.py
+  🔴 _to_upper() en 2 clases
+       → RegistroClientes -> clientes\art\pantalla_clientes.py
+       → PantallaProveedores -> proveedores\art\pantalla_proveedores.py
+  🔴 _forzar_mayusculas() en 3 clases
+       → RegistroClientes -> clientes\art\pantalla_clientes.py
+       → NavLineEdit -> common\focus_simple.py
+       → PantallaProveedores -> proveedores\art\pantalla_proveedores.py
+  🔴 _forzar_minusculas() en 2 clases
+       → RegistroClientes -> clientes\art\pantalla_clientes.py
+       → PantallaProveedores -> proveedores\art\pantalla_proveedores.py
+  🔴 _normalizar_rfc_para_guardar() en 2 clases
+       → RegistroClientes -> clientes\art\pantalla_clientes.py
+       → PantallaProveedores -> proveedores\art\pantalla_proveedores.py
+  🔴 _modo_inicio() en 2 clases
+       → RegistroClientes -> clientes\art\pantalla_clientes.py
+       → PantallaProveedores -> proveedores\art\pantalla_proveedores.py
+  🔴 _modo_editar() en 8 clases
+       → RegistroClientes -> clientes\art\pantalla_clientes.py
+       → PantallaMaterialesAluminio -> materiales\aluminio\pantalla_materiales_aluminio.py
+       → PantallaHerrajes -> materiales\herrajes\pantalla_herrajes.py
+       → PantallaHerreria -> materiales\herreria\pantalla_herreria.py
+  🔴 _modo_eliminar() en 5 clases
+       → RegistroClientes -> clientes\art\pantalla_clientes.py
+       → PantallaMaterialesAluminio -> materiales\aluminio\pantalla_materiales_aluminio.py
+       → PantallaHerrajes -> materiales\herrajes\pantalla_herrajes.py
+       → PantallaHerreria -> materiales\herreria\pantalla_herreria.py
+2.3 Funciones globales duplicadas (top 15)
+  🔴 _build_logger() en 4 archivos
+  🔴 log_exception() en 2 archivos
+  🔴 __init__() en 171 archivos
+  🔴 _read_workspace_env() en 9 archivos
+  🔴 showEvent() en 12 archivos
+  🔴 _setup_shortcuts() en 9 archivos
+  🔴 _setup_simple_navigation() en 5 archivos
+  🔴 _setup_search_keys() en 5 archivos
+  🔴 _configurar_tabla_columnas() en 2 archivos
+  🔴 _llenar_tabla() en 10 archivos
+  🔴 _s() en 2 archivos
+  🔴 _to_upper() en 2 archivos
+  🔴 _forzar_mayusculas() en 3 archivos
+  🔴 _forzar_minusculas() en 2 archivos
+  🔴 _normalizar_rfc_para_guardar() en 2 archivos
+2.4 Top 10 archivos más grandes
+  1. presupuestos\modulo_presupuestos.py (1,427 líneas)
+  2. presupuestos\controllers\presupuesto_controller.py (1,350 líneas)
+  3. paquetes\aluminio\pantalla_paquete_aluminio.py (1,250 líneas)
+  4. materiales\herrajes\pantalla_herrajes.py (1,133 líneas)
+  5. manuales\scripts_generadores\generar_manual_operativo_presupuestos.py (1,060 líneas)
+  6. clientes\art\pantalla_clientes.py (1,001 líneas)
+  7. proveedores\art\pantalla_proveedores.py (983 líneas)
+  8. manuales\scripts_generadores\generar_manual_operativo_paquete_aluminio.py (941 líneas)
+  9. manuales\scripts_generadores\generar_manual_operativo_paquete_herrajes.py (901 líneas)
+  10. paquetes\herrajes\pantalla_paquete_herrajes.py (892 líneas)
+2.5 Docstrings: clases 106/246  |  funciones 1119/3258
+2.6 Tecnologías detectadas
+  UI: PyQt6  |  BD: pyodbc  |  Data: numpy, pandas
+
+====================================================================================================
+3. MAPA DE DEPENDENCIAS
+====================================================================================================
+
+3.1 Módulos más importados
+  📥 common → 97
+  📥 presupuestos → 27
+  📥 concentrador_materiales → 24
+  📥 materiales → 11
+  📥 db → 5
+  📥 cxc → 5
+  📥 clientes → 4
+  📥 proveedores → 4
+  📥 paquetes → 3
+  📥 principal → 1
+3.2 Módulos más dependientes
+  📤 paquetes\aluminio\pantalla_paquete_aluminio.py → 3
+  📤 clientes\art\pantalla_clientes.py → 2
+  📤 clientes\main.py → 2
+  📤 clientes\repositories\cliente_repository.py → 2
+  📤 clientes\services\cliente_service.py → 2
+  📤 concentrador_materiales\reports\excel_generator.py → 2
+  📤 concentrador_materiales\reports\pdf_generator.py → 2
+  📤 concentrador_materiales\repositories\concentrador_repository.py → 2
+  📤 concentrador_materiales\repositories\cxc_repository.py → 2
+  📤 concentrador_materiales\repositories\materiales_repository.py → 2
+3.3 Dependencias circulares
+  ✅ Sin dependencias circulares obvias
+
+====================================================================================================
+4. DEPENDENCIAS EXTERNAS (requirements.txt)
+====================================================================================================
+
+  📦 Listadas en requirements: 13
+4.1 Instaladas pero NO usadas
+  ⚠️ pillow
+  ⚠️ pyinstaller
+  ⚠️ pyinstaller-hooks-contrib
+  ⚠️ pyspellchecker
+  ⚠️ pywin32
+4.2 Usadas pero FALTAN en requirements (filtrada stdlib)
+  ❌ abrir_presupuesto_dialog
+  ❌ aluminio
+  ❌ anidada
+  ❌ busquedas
+  ❌ calculators
+  ❌ constants
+  ❌ controllers
+  ❌ core
+  ❌ data
+  ❌ database_service
+  ... y 42 más
+
+====================================================================================================
+5. SEGURIDAD (secretos hardcodeados)
+====================================================================================================
+
+  🔒 Posibles secretos: 3
+  ⚠️ db\crear_clientes.py (línea 26) → PASSWORD
+  ⚠️ db\crear_proveedores.py (línea 29) → PASSWORD
+  ⚠️ test_sendgrid.py (línea 20) → API_KEY
+
+====================================================================================================
+6. COMPLEJIDAD CICLOMÁTICA (radon)
+====================================================================================================
+
+  ⚠️ radon no instalado (pip install radon)
+
+====================================================================================================
+7. ESTILO PEP8 (pycodestyle)
+====================================================================================================
+
+  👔 Violaciones PEP8 (top 20 archivos por tamaño): 0
+
+====================================================================================================
+8. ESTRUCTURA DE BASE DE DATOS
+====================================================================================================
+
+
+📊 BD: aluminio
+  📁 materiales_aluminio
+     ├─ clave (varchar) [Nulo: NO]
+     ├─ descripcion (varchar) [Nulo: NO]
+     ├─ largo (decimal) [Nulo: NO]
+     ├─ sa (decimal) [Nulo: YES]
+     ├─ nat (decimal) [Nulo: YES]
+     ├─ bmo (decimal) [Nulo: YES]
+     ├─ e100 (decimal) [Nulo: YES]
+     ├─ e200 (decimal) [Nulo: YES]
+     ├─ e400 (decimal) [Nulo: YES]
+     ├─ bco (decimal) [Nulo: YES]
+     ├─ hue (decimal) [Nulo: YES]
+     ├─ gris (decimal) [Nulo: YES]
+     ├─ cho (decimal) [Nulo: YES]
+     ├─ ace (decimal) [Nulo: YES]
+     ├─ madl (decimal) [Nulo: YES]
+     ├─ madt (decimal) [Nulo: YES]
+     ├─ np (decimal) [Nulo: YES]
+  📁 paquete_aluminio_items
+     ├─ id (int) [Nulo: NO]
+     ├─ clave_paquete (varchar) [Nulo: NO]
+     ├─ tipo (varchar) [Nulo: NO]
+     ├─ clv_item (varchar) [Nulo: NO]
+     ├─ horizontal (int) [Nulo: NO]
+     ├─ vertical (int) [Nulo: NO]
+     ├─ cantidad (int) [Nulo: NO]
+  📁 paquetes_aluminio
+     ├─ clave (varchar) [Nulo: NO]
+     ├─ descripcion (varchar) [Nulo: NO]
+  📁 tipos_item
+     ├─ codigo (char) [Nulo: NO]
+     ├─ nombre (varchar) [Nulo: NO]
+     ├─ modo (char) [Nulo: NO]
+  👁️ Vistas: ninguna
+  ⚙️ SPs: ninguno
+  💥 Triggers: ninguno
+
+📊 BD: clientes
+  📁 Clientes
+     ├─ id (int) [Nulo: NO]
+     ├─ Nombre (nvarchar) [Nulo: NO]
+     ├─ Direccion (nvarchar) [Nulo: YES]
+     ├─ Telefono (nvarchar) [Nulo: YES]
+     ├─ Email (nvarchar) [Nulo: YES]
+     ├─ Contacto (nvarchar) [Nulo: YES]
+     ├─ LimiteCredito (decimal) [Nulo: YES]
+     ├─ SaldoPendiente (decimal) [Nulo: YES]
+     ├─ Categoria (nvarchar) [Nulo: YES]
+     ├─ Notas (nvarchar) [Nulo: YES]
+     ├─ FechaAlta (datetime) [Nulo: YES]
+     ├─ titulo (nvarchar) [Nulo: YES]
+     ├─ a_paterno (nvarchar) [Nulo: YES]
+     ├─ a_materno (nvarchar) [Nulo: YES]
+     ├─ empresa (nvarchar) [Nulo: YES]
+     ├─ num_exterior (nvarchar) [Nulo: YES]
+     ├─ num_interior (nvarchar) [Nulo: YES]
+     ├─ cp (nvarchar) [Nulo: YES]
+     ├─ colonia (nvarchar) [Nulo: YES]
+     ├─ municipio (nvarchar) [Nulo: YES]
+     ├─ estado (nvarchar) [Nulo: YES]
+     ├─ rfc (nvarchar) [Nulo: YES]
+  📁 sysdiagrams
+     ├─ name (nvarchar) [Nulo: NO]
+     ├─ principal_id (int) [Nulo: NO]
+     ├─ diagram_id (int) [Nulo: NO]
+     ├─ version (int) [Nulo: YES]
+     ├─ definition (varbinary) [Nulo: YES]
+  👁️ Vistas: ninguna
+  ⚙️ SPs: sp_upgraddiagrams, sp_helpdiagrams, sp_helpdiagramdefinition, sp_creatediagram, sp_renamediagram, sp_alterdiagram, sp_dropdiagram
+  💥 Triggers: ninguno
+
+📊 BD: cxc
+  📁 configuracion_cxc
+     ├─ id (int) [Nulo: NO]
+     ├─ iva_default (decimal) [Nulo: YES]
+     ├─ descuento_default (decimal) [Nulo: YES]
+     ├─ prefijo_factura (varchar) [Nulo: YES]
+     ├─ siguiente_folio (int) [Nulo: YES]
+  📁 cuentas_por_cobrar
+     ├─ id (int) [Nulo: NO]
+     ├─ presupuesto_id (int) [Nulo: NO]
+     ├─ cliente_id (int) [Nulo: NO]
+     ├─ numero_factura (varchar) [Nulo: NO]
+     ├─ fecha_emision (date) [Nulo: NO]
+     ├─ subtotal (decimal) [Nulo: NO]
+     ├─ descuento_porcentaje (decimal) [Nulo: YES]
+     ├─ descuento_monto (decimal) [Nulo: YES]
+     ├─ iva_porcentaje (decimal) [Nulo: YES]
+     ├─ iva_monto (decimal) [Nulo: YES]
+     ├─ total (decimal) [Nulo: NO]
+     ├─ saldo_pendiente (decimal) [Nulo: NO]
+     ├─ estado (varchar) [Nulo: YES]
+     ├─ notas (text) [Nulo: YES]
+     ├─ created_at (datetime) [Nulo: YES]
+     ├─ updated_at (datetime) [Nulo: YES]
+     ├─ folio (varchar) [Nulo: NO]
+     ├─ tipo_operacion (varchar) [Nulo: NO]
+     ├─ presupuesto_aceptado (bit) [Nulo: NO]
+     ├─ fecha_aceptacion (datetime) [Nulo: YES]
+  📁 cuentas_por_cobrar_BACKUP_20260526
+     ├─ id (int) [Nulo: NO]
+     ├─ presupuesto_id (int) [Nulo: NO]
+     ├─ cliente_id (int) [Nulo: NO]
+     ├─ numero_factura (varchar) [Nulo: NO]
+     ├─ fecha_emision (date) [Nulo: NO]
+     ├─ fecha_vencimiento (date) [Nulo: YES]
+     ├─ subtotal (decimal) [Nulo: NO]
+     ├─ descuento_porcentaje (decimal) [Nulo: YES]
+     ├─ descuento_monto (decimal) [Nulo: YES]
+     ├─ iva_porcentaje (decimal) [Nulo: YES]
+     ├─ iva_monto (decimal) [Nulo: YES]
+     ├─ total (decimal) [Nulo: NO]
+     ├─ saldo_pendiente (decimal) [Nulo: NO]
+     ├─ estado (varchar) [Nulo: YES]
+     ├─ notas (text) [Nulo: YES]
+     ├─ created_at (datetime) [Nulo: YES]
+     ├─ updated_at (datetime) [Nulo: YES]
+     ├─ folio (varchar) [Nulo: NO]
+     ├─ tipo_operacion (varchar) [Nulo: NO]
+     ├─ presupuesto_aceptado (bit) [Nulo: NO]
+     ├─ fecha_aceptacion (datetime) [Nulo: YES]
+  📁 cxc_detalle
+     ├─ id (int) [Nulo: NO]
+     ├─ cxc_id (int) [Nulo: NO]
+     ├─ presupuesto_id (int) [Nulo: NO]
+     ├─ partida_id (int) [Nulo: NO]
+     ├─ cantidad_facturada (decimal) [Nulo: NO]
+     ├─ precio_unitario (decimal) [Nulo: NO]
+     ├─ importe (decimal) [Nulo: NO]
+     ├─ created_at (datetime) [Nulo: YES]
+  📁 pagos_recibidos
+     ├─ id (int) [Nulo: NO]
+     ├─ cxc_id (int) [Nulo: NO]
+     ├─ fecha_pago (date) [Nulo: NO]
+     ├─ monto (decimal) [Nulo: NO]
+     ├─ metodo_pago (varchar) [Nulo: YES]
+     ├─ referencia (varchar) [Nulo: YES]
+     ├─ notas (text) [Nulo: YES]
+     ├─ created_at (datetime) [Nulo: YES]
+     ├─ concepto (varchar) [Nulo: NO]
+     ├─ cuenta_destino (varchar) [Nulo: NO]
+  👁️ Vistas: ninguna
+  ⚙️ SPs: ninguno
+  💥 Triggers: ninguno
+
+📊 BD: ERP_VAH
+  📁 Clientes
+     ├─ ClienteId (int) [Nulo: NO]
+     ├─ Titulo (nvarchar) [Nulo: YES]
+     ├─ Nombre (nvarchar) [Nulo: NO]
+     ├─ ApellidoPaterno (nvarchar) [Nulo: YES]
+     ├─ ApellidoMaterno (nvarchar) [Nulo: YES]
+     ├─ Empresa (nvarchar) [Nulo: YES]
+     ├─ Direccion (nvarchar) [Nulo: YES]
+     ├─ NumeroExterior (nvarchar) [Nulo: YES]
+     ├─ NumeroInterior (nvarchar) [Nulo: YES]
+     ├─ CodigoPostal (nvarchar) [Nulo: YES]
+     ├─ Colonia (nvarchar) [Nulo: YES]
+     ├─ Municipio (nvarchar) [Nulo: YES]
+     ├─ Estado (nvarchar) [Nulo: YES]
+     ├─ Rfc (nvarchar) [Nulo: YES]
+     ├─ Telefono (nvarchar) [Nulo: YES]
+     ├─ Correo (nvarchar) [Nulo: YES]
+     ├─ Contacto (nvarchar) [Nulo: YES]
+     ├─ LimiteCredito (decimal) [Nulo: YES]
+     ├─ SaldoPendiente (decimal) [Nulo: YES]
+     ├─ Categoria (nvarchar) [Nulo: YES]
+     ├─ Notas (nvarchar) [Nulo: YES]
+     ├─ FechaAlta (datetime2) [Nulo: YES]
+     ├─ RowVersion (timestamp) [Nulo: NO]
+  📁 MaterialesAluminio
+     ├─ MaterialAluminioId (int) [Nulo: NO]
+     ├─ Clave (nvarchar) [Nulo: NO]
+     ├─ ClaveBase (nvarchar) [Nulo: NO]
+     ├─ Descripcion (nvarchar) [Nulo: NO]
+     ├─ Largo (decimal) [Nulo: NO]
+     ├─ Sa (decimal) [Nulo: NO]
+     ├─ Nat (decimal) [Nulo: NO]
+     ├─ Bmo (decimal) [Nulo: NO]
+     ├─ E100 (decimal) [Nulo: NO]
+     ├─ E200 (decimal) [Nulo: NO]
+     ├─ E400 (decimal) [Nulo: NO]
+     ├─ Bco (decimal) [Nulo: NO]
+     ├─ Hue (decimal) [Nulo: NO]
+     ├─ Gris (decimal) [Nulo: NO]
+     ├─ Cho (decimal) [Nulo: NO]
+     ├─ Ace (decimal) [Nulo: NO]
+     ├─ Madl (decimal) [Nulo: NO]
+     ├─ Madt (decimal) [Nulo: NO]
+     ├─ Np (decimal) [Nulo: NO]
+     ├─ FechaAltaUtc (datetime2) [Nulo: NO]
+     ├─ RowVersion (timestamp) [Nulo: NO]
+  📁 MaterialesHerrajes
+     ├─ MaterialHerrajeId (int) [Nulo: NO]
+     ├─ Clave (nvarchar) [Nulo: NO]
+     ├─ Descripcion (nvarchar) [Nulo: NO]
+     ├─ Precio (decimal) [Nulo: NO]
+     ├─ FechaAltaUtc (datetime2) [Nulo: NO]
+     ├─ RowVersion (timestamp) [Nulo: NO]
+  📁 MaterialesHerrajesActualizacionPrecioDetalles
+     ├─ MaterialHerrajeActualizacionPrecioDetalleId (bigint) [Nulo: NO]
+     ├─ MaterialHerrajeActualizacionPrecioLoteId (bigint) [Nulo: NO]
+     ├─ NumeroFila (int) [Nulo: NO]
+     ├─ MaterialHerrajeId (int) [Nulo: NO]
+     ├─ Clave (nvarchar) [Nulo: NO]
+     ├─ DescripcionExcel (nvarchar) [Nulo: NO]
+     ├─ DescripcionMaestra (nvarchar) [Nulo: NO]
+     ├─ UnidadMedida (nvarchar) [Nulo: NO]
+     ├─ PrecioLista (decimal) [Nulo: NO]
+     ├─ FactorConversion (decimal) [Nulo: NO]
+     ├─ OrigenFactor (nvarchar) [Nulo: NO]
+     ├─ PrecioAnterior (decimal) [Nulo: YES]
+     ├─ PrecioNuevo (decimal) [Nulo: NO]
+     ├─ Accion (nvarchar) [Nulo: NO]
+  📁 MaterialesHerrajesActualizacionPrecioLotes
+     ├─ MaterialHerrajeActualizacionPrecioLoteId (bigint) [Nulo: NO]
+     ├─ PlanId (uniqueidentifier) [Nulo: NO]
+     ├─ FechaAplicacionUtc (datetime2) [Nulo: NO]
+     ├─ NombreArchivo (nvarchar) [Nulo: NO]
+     ├─ HashArchivoSha256 (char) [Nulo: NO]
+     ├─ NombreHoja (nvarchar) [Nulo: NO]
+     ├─ FingerprintCatalogoAntesSha256 (char) [Nulo: NO]
+     ├─ FingerprintFactoresAntesSha256 (char) [Nulo: NO]
+     ├─ FingerprintCatalogoDespuesSha256 (char) [Nulo: NO]
+     ├─ FingerprintFactoresDespuesSha256 (char) [Nulo: NO]
+     ├─ FilasExcel (int) [Nulo: NO]
+     ├─ Insertados (int) [Nulo: NO]
+     ├─ Actualizados (int) [Nulo: NO]
+     ├─ SinCambio (int) [Nulo: NO]
+  📁 MaterialesHerrajesFactoresConversion
+     ├─ MaterialHerrajeFactorConversionId (int) [Nulo: NO]
+     ├─ MaterialHerrajeId (int) [Nulo: NO]
+     ├─ UnidadMedida (nvarchar) [Nulo: NO]
+     ├─ FactorConversion (decimal) [Nulo: NO]
+     ├─ OrigenRegla (nvarchar) [Nulo: NO]
+     ├─ DescripcionReferencia (nvarchar) [Nulo: NO]
+     ├─ FechaConfirmacionUtc (datetime2) [Nulo: NO]
+     ├─ RowVersion (timestamp) [Nulo: NO]
+  📁 MaterialesHerreria
+     ├─ MaterialHerreriaId (int) [Nulo: NO]
+     ├─ Clave (nvarchar) [Nulo: NO]
+     ├─ Descripcion (nvarchar) [Nulo: NO]
+     ├─ KilogramosPorMetro (decimal) [Nulo: NO]
+     ├─ FechaAltaUtc (datetime2) [Nulo: NO]
+     ├─ RowVersion (timestamp) [Nulo: NO]
+  📁 MaterialesOtros
+     ├─ MaterialOtroId (int) [Nulo: NO]
+     ├─ Clave (nvarchar) [Nulo: NO]
+     ├─ Descripcion (nvarchar) [Nulo: NO]
+     ├─ Precio (decimal) [Nulo: NO]
+     ├─ FechaAltaUtc (datetime2) [Nulo: NO]
+     ├─ RowVersion (timestamp) [Nulo: NO]
+  📁 MaterialesVidrio
+     ├─ MaterialVidrioId (int) [Nulo: NO]
+     ├─ Clave (nvarchar) [Nulo: NO]
+     ├─ Descripcion (nvarchar) [Nulo: NO]
+     ├─ PrecioPorMetroCuadrado (decimal) [Nulo: NO]
+     ├─ FechaAltaUtc (datetime2) [Nulo: NO]
+     ├─ RowVersion (timestamp) [Nulo: NO]
+  📁 PaquetesAluminio
+     ├─ PaqueteAluminioId (int) [Nulo: NO]
+     ├─ Clave (nvarchar) [Nulo: NO]
+     ├─ Descripcion (nvarchar) [Nulo: NO]
+     ├─ FechaAltaUtc (datetime2) [Nulo: YES]
+     ├─ RowVersion (timestamp) [Nulo: NO]
+  📁 PaquetesAluminioDetalles
+     ├─ PaqueteAluminioDetalleId (int) [Nulo: NO]
+     ├─ PaqueteAluminioId (int) [Nulo: NO]
+     ├─ TipoItem (char) [Nulo: NO]
+     ├─ MaterialAluminioId (int) [Nulo: YES]
+     ├─ MaterialHerrajeId (int) [Nulo: YES]
+     ├─ PaqueteHerrajeId (int) [Nulo: YES]
+     ├─ MaterialOtroId (int) [Nulo: YES]
+     ├─ Horizontal (int) [Nulo: NO]
+     ├─ Vertical (int) [Nulo: NO]
+     ├─ Cantidad (int) [Nulo: NO]
+  📁 PaquetesHerrajes
+     ├─ PaqueteHerrajeId (int) [Nulo: NO]
+     ├─ Clave (nvarchar) [Nulo: NO]
+     ├─ Descripcion (nvarchar) [Nulo: NO]
+     ├─ FechaAltaUtc (datetime2) [Nulo: NO]
+     ├─ RowVersion (timestamp) [Nulo: NO]
+  📁 PaquetesHerrajesDetalles
+     ├─ PaqueteHerrajeId (int) [Nulo: NO]
+     ├─ MaterialHerrajeId (int) [Nulo: NO]
+     ├─ Cantidad (int) [Nulo: NO]
+  📁 Proveedores
+     ├─ ProveedorId (int) [Nulo: NO]
+     ├─ Empresa (nvarchar) [Nulo: NO]
+     ├─ TipoProveedor (nvarchar) [Nulo: NO]
+     ├─ NombreAgente (nvarchar) [Nulo: YES]
+     ├─ Direccion (nvarchar) [Nulo: YES]
+     ├─ NumeroExterior (nvarchar) [Nulo: YES]
+     ├─ NumeroInterior (nvarchar) [Nulo: YES]
+     ├─ CodigoPostal (nvarchar) [Nulo: YES]
+     ├─ Colonia (nvarchar) [Nulo: YES]
+     ├─ Municipio (nvarchar) [Nulo: YES]
+     ├─ Estado (nvarchar) [Nulo: YES]
+     ├─ Rfc (nvarchar) [Nulo: YES]
+     ├─ Telefono (nvarchar) [Nulo: YES]
+     ├─ Correo (nvarchar) [Nulo: YES]
+     ├─ Contacto (nvarchar) [Nulo: YES]
+     ├─ Notas (nvarchar) [Nulo: YES]
+     ├─ FechaAlta (datetime2) [Nulo: YES]
+     ├─ RowVersion (timestamp) [Nulo: NO]
+  📁 SchemaVersionHistory
+     ├─ MigrationId (nvarchar) [Nulo: NO]
+     ├─ AppliedAtUtc (datetime2) [Nulo: NO]
+     ├─ AppliedBy (nvarchar) [Nulo: YES]
+     ├─ ScriptHash (char) [Nulo: YES]
+  👁️ Vistas: ninguna
+  ⚙️ SPs: ninguno
+  💥 Triggers: ninguno
+
+📊 BD: ERP_VAH_G7_LAB
+  📁 Clientes
+     ├─ ClienteId (int) [Nulo: NO]
+     ├─ Titulo (nvarchar) [Nulo: YES]
+     ├─ Nombre (nvarchar) [Nulo: NO]
+     ├─ ApellidoPaterno (nvarchar) [Nulo: YES]
+     ├─ ApellidoMaterno (nvarchar) [Nulo: YES]
+     ├─ Empresa (nvarchar) [Nulo: YES]
+     ├─ Direccion (nvarchar) [Nulo: YES]
+     ├─ NumeroExterior (nvarchar) [Nulo: YES]
+     ├─ NumeroInterior (nvarchar) [Nulo: YES]
+     ├─ CodigoPostal (nvarchar) [Nulo: YES]
+     ├─ Colonia (nvarchar) [Nulo: YES]
+     ├─ Municipio (nvarchar) [Nulo: YES]
+     ├─ Estado (nvarchar) [Nulo: YES]
+     ├─ Rfc (nvarchar) [Nulo: YES]
+     ├─ Telefono (nvarchar) [Nulo: YES]
+     ├─ Correo (nvarchar) [Nulo: YES]
+     ├─ Contacto (nvarchar) [Nulo: YES]
+     ├─ LimiteCredito (decimal) [Nulo: YES]
+     ├─ SaldoPendiente (decimal) [Nulo: YES]
+     ├─ Categoria (nvarchar) [Nulo: YES]
+     ├─ Notas (nvarchar) [Nulo: YES]
+     ├─ FechaAlta (datetime2) [Nulo: YES]
+     ├─ RowVersion (timestamp) [Nulo: NO]
+  📁 MaterialesAluminio
+     ├─ MaterialAluminioId (int) [Nulo: NO]
+     ├─ Clave (nvarchar) [Nulo: NO]
+     ├─ ClaveBase (nvarchar) [Nulo: NO]
+     ├─ Descripcion (nvarchar) [Nulo: NO]
+     ├─ Largo (decimal) [Nulo: NO]
+     ├─ Sa (decimal) [Nulo: NO]
+     ├─ Nat (decimal) [Nulo: NO]
+     ├─ Bmo (decimal) [Nulo: NO]
+     ├─ E100 (decimal) [Nulo: NO]
+     ├─ E200 (decimal) [Nulo: NO]
+     ├─ E400 (decimal) [Nulo: NO]
+     ├─ Bco (decimal) [Nulo: NO]
+     ├─ Hue (decimal) [Nulo: NO]
+     ├─ Gris (decimal) [Nulo: NO]
+     ├─ Cho (decimal) [Nulo: NO]
+     ├─ Ace (decimal) [Nulo: NO]
+     ├─ Madl (decimal) [Nulo: NO]
+     ├─ Madt (decimal) [Nulo: NO]
+     ├─ Np (decimal) [Nulo: NO]
+     ├─ FechaAltaUtc (datetime2) [Nulo: NO]
+     ├─ RowVersion (timestamp) [Nulo: NO]
+  📁 MaterialesHerrajes
+     ├─ MaterialHerrajeId (int) [Nulo: NO]
+     ├─ Clave (nvarchar) [Nulo: NO]
+     ├─ Descripcion (nvarchar) [Nulo: NO]
+     ├─ Precio (decimal) [Nulo: NO]
+     ├─ FechaAltaUtc (datetime2) [Nulo: NO]
+     ├─ RowVersion (timestamp) [Nulo: NO]
+  📁 MaterialesHerrajesActualizacionPrecioDetalles
+     ├─ MaterialHerrajeActualizacionPrecioDetalleId (bigint) [Nulo: NO]
+     ├─ MaterialHerrajeActualizacionPrecioLoteId (bigint) [Nulo: NO]
+     ├─ NumeroFila (int) [Nulo: NO]
+     ├─ MaterialHerrajeId (int) [Nulo: NO]
+     ├─ Clave (nvarchar) [Nulo: NO]
+     ├─ DescripcionExcel (nvarchar) [Nulo: NO]
+     ├─ DescripcionMaestra (nvarchar) [Nulo: NO]
+     ├─ UnidadMedida (nvarchar) [Nulo: NO]
+     ├─ PrecioLista (decimal) [Nulo: NO]
+     ├─ FactorConversion (decimal) [Nulo: NO]
+     ├─ OrigenFactor (nvarchar) [Nulo: NO]
+     ├─ PrecioAnterior (decimal) [Nulo: YES]
+     ├─ PrecioNuevo (decimal) [Nulo: NO]
+     ├─ Accion (nvarchar) [Nulo: NO]
+  📁 MaterialesHerrajesActualizacionPrecioLotes
+     ├─ MaterialHerrajeActualizacionPrecioLoteId (bigint) [Nulo: NO]
+     ├─ PlanId (uniqueidentifier) [Nulo: NO]
+     ├─ FechaAplicacionUtc (datetime2) [Nulo: NO]
+     ├─ NombreArchivo (nvarchar) [Nulo: NO]
+     ├─ HashArchivoSha256 (char) [Nulo: NO]
+     ├─ NombreHoja (nvarchar) [Nulo: NO]
+     ├─ FingerprintCatalogoAntesSha256 (char) [Nulo: NO]
+     ├─ FingerprintFactoresAntesSha256 (char) [Nulo: NO]
+     ├─ FingerprintCatalogoDespuesSha256 (char) [Nulo: NO]
+     ├─ FingerprintFactoresDespuesSha256 (char) [Nulo: NO]
+     ├─ FilasExcel (int) [Nulo: NO]
+     ├─ Insertados (int) [Nulo: NO]
+     ├─ Actualizados (int) [Nulo: NO]
+     ├─ SinCambio (int) [Nulo: NO]
+  📁 MaterialesHerrajesFactoresConversion
+     ├─ MaterialHerrajeFactorConversionId (int) [Nulo: NO]
+     ├─ MaterialHerrajeId (int) [Nulo: NO]
+     ├─ UnidadMedida (nvarchar) [Nulo: NO]
+     ├─ FactorConversion (decimal) [Nulo: NO]
+     ├─ OrigenRegla (nvarchar) [Nulo: NO]
+     ├─ DescripcionReferencia (nvarchar) [Nulo: NO]
+     ├─ FechaConfirmacionUtc (datetime2) [Nulo: NO]
+     ├─ RowVersion (timestamp) [Nulo: NO]
+  📁 MaterialesHerreria
+     ├─ MaterialHerreriaId (int) [Nulo: NO]
+     ├─ Clave (nvarchar) [Nulo: NO]
+     ├─ Descripcion (nvarchar) [Nulo: NO]
+     ├─ KilogramosPorMetro (decimal) [Nulo: NO]
+     ├─ FechaAltaUtc (datetime2) [Nulo: NO]
+     ├─ RowVersion (timestamp) [Nulo: NO]
+  📁 MaterialesOtros
+     ├─ MaterialOtroId (int) [Nulo: NO]
+     ├─ Clave (nvarchar) [Nulo: NO]
+     ├─ Descripcion (nvarchar) [Nulo: NO]
+     ├─ Precio (decimal) [Nulo: NO]
+     ├─ FechaAltaUtc (datetime2) [Nulo: NO]
+     ├─ RowVersion (timestamp) [Nulo: NO]
+  📁 MaterialesVidrio
+     ├─ MaterialVidrioId (int) [Nulo: NO]
+     ├─ Clave (nvarchar) [Nulo: NO]
+     ├─ Descripcion (nvarchar) [Nulo: NO]
+     ├─ PrecioPorMetroCuadrado (decimal) [Nulo: NO]
+     ├─ FechaAltaUtc (datetime2) [Nulo: NO]
+     ├─ RowVersion (timestamp) [Nulo: NO]
+  📁 PaquetesHerrajes
+     ├─ PaqueteHerrajeId (int) [Nulo: NO]
+     ├─ Clave (nvarchar) [Nulo: NO]
+     ├─ Descripcion (nvarchar) [Nulo: NO]
+     ├─ FechaAltaUtc (datetime2) [Nulo: YES]
+     ├─ RowVersion (timestamp) [Nulo: NO]
+  📁 PaquetesHerrajesDetalles
+     ├─ PaqueteHerrajeId (int) [Nulo: NO]
+     ├─ MaterialHerrajeId (int) [Nulo: NO]
+     ├─ Cantidad (int) [Nulo: NO]
+  📁 Proveedores
+     ├─ ProveedorId (int) [Nulo: NO]
+     ├─ Empresa (nvarchar) [Nulo: NO]
+     ├─ TipoProveedor (nvarchar) [Nulo: NO]
+     ├─ NombreAgente (nvarchar) [Nulo: YES]
+     ├─ Direccion (nvarchar) [Nulo: YES]
+     ├─ NumeroExterior (nvarchar) [Nulo: YES]
+     ├─ NumeroInterior (nvarchar) [Nulo: YES]
+     ├─ CodigoPostal (nvarchar) [Nulo: YES]
+     ├─ Colonia (nvarchar) [Nulo: YES]
+     ├─ Municipio (nvarchar) [Nulo: YES]
+     ├─ Estado (nvarchar) [Nulo: YES]
+     ├─ Rfc (nvarchar) [Nulo: YES]
+     ├─ Telefono (nvarchar) [Nulo: YES]
+     ├─ Correo (nvarchar) [Nulo: YES]
+     ├─ Contacto (nvarchar) [Nulo: YES]
+     ├─ Notas (nvarchar) [Nulo: YES]
+     ├─ FechaAlta (datetime2) [Nulo: YES]
+     ├─ RowVersion (timestamp) [Nulo: NO]
+  📁 SchemaVersionHistory
+     ├─ MigrationId (nvarchar) [Nulo: NO]
+     ├─ AppliedAtUtc (datetime2) [Nulo: NO]
+     ├─ AppliedBy (nvarchar) [Nulo: YES]
+     ├─ ScriptHash (char) [Nulo: YES]
+  👁️ Vistas: ninguna
+  ⚙️ SPs: ninguno
+  💥 Triggers: ninguno
+
+📊 BD: ERP_VAH_G8_BAJA_SANDBOX
+  📁 Clientes
+     ├─ ClienteId (int) [Nulo: NO]
+     ├─ Titulo (nvarchar) [Nulo: YES]
+     ├─ Nombre (nvarchar) [Nulo: NO]
+     ├─ ApellidoPaterno (nvarchar) [Nulo: YES]
+     ├─ ApellidoMaterno (nvarchar) [Nulo: YES]
+     ├─ Empresa (nvarchar) [Nulo: YES]
+     ├─ Direccion (nvarchar) [Nulo: YES]
+     ├─ NumeroExterior (nvarchar) [Nulo: YES]
+     ├─ NumeroInterior (nvarchar) [Nulo: YES]
+     ├─ CodigoPostal (nvarchar) [Nulo: YES]
+     ├─ Colonia (nvarchar) [Nulo: YES]
+     ├─ Municipio (nvarchar) [Nulo: YES]
+     ├─ Estado (nvarchar) [Nulo: YES]
+     ├─ Rfc (nvarchar) [Nulo: YES]
+     ├─ Telefono (nvarchar) [Nulo: YES]
+     ├─ Correo (nvarchar) [Nulo: YES]
+     ├─ Contacto (nvarchar) [Nulo: YES]
+     ├─ LimiteCredito (decimal) [Nulo: YES]
+     ├─ SaldoPendiente (decimal) [Nulo: YES]
+     ├─ Categoria (nvarchar) [Nulo: YES]
+     ├─ Notas (nvarchar) [Nulo: YES]
+     ├─ FechaAlta (datetime2) [Nulo: YES]
+     ├─ RowVersion (timestamp) [Nulo: NO]
+  📁 MaterialesAluminio
+     ├─ MaterialAluminioId (int) [Nulo: NO]
+     ├─ Clave (nvarchar) [Nulo: NO]
+     ├─ ClaveBase (nvarchar) [Nulo: NO]
+     ├─ Descripcion (nvarchar) [Nulo: NO]
+     ├─ Largo (decimal) [Nulo: NO]
+     ├─ Sa (decimal) [Nulo: NO]
+     ├─ Nat (decimal) [Nulo: NO]
+     ├─ Bmo (decimal) [Nulo: NO]
+     ├─ E100 (decimal) [Nulo: NO]
+     ├─ E200 (decimal) [Nulo: NO]
+     ├─ E400 (decimal) [Nulo: NO]
+     ├─ Bco (decimal) [Nulo: NO]
+     ├─ Hue (decimal) [Nulo: NO]
+     ├─ Gris (decimal) [Nulo: NO]
+     ├─ Cho (decimal) [Nulo: NO]
+     ├─ Ace (decimal) [Nulo: NO]
+     ├─ Madl (decimal) [Nulo: NO]
+     ├─ Madt (decimal) [Nulo: NO]
+     ├─ Np (decimal) [Nulo: NO]
+     ├─ FechaAltaUtc (datetime2) [Nulo: NO]
+     ├─ RowVersion (timestamp) [Nulo: NO]
+  📁 MaterialesHerrajes
+     ├─ MaterialHerrajeId (int) [Nulo: NO]
+     ├─ Clave (nvarchar) [Nulo: NO]
+     ├─ Descripcion (nvarchar) [Nulo: NO]
+     ├─ Precio (decimal) [Nulo: NO]
+     ├─ FechaAltaUtc (datetime2) [Nulo: NO]
+     ├─ RowVersion (timestamp) [Nulo: NO]
+  📁 MaterialesHerrajesActualizacionPrecioDetalles
+     ├─ MaterialHerrajeActualizacionPrecioDetalleId (bigint) [Nulo: NO]
+     ├─ MaterialHerrajeActualizacionPrecioLoteId (bigint) [Nulo: NO]
+     ├─ NumeroFila (int) [Nulo: NO]
+     ├─ MaterialHerrajeId (int) [Nulo: NO]
+     ├─ Clave (nvarchar) [Nulo: NO]
+     ├─ DescripcionExcel (nvarchar) [Nulo: NO]
+     ├─ DescripcionMaestra (nvarchar) [Nulo: NO]
+     ├─ UnidadMedida (nvarchar) [Nulo: NO]
+     ├─ PrecioLista (decimal) [Nulo: NO]
+     ├─ FactorConversion (decimal) [Nulo: NO]
+     ├─ OrigenFactor (nvarchar) [Nulo: NO]
+     ├─ PrecioAnterior (decimal) [Nulo: YES]
+     ├─ PrecioNuevo (decimal) [Nulo: NO]
+     ├─ Accion (nvarchar) [Nulo: NO]
+  📁 MaterialesHerrajesActualizacionPrecioLotes
+     ├─ MaterialHerrajeActualizacionPrecioLoteId (bigint) [Nulo: NO]
+     ├─ PlanId (uniqueidentifier) [Nulo: NO]
+     ├─ FechaAplicacionUtc (datetime2) [Nulo: NO]
+     ├─ NombreArchivo (nvarchar) [Nulo: NO]
+     ├─ HashArchivoSha256 (char) [Nulo: NO]
+     ├─ NombreHoja (nvarchar) [Nulo: NO]
+     ├─ FingerprintCatalogoAntesSha256 (char) [Nulo: NO]
+     ├─ FingerprintFactoresAntesSha256 (char) [Nulo: NO]
+     ├─ FingerprintCatalogoDespuesSha256 (char) [Nulo: NO]
+     ├─ FingerprintFactoresDespuesSha256 (char) [Nulo: NO]
+     ├─ FilasExcel (int) [Nulo: NO]
+     ├─ Insertados (int) [Nulo: NO]
+     ├─ Actualizados (int) [Nulo: NO]
+     ├─ SinCambio (int) [Nulo: NO]
+  📁 MaterialesHerrajesFactoresConversion
+     ├─ MaterialHerrajeFactorConversionId (int) [Nulo: NO]
+     ├─ MaterialHerrajeId (int) [Nulo: NO]
+     ├─ UnidadMedida (nvarchar) [Nulo: NO]
+     ├─ FactorConversion (decimal) [Nulo: NO]
+     ├─ OrigenRegla (nvarchar) [Nulo: NO]
+     ├─ DescripcionReferencia (nvarchar) [Nulo: NO]
+     ├─ FechaConfirmacionUtc (datetime2) [Nulo: NO]
+     ├─ RowVersion (timestamp) [Nulo: NO]
+  📁 MaterialesHerreria
+     ├─ MaterialHerreriaId (int) [Nulo: NO]
+     ├─ Clave (nvarchar) [Nulo: NO]
+     ├─ Descripcion (nvarchar) [Nulo: NO]
+     ├─ KilogramosPorMetro (decimal) [Nulo: NO]
+     ├─ FechaAltaUtc (datetime2) [Nulo: NO]
+     ├─ RowVersion (timestamp) [Nulo: NO]
+  📁 MaterialesOtros
+     ├─ MaterialOtroId (int) [Nulo: NO]
+     ├─ Clave (nvarchar) [Nulo: NO]
+     ├─ Descripcion (nvarchar) [Nulo: NO]
+     ├─ Precio (decimal) [Nulo: NO]
+     ├─ FechaAltaUtc (datetime2) [Nulo: NO]
+     ├─ RowVersion (timestamp) [Nulo: NO]
+  📁 MaterialesVidrio
+     ├─ MaterialVidrioId (int) [Nulo: NO]
+     ├─ Clave (nvarchar) [Nulo: NO]
+     ├─ Descripcion (nvarchar) [Nulo: NO]
+     ├─ PrecioPorMetroCuadrado (decimal) [Nulo: NO]
+     ├─ FechaAltaUtc (datetime2) [Nulo: NO]
+     ├─ RowVersion (timestamp) [Nulo: NO]
+  📁 PaquetesHerrajes
+     ├─ PaqueteHerrajeId (int) [Nulo: NO]
+     ├─ Clave (nvarchar) [Nulo: NO]
+     ├─ Descripcion (nvarchar) [Nulo: NO]
+     ├─ FechaAltaUtc (datetime2) [Nulo: YES]
+     ├─ RowVersion (timestamp) [Nulo: NO]
+  📁 PaquetesHerrajesDetalles
+     ├─ PaqueteHerrajeId (int) [Nulo: NO]
+     ├─ MaterialHerrajeId (int) [Nulo: NO]
+     ├─ Cantidad (int) [Nulo: NO]
+  📁 Proveedores
+     ├─ ProveedorId (int) [Nulo: NO]
+     ├─ Empresa (nvarchar) [Nulo: NO]
+     ├─ TipoProveedor (nvarchar) [Nulo: NO]
+     ├─ NombreAgente (nvarchar) [Nulo: YES]
+     ├─ Direccion (nvarchar) [Nulo: YES]
+     ├─ NumeroExterior (nvarchar) [Nulo: YES]
+     ├─ NumeroInterior (nvarchar) [Nulo: YES]
+     ├─ CodigoPostal (nvarchar) [Nulo: YES]
+     ├─ Colonia (nvarchar) [Nulo: YES]
+     ├─ Municipio (nvarchar) [Nulo: YES]
+     ├─ Estado (nvarchar) [Nulo: YES]
+     ├─ Rfc (nvarchar) [Nulo: YES]
+     ├─ Telefono (nvarchar) [Nulo: YES]
+     ├─ Correo (nvarchar) [Nulo: YES]
+     ├─ Contacto (nvarchar) [Nulo: YES]
+     ├─ Notas (nvarchar) [Nulo: YES]
+     ├─ FechaAlta (datetime2) [Nulo: YES]
+     ├─ RowVersion (timestamp) [Nulo: NO]
+  📁 SchemaVersionHistory
+     ├─ MigrationId (nvarchar) [Nulo: NO]
+     ├─ AppliedAtUtc (datetime2) [Nulo: NO]
+     ├─ AppliedBy (nvarchar) [Nulo: YES]
+     ├─ ScriptHash (char) [Nulo: YES]
+  👁️ Vistas: ninguna
+  ⚙️ SPs: ninguno
+  💥 Triggers: ninguno
+
+📊 BD: ERP_VAH_G8_RESTORE_CHECK
+  📁 Clientes
+     ├─ ClienteId (int) [Nulo: NO]
+     ├─ Titulo (nvarchar) [Nulo: YES]
+     ├─ Nombre (nvarchar) [Nulo: NO]
+     ├─ ApellidoPaterno (nvarchar) [Nulo: YES]
+     ├─ ApellidoMaterno (nvarchar) [Nulo: YES]
+     ├─ Empresa (nvarchar) [Nulo: YES]
+     ├─ Direccion (nvarchar) [Nulo: YES]
+     ├─ NumeroExterior (nvarchar) [Nulo: YES]
+     ├─ NumeroInterior (nvarchar) [Nulo: YES]
+     ├─ CodigoPostal (nvarchar) [Nulo: YES]
+     ├─ Colonia (nvarchar) [Nulo: YES]
+     ├─ Municipio (nvarchar) [Nulo: YES]
+     ├─ Estado (nvarchar) [Nulo: YES]
+     ├─ Rfc (nvarchar) [Nulo: YES]
+     ├─ Telefono (nvarchar) [Nulo: YES]
+     ├─ Correo (nvarchar) [Nulo: YES]
+     ├─ Contacto (nvarchar) [Nulo: YES]
+     ├─ LimiteCredito (decimal) [Nulo: YES]
+     ├─ SaldoPendiente (decimal) [Nulo: YES]
+     ├─ Categoria (nvarchar) [Nulo: YES]
+     ├─ Notas (nvarchar) [Nulo: YES]
+     ├─ FechaAlta (datetime2) [Nulo: YES]
+     ├─ RowVersion (timestamp) [Nulo: NO]
+  📁 MaterialesAluminio
+     ├─ MaterialAluminioId (int) [Nulo: NO]
+     ├─ Clave (nvarchar) [Nulo: NO]
+     ├─ ClaveBase (nvarchar) [Nulo: NO]
+     ├─ Descripcion (nvarchar) [Nulo: NO]
+     ├─ Largo (decimal) [Nulo: NO]
+     ├─ Sa (decimal) [Nulo: NO]
+     ├─ Nat (decimal) [Nulo: NO]
+     ├─ Bmo (decimal) [Nulo: NO]
+     ├─ E100 (decimal) [Nulo: NO]
+     ├─ E200 (decimal) [Nulo: NO]
+     ├─ E400 (decimal) [Nulo: NO]
+     ├─ Bco (decimal) [Nulo: NO]
+     ├─ Hue (decimal) [Nulo: NO]
+     ├─ Gris (decimal) [Nulo: NO]
+     ├─ Cho (decimal) [Nulo: NO]
+     ├─ Ace (decimal) [Nulo: NO]
+     ├─ Madl (decimal) [Nulo: NO]
+     ├─ Madt (decimal) [Nulo: NO]
+     ├─ Np (decimal) [Nulo: NO]
+     ├─ FechaAltaUtc (datetime2) [Nulo: NO]
+     ├─ RowVersion (timestamp) [Nulo: NO]
+  📁 MaterialesHerrajes
+     ├─ MaterialHerrajeId (int) [Nulo: NO]
+     ├─ Clave (nvarchar) [Nulo: NO]
+     ├─ Descripcion (nvarchar) [Nulo: NO]
+     ├─ Precio (decimal) [Nulo: NO]
+     ├─ FechaAltaUtc (datetime2) [Nulo: NO]
+     ├─ RowVersion (timestamp) [Nulo: NO]
+  📁 MaterialesHerrajesActualizacionPrecioDetalles
+     ├─ MaterialHerrajeActualizacionPrecioDetalleId (bigint) [Nulo: NO]
+     ├─ MaterialHerrajeActualizacionPrecioLoteId (bigint) [Nulo: NO]
+     ├─ NumeroFila (int) [Nulo: NO]
+     ├─ MaterialHerrajeId (int) [Nulo: NO]
+     ├─ Clave (nvarchar) [Nulo: NO]
+     ├─ DescripcionExcel (nvarchar) [Nulo: NO]
+     ├─ DescripcionMaestra (nvarchar) [Nulo: NO]
+     ├─ UnidadMedida (nvarchar) [Nulo: NO]
+     ├─ PrecioLista (decimal) [Nulo: NO]
+     ├─ FactorConversion (decimal) [Nulo: NO]
+     ├─ OrigenFactor (nvarchar) [Nulo: NO]
+     ├─ PrecioAnterior (decimal) [Nulo: YES]
+     ├─ PrecioNuevo (decimal) [Nulo: NO]
+     ├─ Accion (nvarchar) [Nulo: NO]
+  📁 MaterialesHerrajesActualizacionPrecioLotes
+     ├─ MaterialHerrajeActualizacionPrecioLoteId (bigint) [Nulo: NO]
+     ├─ PlanId (uniqueidentifier) [Nulo: NO]
+     ├─ FechaAplicacionUtc (datetime2) [Nulo: NO]
+     ├─ NombreArchivo (nvarchar) [Nulo: NO]
+     ├─ HashArchivoSha256 (char) [Nulo: NO]
+     ├─ NombreHoja (nvarchar) [Nulo: NO]
+     ├─ FingerprintCatalogoAntesSha256 (char) [Nulo: NO]
+     ├─ FingerprintFactoresAntesSha256 (char) [Nulo: NO]
+     ├─ FingerprintCatalogoDespuesSha256 (char) [Nulo: NO]
+     ├─ FingerprintFactoresDespuesSha256 (char) [Nulo: NO]
+     ├─ FilasExcel (int) [Nulo: NO]
+     ├─ Insertados (int) [Nulo: NO]
+     ├─ Actualizados (int) [Nulo: NO]
+     ├─ SinCambio (int) [Nulo: NO]
+  📁 MaterialesHerrajesFactoresConversion
+     ├─ MaterialHerrajeFactorConversionId (int) [Nulo: NO]
+     ├─ MaterialHerrajeId (int) [Nulo: NO]
+     ├─ UnidadMedida (nvarchar) [Nulo: NO]
+     ├─ FactorConversion (decimal) [Nulo: NO]
+     ├─ OrigenRegla (nvarchar) [Nulo: NO]
+     ├─ DescripcionReferencia (nvarchar) [Nulo: NO]
+     ├─ FechaConfirmacionUtc (datetime2) [Nulo: NO]
+     ├─ RowVersion (timestamp) [Nulo: NO]
+  📁 MaterialesHerreria
+     ├─ MaterialHerreriaId (int) [Nulo: NO]
+     ├─ Clave (nvarchar) [Nulo: NO]
+     ├─ Descripcion (nvarchar) [Nulo: NO]
+     ├─ KilogramosPorMetro (decimal) [Nulo: NO]
+     ├─ FechaAltaUtc (datetime2) [Nulo: NO]
+     ├─ RowVersion (timestamp) [Nulo: NO]
+  📁 MaterialesOtros
+     ├─ MaterialOtroId (int) [Nulo: NO]
+     ├─ Clave (nvarchar) [Nulo: NO]
+     ├─ Descripcion (nvarchar) [Nulo: NO]
+     ├─ Precio (decimal) [Nulo: NO]
+     ├─ FechaAltaUtc (datetime2) [Nulo: NO]
+     ├─ RowVersion (timestamp) [Nulo: NO]
+  📁 MaterialesVidrio
+     ├─ MaterialVidrioId (int) [Nulo: NO]
+     ├─ Clave (nvarchar) [Nulo: NO]
+     ├─ Descripcion (nvarchar) [Nulo: NO]
+     ├─ PrecioPorMetroCuadrado (decimal) [Nulo: NO]
+     ├─ FechaAltaUtc (datetime2) [Nulo: NO]
+     ├─ RowVersion (timestamp) [Nulo: NO]
+  📁 PaquetesHerrajes
+     ├─ PaqueteHerrajeId (int) [Nulo: NO]
+     ├─ Clave (nvarchar) [Nulo: NO]
+     ├─ Descripcion (nvarchar) [Nulo: NO]
+     ├─ FechaAltaUtc (datetime2) [Nulo: YES]
+     ├─ RowVersion (timestamp) [Nulo: NO]
+  📁 PaquetesHerrajesDetalles
+     ├─ PaqueteHerrajeId (int) [Nulo: NO]
+     ├─ MaterialHerrajeId (int) [Nulo: NO]
+     ├─ Cantidad (int) [Nulo: NO]
+  📁 Proveedores
+     ├─ ProveedorId (int) [Nulo: NO]
+     ├─ Empresa (nvarchar) [Nulo: NO]
+     ├─ TipoProveedor (nvarchar) [Nulo: NO]
+     ├─ NombreAgente (nvarchar) [Nulo: YES]
+     ├─ Direccion (nvarchar) [Nulo: YES]
+     ├─ NumeroExterior (nvarchar) [Nulo: YES]
+     ├─ NumeroInterior (nvarchar) [Nulo: YES]
+     ├─ CodigoPostal (nvarchar) [Nulo: YES]
+     ├─ Colonia (nvarchar) [Nulo: YES]
+     ├─ Municipio (nvarchar) [Nulo: YES]
+     ├─ Estado (nvarchar) [Nulo: YES]
+     ├─ Rfc (nvarchar) [Nulo: YES]
+     ├─ Telefono (nvarchar) [Nulo: YES]
+     ├─ Correo (nvarchar) [Nulo: YES]
+     ├─ Contacto (nvarchar) [Nulo: YES]
+     ├─ Notas (nvarchar) [Nulo: YES]
+     ├─ FechaAlta (datetime2) [Nulo: YES]
+     ├─ RowVersion (timestamp) [Nulo: NO]
+  📁 SchemaVersionHistory
+     ├─ MigrationId (nvarchar) [Nulo: NO]
+     ├─ AppliedAtUtc (datetime2) [Nulo: NO]
+     ├─ AppliedBy (nvarchar) [Nulo: YES]
+     ├─ ScriptHash (char) [Nulo: YES]
+  👁️ Vistas: ninguna
+  ⚙️ SPs: ninguno
+  💥 Triggers: ninguno
+
+📊 BD: herrajes
+  📁 materiales_herraje
+     ├─ Clave (varchar) [Nulo: NO]
+     ├─ Descripcion (varchar) [Nulo: YES]
+     ├─ Precio (decimal) [Nulo: YES]
+  📁 paquete_herraje_items
+     ├─ clave_paquete (varchar) [Nulo: NO]
+     ├─ clv_herraje (varchar) [Nulo: NO]
+     ├─ cantidad (int) [Nulo: NO]
+  📁 paquetes_herrajes
+     ├─ clave (varchar) [Nulo: NO]
+     ├─ descripcion (varchar) [Nulo: NO]
+  👁️ Vistas: vw_paquete_herraje_detalle, vw_paquete_herraje_resumen
+  ⚙️ SPs: sp_paquete_herraje_upsert, sp_paquete_herraje_item_upsert, sp_paquete_herraje_delete
+  💥 Triggers: ninguno
+
+📊 BD: herreria
+  📁 Clientes
+     ├─ ClienteId (int) [Nulo: NO]
+     ├─ Titulo (nvarchar) [Nulo: YES]
+     ├─ Nombre (nvarchar) [Nulo: NO]
+     ├─ ApellidoPaterno (nvarchar) [Nulo: YES]
+     ├─ ApellidoMaterno (nvarchar) [Nulo: YES]
+     ├─ Empresa (nvarchar) [Nulo: YES]
+     ├─ Direccion (nvarchar) [Nulo: YES]
+     ├─ NumeroExterior (nvarchar) [Nulo: YES]
+     ├─ NumeroInterior (nvarchar) [Nulo: YES]
+     ├─ CodigoPostal (nvarchar) [Nulo: YES]
+     ├─ Colonia (nvarchar) [Nulo: YES]
+     ├─ Municipio (nvarchar) [Nulo: YES]
+     ├─ Estado (nvarchar) [Nulo: YES]
+     ├─ Rfc (nvarchar) [Nulo: YES]
+     ├─ Telefono (nvarchar) [Nulo: YES]
+     ├─ Correo (nvarchar) [Nulo: YES]
+     ├─ Contacto (nvarchar) [Nulo: YES]
+     ├─ LimiteCredito (decimal) [Nulo: YES]
+     ├─ SaldoPendiente (decimal) [Nulo: YES]
+     ├─ Categoria (nvarchar) [Nulo: YES]
+     ├─ Notas (nvarchar) [Nulo: YES]
+     ├─ FechaAlta (datetime2) [Nulo: YES]
+     ├─ RowVersion (timestamp) [Nulo: NO]
+  📁 materiales_herreria
+     ├─ Clave (varchar) [Nulo: NO]
+     ├─ Descripcion (varchar) [Nulo: YES]
+     ├─ kilogramos (decimal) [Nulo: YES]
+  📁 MaterialesAluminio
+     ├─ MaterialAluminioId (int) [Nulo: NO]
+     ├─ Clave (nvarchar) [Nulo: NO]
+     ├─ ClaveBase (nvarchar) [Nulo: NO]
+     ├─ Descripcion (nvarchar) [Nulo: NO]
+     ├─ Largo (decimal) [Nulo: NO]
+     ├─ Sa (decimal) [Nulo: NO]
+     ├─ Nat (decimal) [Nulo: NO]
+     ├─ Bmo (decimal) [Nulo: NO]
+     ├─ E100 (decimal) [Nulo: NO]
+     ├─ E200 (decimal) [Nulo: NO]
+     ├─ E400 (decimal) [Nulo: NO]
+     ├─ Bco (decimal) [Nulo: NO]
+     ├─ Hue (decimal) [Nulo: NO]
+     ├─ Gris (decimal) [Nulo: NO]
+     ├─ Cho (decimal) [Nulo: NO]
+     ├─ Ace (decimal) [Nulo: NO]
+     ├─ Madl (decimal) [Nulo: NO]
+     ├─ Madt (decimal) [Nulo: NO]
+     ├─ Np (decimal) [Nulo: NO]
+     ├─ FechaAltaUtc (datetime2) [Nulo: NO]
+     ├─ RowVersion (timestamp) [Nulo: NO]
+  📁 MaterialesHerreria
+     ├─ MaterialHerreriaId (int) [Nulo: NO]
+     ├─ Clave (nvarchar) [Nulo: NO]
+     ├─ Descripcion (nvarchar) [Nulo: NO]
+     ├─ KilogramosPorMetro (decimal) [Nulo: NO]
+     ├─ FechaAltaUtc (datetime2) [Nulo: NO]
+     ├─ RowVersion (timestamp) [Nulo: NO]
+  📁 Proveedores
+     ├─ ProveedorId (int) [Nulo: NO]
+     ├─ Empresa (nvarchar) [Nulo: NO]
+     ├─ TipoProveedor (nvarchar) [Nulo: NO]
+     ├─ NombreAgente (nvarchar) [Nulo: YES]
+     ├─ Direccion (nvarchar) [Nulo: YES]
+     ├─ NumeroExterior (nvarchar) [Nulo: YES]
+     ├─ NumeroInterior (nvarchar) [Nulo: YES]
+     ├─ CodigoPostal (nvarchar) [Nulo: YES]
+     ├─ Colonia (nvarchar) [Nulo: YES]
+     ├─ Municipio (nvarchar) [Nulo: YES]
+     ├─ Estado (nvarchar) [Nulo: YES]
+     ├─ Rfc (nvarchar) [Nulo: YES]
+     ├─ Telefono (nvarchar) [Nulo: YES]
+     ├─ Correo (nvarchar) [Nulo: YES]
+     ├─ Contacto (nvarchar) [Nulo: YES]
+     ├─ Notas (nvarchar) [Nulo: YES]
+     ├─ FechaAlta (datetime2) [Nulo: YES]
+     ├─ RowVersion (timestamp) [Nulo: NO]
+  📁 SchemaVersionHistory
+     ├─ MigrationId (nvarchar) [Nulo: NO]
+     ├─ AppliedAtUtc (datetime2) [Nulo: NO]
+     ├─ AppliedBy (nvarchar) [Nulo: YES]
+     ├─ ScriptHash (char) [Nulo: YES]
+  👁️ Vistas: ninguna
+  ⚙️ SPs: ninguno
+  💥 Triggers: ninguno
+
+📊 BD: otros
+  📁 materiales_otros
+     ├─ Clave (varchar) [Nulo: NO]
+     ├─ Descripcion (varchar) [Nulo: YES]
+     ├─ Precio (decimal) [Nulo: YES]
+  👁️ Vistas: ninguna
+  ⚙️ SPs: ninguno
+  💥 Triggers: ninguno
+
+📊 BD: plasticos
+  📁 materiales_plasticos
+     ├─ Clave (varchar) [Nulo: NO]
+     ├─ Descripcion (varchar) [Nulo: YES]
+     ├─ Precio (decimal) [Nulo: YES]
+  👁️ Vistas: ninguna
+  ⚙️ SPs: ninguno
+  💥 Triggers: ninguno
+
+📊 BD: presupuestos
+  📁 items_partida
+     ├─ id (int) [Nulo: NO]
+     ├─ partida_id (int) [Nulo: NO]
+     ├─ tipo (varchar) [Nulo: NO]
+     ├─ color (varchar) [Nulo: YES]
+     ├─ clave (varchar) [Nulo: NO]
+     ├─ descripcion (text) [Nulo: YES]
+     ├─ ca (decimal) [Nulo: YES]
+     ├─ ancho (decimal) [Nulo: YES]
+     ├─ ch (decimal) [Nulo: YES]
+     ├─ alto (decimal) [Nulo: YES]
+     ├─ piezas (int) [Nulo: YES]
+     ├─ pu (decimal) [Nulo: YES]
+     ├─ importe (decimal) [Nulo: YES]
+     ├─ metros (decimal) [Nulo: YES]
+     ├─ kg_m (decimal) [Nulo: YES]
+     ├─ kgs (decimal) [Nulo: YES]
+     ├─ precio_kg (decimal) [Nulo: YES]
+  📁 parametros_sistema
+     ├─ id (int) [Nulo: NO]
+     ├─ correo_remitente (varchar) [Nulo: YES]
+     ├─ contrasena_correo (varchar) [Nulo: YES]
+     ├─ servidor_smtp (varchar) [Nulo: YES]
+     ├─ puerto_smtp (int) [Nulo: YES]
+     ├─ numero_inicial_presupuesto (int) [Nulo: YES]
+     ├─ iva_porcentaje (decimal) [Nulo: YES]
+     ├─ clave_acceso_mantenimiento (varchar) [Nulo: YES]
+     ├─ color_global_defecto (nvarchar) [Nulo: YES]
+     ├─ desperdicio_defecto (float) [Nulo: YES]
+     ├─ fv_defecto (float) [Nulo: YES]
+  📁 partida_paquetes
+     ├─ id (int) [Nulo: NO]
+     ├─ partida_id (int) [Nulo: NO]
+     ├─ tipo_paquete (varchar) [Nulo: NO]
+     ├─ clave_paquete (varchar) [Nulo: NO]
+     ├─ descripcion (varchar) [Nulo: YES]
+     ├─ ancho (decimal) [Nulo: NO]
+     ├─ alto (decimal) [Nulo: NO]
+     ├─ piezas (int) [Nulo: NO]
+  📁 partidas
+     ├─ id (int) [Nulo: NO]
+     ├─ presupuesto_id (int) [Nulo: NO]
+     ├─ partida (int) [Nulo: NO]
+     ├─ titulo (varchar) [Nulo: NO]
+     ├─ descripcion (text) [Nulo: YES]
+     ├─ color_partida (varchar) [Nulo: YES]
+     ├─ desperdicio (decimal) [Nulo: YES]
+     ├─ fv_porcentaje (decimal) [Nulo: YES]
+     ├─ kg (decimal) [Nulo: YES]
+     ├─ ancho (decimal) [Nulo: YES]
+     ├─ alto (decimal) [Nulo: YES]
+     ├─ mano_obra (decimal) [Nulo: YES]
+     ├─ accesorios (decimal) [Nulo: YES]
+     ├─ piezas (int) [Nulo: YES]
+     ├─ precio_unitario (decimal) [Nulo: YES]
+     ├─ total_partida (decimal) [Nulo: YES]
+  📁 presupuestos
+     ├─ id (int) [Nulo: NO]
+     ├─ cliente_id (int) [Nulo: NO]
+     ├─ obra (varchar) [Nulo: NO]
+     ├─ presupuesto (int) [Nulo: NO]
+     ├─ fecha (date) [Nulo: NO]
+     ├─ color_global (varchar) [Nulo: NO]
+     ├─ descuento_porcentaje (decimal) [Nulo: YES]
+     ├─ notas (text) [Nulo: YES]
+     ├─ forma_pago (varchar) [Nulo: YES]
+     ├─ plazo_entrega (varchar) [Nulo: YES]
+  📁 resumen_presupuesto
+     ├─ id (int) [Nulo: NO]
+     ├─ presupuesto_id (int) [Nulo: NO]
+     ├─ subtotal (decimal) [Nulo: YES]
+     ├─ iva (decimal) [Nulo: YES]
+     ├─ total (decimal) [Nulo: YES]
+  👁️ Vistas: ninguna
+  ⚙️ SPs: ninguno
+  💥 Triggers: ninguno
+
+📊 BD: proveedores
+  📁 Proveedores
+     ├─ id (int) [Nulo: NO]
+     ├─ empresa (nvarchar) [Nulo: NO]
+     ├─ tipo_proveedor (nvarchar) [Nulo: YES]
+     ├─ direccion (nvarchar) [Nulo: YES]
+     ├─ colonia (nvarchar) [Nulo: YES]
+     ├─ municipio (nvarchar) [Nulo: YES]
+     ├─ estado (nvarchar) [Nulo: YES]
+     ├─ rfc (nvarchar) [Nulo: YES]
+     ├─ telefono (nvarchar) [Nulo: YES]
+     ├─ correo (nvarchar) [Nulo: YES]
+     ├─ contacto (nvarchar) [Nulo: YES]
+     ├─ notas (nvarchar) [Nulo: YES]
+     ├─ fecha_alta (datetime) [Nulo: YES]
+     ├─ nombre_agente (nvarchar) [Nulo: YES]
+     ├─ tipo (nvarchar) [Nulo: YES]
+     ├─ num_exterior (nvarchar) [Nulo: YES]
+     ├─ num_interior (nvarchar) [Nulo: YES]
+     ├─ cp (nvarchar) [Nulo: YES]
+  📁 Proveedores_Backup_20260521
+     ├─ id (int) [Nulo: NO]
+     ├─ empresa (nvarchar) [Nulo: NO]
+     ├─ tipo_proveedor (nvarchar) [Nulo: YES]
+     ├─ direccion (nvarchar) [Nulo: YES]
+     ├─ colonia (nvarchar) [Nulo: YES]
+     ├─ municipio (nvarchar) [Nulo: YES]
+     ├─ estado (nvarchar) [Nulo: YES]
+     ├─ rfc (nvarchar) [Nulo: YES]
+     ├─ telefono (nvarchar) [Nulo: YES]
+     ├─ correo (nvarchar) [Nulo: YES]
+     ├─ contacto (nvarchar) [Nulo: YES]
+     ├─ notas (nvarchar) [Nulo: YES]
+     ├─ fecha_alta (datetime) [Nulo: YES]
+     ├─ nombre_agente (nvarchar) [Nulo: YES]
+     ├─ tipo (nvarchar) [Nulo: YES]
+     ├─ num_exterior (nvarchar) [Nulo: YES]
+     ├─ num_interior (nvarchar) [Nulo: YES]
+     ├─ cp (nvarchar) [Nulo: YES]
+  👁️ Vistas: ninguna
+  ⚙️ SPs: ninguno
+  💥 Triggers: ninguno
+
+📊 BD: vah
+  📁 presupuestos
+     ├─ id (int) [Nulo: NO]
+     ├─ fecha (date) [Nulo: NO]
+     ├─ cliente_id (int) [Nulo: YES]
+     ├─ obra (nvarchar) [Nulo: YES]
+     ├─ titulo_partida (nvarchar) [Nulo: YES]
+     ├─ mano_obra (decimal) [Nulo: NO]
+     ├─ accesorios (decimal) [Nulo: NO]
+     ├─ descuento_pct (decimal) [Nulo: NO]
+  👁️ Vistas: ninguna
+  ⚙️ SPs: ninguno
+  💥 Triggers: ninguno
+
+📊 BD: vidrio
+  📁 materiales_vidrio
+     ├─ Clave (varchar) [Nulo: NO]
+     ├─ Descripcion (varchar) [Nulo: YES]
+     ├─ Precio (decimal) [Nulo: YES]
+  👁️ Vistas: ninguna
+  ⚙️ SPs: ninguno
+  💥 Triggers: ninguno
+
+====================================================================================================
+9. RELACIONES ENTRE TABLAS (FK)
+====================================================================================================
+
+📊 aluminio:
+  🔗 paquete_aluminio_items.clave_paquete → paquetes_aluminio.clave
+📊 clientes:
+  ℹ️ Sin FKs explícitas (relaciones lógicas en código)
+📊 cxc:
+  🔗 pagos_recibidos.cxc_id → cuentas_por_cobrar.id
+  🔗 cxc_detalle.cxc_id → cuentas_por_cobrar.id
+📊 ERP_VAH:
+  🔗 PaquetesAluminioDetalles.MaterialOtroId → MaterialesOtros.MaterialOtroId
+  🔗 MaterialesHerrajesActualizacionPrecioDetalles.MaterialHerrajeActualizacionPrecioLoteId → MaterialesHerrajesActualizacionPrecioLotes.MaterialHerrajeActualizacionPrecioLoteId
+  🔗 PaquetesAluminioDetalles.MaterialAluminioId → MaterialesAluminio.MaterialAluminioId
+  🔗 PaquetesHerrajesDetalles.PaqueteHerrajeId → PaquetesHerrajes.PaqueteHerrajeId
+  🔗 PaquetesAluminioDetalles.PaqueteHerrajeId → PaquetesHerrajes.PaqueteHerrajeId
+  🔗 PaquetesAluminioDetalles.PaqueteAluminioId → PaquetesAluminio.PaqueteAluminioId
+  🔗 MaterialesHerrajesFactoresConversion.MaterialHerrajeId → MaterialesHerrajes.MaterialHerrajeId
+  🔗 MaterialesHerrajesActualizacionPrecioDetalles.MaterialHerrajeId → MaterialesHerrajes.MaterialHerrajeId
+  🔗 PaquetesHerrajesDetalles.MaterialHerrajeId → MaterialesHerrajes.MaterialHerrajeId
+  🔗 PaquetesAluminioDetalles.MaterialHerrajeId → MaterialesHerrajes.MaterialHerrajeId
+📊 ERP_VAH_G7_LAB:
+  🔗 MaterialesHerrajesActualizacionPrecioDetalles.MaterialHerrajeActualizacionPrecioLoteId → MaterialesHerrajesActualizacionPrecioLotes.MaterialHerrajeActualizacionPrecioLoteId
+  🔗 PaquetesHerrajesDetalles.PaqueteHerrajeId → PaquetesHerrajes.PaqueteHerrajeId
+  🔗 MaterialesHerrajesFactoresConversion.MaterialHerrajeId → MaterialesHerrajes.MaterialHerrajeId
+  🔗 MaterialesHerrajesActualizacionPrecioDetalles.MaterialHerrajeId → MaterialesHerrajes.MaterialHerrajeId
+  🔗 PaquetesHerrajesDetalles.MaterialHerrajeId → MaterialesHerrajes.MaterialHerrajeId
+📊 ERP_VAH_G8_BAJA_SANDBOX:
+  🔗 MaterialesHerrajesActualizacionPrecioDetalles.MaterialHerrajeActualizacionPrecioLoteId → MaterialesHerrajesActualizacionPrecioLotes.MaterialHerrajeActualizacionPrecioLoteId
+  🔗 PaquetesHerrajesDetalles.PaqueteHerrajeId → PaquetesHerrajes.PaqueteHerrajeId
+  🔗 MaterialesHerrajesFactoresConversion.MaterialHerrajeId → MaterialesHerrajes.MaterialHerrajeId
+  🔗 MaterialesHerrajesActualizacionPrecioDetalles.MaterialHerrajeId → MaterialesHerrajes.MaterialHerrajeId
+  🔗 PaquetesHerrajesDetalles.MaterialHerrajeId → MaterialesHerrajes.MaterialHerrajeId
+📊 ERP_VAH_G8_RESTORE_CHECK:
+  🔗 MaterialesHerrajesActualizacionPrecioDetalles.MaterialHerrajeActualizacionPrecioLoteId → MaterialesHerrajesActualizacionPrecioLotes.MaterialHerrajeActualizacionPrecioLoteId
+  🔗 PaquetesHerrajesDetalles.PaqueteHerrajeId → PaquetesHerrajes.PaqueteHerrajeId
+  🔗 MaterialesHerrajesFactoresConversion.MaterialHerrajeId → MaterialesHerrajes.MaterialHerrajeId
+  🔗 MaterialesHerrajesActualizacionPrecioDetalles.MaterialHerrajeId → MaterialesHerrajes.MaterialHerrajeId
+  🔗 PaquetesHerrajesDetalles.MaterialHerrajeId → MaterialesHerrajes.MaterialHerrajeId
+📊 herrajes:
+  🔗 paquete_herraje_items.clv_herraje → materiales_herraje.Clave
+  🔗 paquete_herraje_items.clave_paquete → paquetes_herrajes.clave
+📊 herreria:
+  ℹ️ Sin FKs explícitas (relaciones lógicas en código)
+📊 otros:
+  ℹ️ Sin FKs explícitas (relaciones lógicas en código)
+📊 plasticos:
+  ℹ️ Sin FKs explícitas (relaciones lógicas en código)
+📊 presupuestos:
+  🔗 partidas.presupuesto_id → presupuestos.id
+  🔗 resumen_presupuesto.presupuesto_id → presupuestos.id
+  🔗 partida_paquetes.partida_id → partidas.id
+  🔗 items_partida.partida_id → partidas.id
+📊 proveedores:
+  ℹ️ Sin FKs explícitas (relaciones lógicas en código)
+📊 vah:
+  ℹ️ Sin FKs explícitas (relaciones lógicas en código)
+📊 vidrio:
+  ℹ️ Sin FKs explícitas (relaciones lógicas en código)
+
+====================================================================================================
+10. INTEGRACIÓN BD ↔ CÓDIGO
+====================================================================================================
+
+  ✓ Clientes → busquedas.py, cliente.py, cliente_repository.py
+  ✓ Clientes → busquedas.py, cliente.py, cliente_repository.py
+  ✓ Clientes → busquedas.py, cliente.py, cliente_repository.py
+  ✓ Clientes → busquedas.py, cliente.py, cliente_repository.py
+  ✓ Clientes → busquedas.py, cliente.py, cliente_repository.py
+  ✓ Clientes → busquedas.py, cliente.py, cliente_repository.py
+  ✓ MaterialesAluminio → external_launchers.py, external_launchers_backup.py, generar_manual_tecnico_aluminio.py
+  ✓ MaterialesAluminio → external_launchers.py, external_launchers_backup.py, generar_manual_tecnico_aluminio.py
+  ✓ MaterialesAluminio → external_launchers.py, external_launchers_backup.py, generar_manual_tecnico_aluminio.py
+  ✓ MaterialesAluminio → external_launchers.py, external_launchers_backup.py, generar_manual_tecnico_aluminio.py
+  ✓ MaterialesAluminio → external_launchers.py, external_launchers_backup.py, generar_manual_tecnico_aluminio.py
+  ✓ MaterialesHerrajes → external_launchers.py, external_launchers_backup.py
+  ✓ MaterialesHerrajes → external_launchers.py, external_launchers_backup.py
+  ✓ MaterialesHerrajes → external_launchers.py, external_launchers_backup.py
+  ✓ MaterialesHerrajes → external_launchers.py, external_launchers_backup.py
+  ✗ MaterialesHerrajesActualizacionPrecioDetalles → (sin referencias en código)
+  ✗ MaterialesHerrajesActualizacionPrecioDetalles → (sin referencias en código)
+  ✗ MaterialesHerrajesActualizacionPrecioDetalles → (sin referencias en código)
+  ✗ MaterialesHerrajesActualizacionPrecioDetalles → (sin referencias en código)
+  ✗ MaterialesHerrajesActualizacionPrecioLotes → (sin referencias en código)
+  ✗ MaterialesHerrajesActualizacionPrecioLotes → (sin referencias en código)
+  ✗ MaterialesHerrajesActualizacionPrecioLotes → (sin referencias en código)
+  ✗ MaterialesHerrajesActualizacionPrecioLotes → (sin referencias en código)
+  ✗ MaterialesHerrajesFactoresConversion → (sin referencias en código)
+  ✗ MaterialesHerrajesFactoresConversion → (sin referencias en código)
+  ✗ MaterialesHerrajesFactoresConversion → (sin referencias en código)
+  ✗ MaterialesHerrajesFactoresConversion → (sin referencias en código)
+  ✓ MaterialesHerreria → external_launchers.py, external_launchers_backup.py
+  ✓ MaterialesHerreria → external_launchers.py, external_launchers_backup.py
+  ✓ MaterialesHerreria → external_launchers.py, external_launchers_backup.py
+  ✓ MaterialesHerreria → external_launchers.py, external_launchers_backup.py
+  ✓ MaterialesHerreria → external_launchers.py, external_launchers_backup.py
+  ✓ MaterialesOtros → external_launchers.py, external_launchers_backup.py
+  ✓ MaterialesOtros → external_launchers.py, external_launchers_backup.py
+  ✓ MaterialesOtros → external_launchers.py, external_launchers_backup.py
+  ✓ MaterialesOtros → external_launchers.py, external_launchers_backup.py
+  ✓ MaterialesVidrio → external_launchers.py, external_launchers_backup.py
+  ✓ MaterialesVidrio → external_launchers.py, external_launchers_backup.py
+  ✓ MaterialesVidrio → external_launchers.py, external_launchers_backup.py
+  ✓ MaterialesVidrio → external_launchers.py, external_launchers_backup.py
+  ✓ PaquetesAluminio → external_launchers.py, external_launchers_backup.py, generar_manual_tecnico_paquete_aluminio.py
+  ✗ PaquetesAluminioDetalles → (sin referencias en código)
+  ✓ PaquetesHerrajes → external_launchers.py, external_launchers_backup.py
+  ✓ PaquetesHerrajes → external_launchers.py, external_launchers_backup.py
+  ✓ PaquetesHerrajes → external_launchers.py, external_launchers_backup.py
+  ✓ PaquetesHerrajes → external_launchers.py, external_launchers_backup.py
+  ✗ PaquetesHerrajesDetalles → (sin referencias en código)
+  ✗ PaquetesHerrajesDetalles → (sin referencias en código)
+  ✗ PaquetesHerrajesDetalles → (sin referencias en código)
+  ✗ PaquetesHerrajesDetalles → (sin referencias en código)
+  ✓ Proveedores → __init__.py, crear_proveedores.py, db.py
+  ✓ Proveedores → __init__.py, crear_proveedores.py, db.py
+  ✓ Proveedores → __init__.py, crear_proveedores.py, db.py
+  ✓ Proveedores → __init__.py, crear_proveedores.py, db.py
+  ✓ Proveedores → __init__.py, crear_proveedores.py, db.py
+  ✓ Proveedores → __init__.py, crear_proveedores.py, db.py
+  ✗ Proveedores_Backup_20260521 → (sin referencias en código)
+  ✗ SchemaVersionHistory → (sin referencias en código)
+  ✗ SchemaVersionHistory → (sin referencias en código)
+  ✗ SchemaVersionHistory → (sin referencias en código)
+  ✗ SchemaVersionHistory → (sin referencias en código)
+  ✗ SchemaVersionHistory → (sin referencias en código)
+  ✓ configuracion_cxc → configuracion_repository.py, cxc_service.py
+  ✓ cuentas_por_cobrar → cxc_repository.py, cxc_service.py, pantalla_cxc.py
+  ✗ cuentas_por_cobrar_BACKUP_20260526 → (sin referencias en código)
+  ✓ cxc_detalle → cxc_repository.py, cxc_service.py, detalle_repository.py
+  ✓ items_partida → calculos.py, concentrador_repository.py, explosor_base.py
+  ✓ materiales_aluminio → advertencias_dialog.py, busquedas.py, calculos.py
+  ✓ materiales_herraje → busquedas.py, db_manager.py, external_launchers.py
+  ✓ materiales_herreria → advertencias_dialog.py, busquedas.py, cargar_excel_herreria.py
+  ✓ materiales_otros → busquedas.py, db_manager.py, external_launchers.py
+  ✓ materiales_plasticos → busquedas.py, db_manager.py, external_launchers.py
+  ✓ materiales_vidrio → busquedas.py, cargar_excel_vidrio.py, db_manager.py
+  ✓ pagos_recibidos → pago_repository.py, pantalla_cxc.py
+  ✓ paquete_aluminio_items → fallbacks.py, generar_manual_operativo_paquete_aluminio.py, generar_manual_tecnico_paquete_aluminio.py
+  ✓ paquete_herraje_items → generar_manual_operativo_paquete_herrajes.py, generar_manual_tecnico_paquete_herrajes.py, generar_manual_tecnico_presupuestos.py
+  ✓ paquetes_aluminio → busquedas.py, external_launchers.py, external_launchers_backup.py
+  ✓ paquetes_herrajes → busquedas.py, external_launchers.py, external_launchers_backup.py
+  ✓ parametros_sistema → __init__.py, config_service.py, constants.py
+  ✓ partida_paquetes → advertencias_dialog.py, concentrador_repository.py, diagnostico_paquetes.py
+  ✓ partidas → __init__.py, concentrado.py, concentrador_repository.py
+  ✓ presupuestos → __init__.py, abrir_presupuesto_dialog.py, app_paths.py
+  ✓ presupuestos → __init__.py, abrir_presupuesto_dialog.py, app_paths.py
+  ✓ resumen_presupuesto → generar_manual_tecnico_presupuestos.py, generar_manual_tecnico_proveedores.py
+  ✗ sysdiagrams → (sin referencias en código)
+  ✓ tipos_item → generar_manual_tecnico_paquete_aluminio.py
+
+====================================================================================================
+11. PIPELINE DE COMPILACIÓN Y LANZADORES (VIVO vs REDUNDANTE)
+====================================================================================================
+
+  ⚪ REDUNDANTE compilar_erp_principal.bat → env=.venv_aider_312 (FUNCIONAL); ⚠️ ref. ERP_VAH.spec inexistente
+  ⚪ REDUNDANTE compilar_erp_principal.ps1 → env=.venv_aider_312 (FUNCIONAL); ⚠️ ref. ERP_VAH.spec inexistente; spec=vah.spec
+  ✅ VIVO compilar_final.bat → env=.venv_aider_312 (FUNCIONAL); ONEFILE
+  ⚪ REDUNDANTE compilar_limpio.bat → env=.venv_aider_312 (FUNCIONAL); spec=vah.spec
+  ⚪ REDUNDANTE compilar_modulos.bat → env=.venv_aider_312 (FUNCIONAL); ONEFILE
+  ⚪ REDUNDANTE compilar_modulos_backup.bat → env=.venv_aider_312 (FUNCIONAL); ONEFILE
+  ⚪ REDUNDANTE compilar_modulos_faltantes.bat → env=.venv_aider_312 (FUNCIONAL); ONEFILE
+  ⚪ REDUNDANTE compilar_rapido.bat → env=.venv_aider_312 (FUNCIONAL); spec=vah.spec
+  ⚪ REDUNDANTE compilar_todo.ps1 → env=.venv_aider_312 (FUNCIONAL); spec=vah.spec; ONEFILE
+  ✅ VIVO ejecutar_rapido.bat → env=.venv_aider_312 (FUNCIONAL)
+  ⚪ REDUNDANTE lanzar_erp.bat → env=.venv (posible ROTO)
+  ⚪ REDUNDANTE lanzar_presupuestos.bat → env=.venv (posible ROTO)
+  ✅ VIVO recompilar_modulos_onedir.bat → env=.venv_aider_312 (FUNCIONAL); ONEDIR
+  ✅ VIVO vah_bd.bat → sin datos
+  ⚪ REDUNDANTE validar_y_probar.ps1 → spec=vah.spec
+
+  RECOMENDACIÓN: pipeline vivo = compilar_final.bat + recompilar_modulos_onedir.bat
+
+====================================================================================================
+12. FRESCURA DE BUILDS (EXE vs fuente)
+====================================================================================================
+
+  📄 Fuente más reciente: 2026-08-28 10:35
+  ✅ al día build\ERP_VAH\ERP_VAH.exe (2026-08-28 10:51)
+  ✅ al día dist\ERP_VAH\ERP_VAH.exe (2026-08-28 11:00)
+  ❌ OBSOLETO dist\modulos_onedir\Concentrador\Concentrador.exe (2026-08-12 10:25)
+  ❌ OBSOLETO dist\modulos_onedir\CXC\CXC.exe (2026-08-12 10:22)
+  ❌ OBSOLETO dist\modulos_onedir\MaterialesAluminio\MaterialesAluminio.exe (2026-08-12 10:32)
+  ❌ OBSOLETO dist\modulos_onedir\MaterialesHerrajes\MaterialesHerrajes.exe (2026-08-12 10:37)
+  ❌ OBSOLETO dist\modulos_onedir\MaterialesHerreria\MaterialesHerreria.exe (2026-08-12 10:40)
+  ❌ OBSOLETO dist\modulos_onedir\MaterialesOtros\MaterialesOtros.exe (2026-08-12 10:44)
+  ❌ OBSOLETO dist\modulos_onedir\MaterialesPlasticos\MaterialesPlasticos.exe (2026-08-12 10:50)
+  ❌ OBSOLETO dist\modulos_onedir\MaterialesVidrio\MaterialesVidrio.exe (2026-08-12 10:55)
+  ❌ OBSOLETO dist\modulos_onedir\PaquetesAluminio\PaquetesAluminio.exe (2026-08-12 11:01)
+  ❌ OBSOLETO dist\modulos_onedir\PaquetesHerrajes\PaquetesHerrajes.exe (2026-08-12 11:07)
+  ❌ OBSOLETO dist\modulos_onedir\Presupuestos\Presupuestos.exe (2026-08-12 10:12)
+  ❌ OBSOLETO dist\modulos_onedir\Proveedores\Proveedores.exe (2026-08-12 10:19)
+
+====================================================================================================
+13. MAPA DE SEÑALES → HANDLERS (presupuestos)
+====================================================================================================
+
+  📄 presupuestos\busquedas.py
+     list_widget.itemClicked → lambda item: accept_callback(item
+     list_widget.itemActivated → lambda item: accept_callback(item
+  📄 presupuestos\core\utils.py
+     line_edit.textEdited → on_text_edited
+     text_edit.textChanged → on_text_changed
+  📄 presupuestos\foco.py
+     window.sb_fv_pct.returnPressed → on_fv_pct_enter
+     window.le_fecha.textChanged → lambda: _on_date_text_changed(window
+     lineedit.textEdited → lambda _: to_upper(
+     combobox.currentTextChanged → lambda _: to_upper(
+  📄 presupuestos\modulo_presupuestos.py
+     self.sp_precio_kg.valueChanged → ctrl.programar_auto
+     self.sb_desperdicio.valueChanged → ctrl.programar_auto
+     self.sb_fv_pct.valueChanged → ctrl.programar_auto
+     self.cbo_color_global.currentTextChanged → lambda _t=None: ctrl.programar_auto(
+     self.cbo_color.currentTextChanged → lambda _t=None: ctrl.programar_auto(
+     self.tbl.itemChanged → lambda _it=None: ctrl.programar_auto(
+     self.tbl_he.itemChanged → lambda _it=None: ctrl.programar_auto(
+     self.le_cliente.textEdited → lambda s: busquedas.clientes_start_search(self, s
+     self.lst_clientes.itemClicked → lambda it: busquedas.pick_cliente(self, it
+     self.lst_clientes.itemActivated → lambda it: busquedas.pick_cliente(self, it
+     self.btn_navegar_partidas.clicked → self._on_navegar_partidas
+     self.le_fecha.textChanged → self._on_fecha_text_changed
+     self.cbo_color_global.currentTextChanged → self._on_color_global_changed
+     self.sb_desperdicio.valueChanged → self._on_campo_global_cambiado
+     self.sb_fv_pct.valueChanged → self._on_campo_global_cambiado
+  📄 presupuestos\reports\corrector_ortografico.py
+     text_edit.textChanged → on_text_changed
+  📄 presupuestos\reports\textedit_con_corrector.py
+     self.textChanged → self._on_text_changed
+  📄 presupuestos\ui\builders\presupuestos_window_builder.py
+     window.le_cliente.textEdited → lambda s: busquedas_module.clientes_start_search(window, s
+     window.btn_nuevo_cliente.clicked → lambda: busquedas_module.nuevo_cliente(window
+     window.lst_clientes.itemClicked → lambda it: busquedas_module.pick_cliente(window, it
+     window.btn_partida_anterior.clicked → window._on_partida_anterior
+     window.btn_partida_siguiente.clicked → window._on_partida_siguiente
+     window.le_fecha.textEdited → window._on_fecha_editado
+     window.cbo_color_global.currentTextChanged → window._on_color_changed
+     window.sb_desperdicio.valueChanged → window._on_valor_partida_changed
+     window.sb_fv_pct.valueChanged → window._on_valor_partida_changed
+     window.cbo_color.currentTextChanged → window._on_color_changed
+     window.sp_ancho.editingFinished → window._on_global_dimension_changed
+     window.sp_alto.editingFinished → window._on_global_dimension_changed
+     window.cbo_tipo.currentTextChanged → lambda _=None: window._after_choose_filtro(
+     window.cbo_buscar.currentTextChanged → lambda _=None: window._after_choose_filtro(
+  📄 presupuestos\ui\dialogs\abrir_presupuesto_dialog.py
+     btn_buscar.clicked → self.buscar
+     self.tabla.doubleClicked → self.aceptar_seleccion
+     self.tabla.itemActivated → self.aceptar_seleccion
+     self.btn_aceptar.clicked → self.aceptar_seleccion
+     self.btn_cancelar.clicked → self.reject
+  📄 presupuestos\ui\dialogs\editar_correo_cliente_dialog.py
+     self.edit_correo.textChanged → self._validar_correo
+  📄 presupuestos\ui\dialogs\enviar_correo_dialog.py
+     self.edit_para.textChanged → self._on_para_changed
+     self.btn_editar_cliente.clicked → self._editar_correo_cliente
+     self.btn_enviar.clicked → self._enviar_correo
+     self.btn_cancelar.clicked → self.reject
+  📄 presupuestos\ui\dialogs\navegar_partidas_dialog.py
+     self.btn_ir.clicked → self.aceptar_seleccion
+     self.btn_cancelar.clicked → self.reject
+  📄 presupuestos\ui\dialogs\notas_presupuesto_dialog.py
+     self.text_notas.textChanged → self._convertir_notas_mayusculas
+     self.cbo_forma_pago.currentTextChanged → self._on_forma_pago_changed
+     self.edit_forma_pago_personalizada.textChanged → self._convertir_a_mayusculas
+     self.cbo_plazo_entrega.currentTextChanged → self._on_plazo_changed
+  📄 presupuestos\ui\dialogs\vista_previa_pdf_dialog.py
+     self.btn_imprimir.clicked → self._on_imprimir
+     self.btn_email.clicked → self._on_enviar_email
+     self.btn_cerrar.clicked → self.accept
+  📄 presupuestos\ui\helpers\textedit_helpers.py
+     text_edit.textChanged → to_upper
+  📄 presupuestos\ui\tables\paquetes.py
+     self.itemChanged → self._on_item_changed
+
+  Total conexiones detectadas: 60
+
+====================================================================================================
+14. INVENTARIO DE PURGA / CÓDIGO MUERTO (A/B/C)
+====================================================================================================
+
+  [A] ELIMINAR_SEGURO:
+     - **/__pycache__/**
+     - **/*.pyc
+     - .pytest_cache/**
+     - .aider.*
+     - build/**
+     - logs/*.log
+     - aluminio_db.log
+     - parse_pdf.log
+     - resultado compilación.txt
+     - audit_*.txt
+     - estructura_completa.txt
+     - archivos_python.txt
+     - todos_archivos.txt
+     - dist/modulos_temp/**
+     - dist/ERP_VAH.exe (raíz)
+  [B] MOVER_A_RESPALDO:
+     - deprecated/**
+     - respaldos/**
+     - **/*.bak
+     - **/*.bak2
+     - **/*.bak3
+     - diagnostico_clases.py
+     - explorar_datos.py
+     - explorar_modulos_con_datos.py
+     - explorar_vah.py
+     - fix_db_name.py
+     - identificar_bd.py
+     - test_conexion.py
+     - test_erp.py
+     - test_xiyan.py
+     - importar_paquetes_herrajes.py
+  [C] REVISAR_HUMANO:
+     - erp_manager.py
+     - servidor_sql.py
+     - run_presupuestos.py
+     - logo.svg
+     - cache/**
+     - pdfs/**
+     - vah.spec.backup
+     - dist/modulos_onedir/**
+     - tools/**
+     - scripts/**
+     - soporteria/**
+     - tests/smoke_test_erp.py
+     - db/_snapshots/**
+     - logs/*.csv
+
+====================================================================================================
+15. REGLAS DE NEGOCIO DOCUMENTADAS (referencias en código)
+====================================================================================================
+
+  📌 Color global VARIOS vs específico
+     → presupuestos\controllers\presupuesto_controller.py:6
+     → presupuestos\controllers\presupuesto_controller.py:9
+     → presupuestos\controllers\presupuesto_controller.py:444
+     → presupuestos\controllers\presupuesto_controller.py:640
+  📌 Margen de corte aluminio (largo-0.10)
+     → presupuestos\calculators\aluminio.py:24
+     → presupuestos\calculators\aluminio.py:25
+  📌 Ajuste industrial (múltiplo 0.05)
+     → presupuestos\calculators\dimensioning.py:16
+     → presupuestos\core\__init__.py:50
+     → presupuestos\core\__init__.py:54
+     → presupuestos\core\__init__.py:94
+  📌 Dispatch central de cálculo
+     → presupuestos\bootstrap.py:69
+     → presupuestos\bootstrap.py:82
+     → presupuestos\bootstrap.py:82
+     → presupuestos\bootstrap.py:92
+  📌 Regla precio cero (guard)
+     → presupuestos\bootstrap.py:70
+     → presupuestos\bootstrap.py:83
+     → presupuestos\bootstrap.py:83
+     → presupuestos\bootstrap.py:93
+  📌 Resumen: D=C*(1+desp), E=D*(1+FV), Total=E*piezas
+     → presupuestos\controllers\presupuesto_controller.py:142
+     → presupuestos\controllers\presupuesto_controller.py:144
+     → presupuestos\controllers\presupuesto_controller.py:154
+     → presupuestos\controllers\presupuesto_controller.py:207
+
+====================================================================================================
+16. ESTADO DE ENTORNOS VIRTUALES
+====================================================================================================
+
+  ❌ ROTO .venv → Python 3.13.3
+  ✅ FUNCIONAL .venv_aider_312 → Python 3.12.9
+
+  RECOMENDACIÓN: migrar lanzar_erp.bat y lanzar_presupuestos.bat a .venv_aider_312
+
+
+====================================================================================================
+FIN DEL ANÁLISIS CONSOLIDADO
+Generado por: generador_gral_arbol_txt.py (v4.0)
+====================================================================================================

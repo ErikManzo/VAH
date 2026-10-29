@@ -1,0 +1,26 @@
+D:\vah\manuales\
+├── scripts_generadores\          # Scripts Python que generan los PDFs
+│   ├── generar_manual_operativo_herrajes.py
+│   ├── generar_manual_tecnico_herrajes.py
+│   ├── generar_manual_operativo_<modulo>.py   # Futuros módulos
+│   ├── generar_manual_tecnico_<modulo>.py     # Futuros módulos
+│   └── prompt_base.txt           # Prompt reutilizable para solicitar manuales
+│
+├── imagenes\                     # Capturas de pantalla ORGANIZADAS POR MÓDULO
+│   ├── herrajes\
+│   │   ├── pantalla_principal.png
+│   │   ├── botones_principales.png
+│   │   └── ...
+│   ├── <otro_modulo>\
+│   │   └── ...
+│   └── comunes\                  # Imágenes compartidas entre manuales
+│       └── logo_vah.png
+│
+├── pdf\                          # PDFs generados (DESTINO FINAL)
+│   ├── VAH_Manual_Operativo_Herrajes.pdf
+│   ├── VAH_Manual_Tecnico_Herrajes.pdf
+│   ├── VAH_Manual_Operativo_<Modulo>.pdf
+│   └── VAH_Manual_Tecnico_<Modulo>.pdf
+│
+└── fuentes\                      # Fuentes corporativas (opcional)
+    └── SegoeUI.ttf

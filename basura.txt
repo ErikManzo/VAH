@@ -1,0 +1,228 @@
+================================================================================
+INVENTARIO CATEGORIZADO DE ARCHIVOS/CARPETAS CANDIDATOS A PURGA - ERP VAH
+================================================================================
+Auditoría técnica en MODO SOLO LECTURA. Fecha: 2026-08-13
+Repo: D:\vah (Python 3.12, PyQt6, PyInstaller, SQL Server)
+Regla de evidencia: cada archivo fue verificado con búsqueda de referencias en
+*.py, *.bat, *.ps1, *.spec (excluyendo venvs/build/dist/arboles). Sin evidencia
+clara -> categoría C (REVISAR), nunca A ni B.
+
+FORMATO: RUTA | TAMAÑO | FECHA | CATEGORÍA | EVIDENCIA | RIESGO
+================================================================================
+
+--------------------------------------------------------------------------------
+CATEGORÍA [A] - ELIMINAR_SEGURO (regenerables/residuos, riesgo BAJO)
+--------------------------------------------------------------------------------
+**/__pycache__/** | - | - | A | Caché bytecode Python regenerable automáticamente | BAJO
+**/*.pyc | - | - | A | Bytecode compilado regenerable | BAJO
+.pytest_cache/** | - | - | A | Caché de pytest regenerable | BAJO
+.aider.* | - | - | A | Artefactos de la herramienta aider | BAJO
+build/** | - | - | A | Salida de PyInstaller regenerable (workpath/specpath) | BAJO
+logs/*.log | - | - | A | Logs de ejecución en tiempo de ejecución | BAJO
+aluminio_db.log | 0 | 2026-08-07 | A | Log de BD vacío, residuo | BAJO
+parse_pdf.log | 0 | 2026-08-07 | A | Log de parseo PDF vacío, residuo | BAJO
+"resultado compilación.txt" | - | - | A | Salida de compilación, regenerable | BAJO
+audit_*.txt | - | - | A | Reportes de auditoría generados | BAJO
+estructura_completa.txt | - | - | A | Inventario generado de estructura | BAJO
+archivos_python.txt | - | - | A | Inventario generado de archivos .py | BAJO
+todos_archivos.txt | - | - | A | Inventario generado de todos los archivos | BAJO
+cxc/estructura_completa.txt | - | - | A | Inventario generado dentro de módulo cxc | BAJO
+cxc/build/** | - | - | A | Salida de PyInstaller dentro de cxc, regenerable | BAJO
+dist/modulos_temp/** | ~1.9 GB | 2026-07-29 | A | EXEs onefile viejos (29/07) de pipeline anterior; el pipeline vivo (compilar_final.bat) usa ONEDIR en dist/ERP_VAH/ | BAJO
+dist/ERP_VAH.exe | 126,548,913 | 2026-08-10 | A | Build monolítico VIEJO (vah.spec). Contiene TODOS los módulos embebidos. Superado por dist/ERP_VAH/ERP_VAH.exe (12/08). Ver D3. | BAJO
+concentrador_materiales/logs/*.log | - | 2026-06 | A | Logs de ejecución del concentrador (24 archivos) | BAJO
+clientes/clientes.log | - | - | A | Log de ejecución del módulo clientes | BAJO
+
+--------------------------------------------------------------------------------
+CATEGORÍA [B] - MOVER_A_RESPALDO (fuera del proyecto, riesgo MEDIO)
+--------------------------------------------------------------------------------
+deprecated/** | - | - | B | Carpeta explícitamente marcada como deprecada (13 archivos) | MEDIO
+**/*.bak | - | - | B | Copias de respaldo de código | MEDIO
+**/*.bak2 | - | - | B | Copias de respaldo de código | MEDIO
+**/*.bak3 | - | - | B | Copias de respaldo de código | MEDIO
+respaldos/** | - | - | B | Carpeta de respaldos (clientes_respaldo_20260521.bak) | MEDIO
+common/focus_simple.py.bak | - | - | B | Respaldo de focus_simple.py | MEDIO
+common/focus_utils.py.bak | - | - | B | Respaldo de focus_utils.py | MEDIO
+common/search_utils.py.bak | - | - | B | Respaldo de search_utils.py | MEDIO
+diagnostico_clases.py | - | - | B | Script suelto de raíz; NINGÚN módulo vivo lo importa (solo se referencia a sí mismo) | MEDIO
+explorar_datos.py | - | - | B | Script suelto de raíz; solo referencia erp_manager.py, no lo importa ningún módulo vivo | MEDIO
+explorar_modulos_con_datos.py | - | - | B | Script suelto de raíz; solo referencia erp_manager.py, no lo importa ningún módulo vivo | MEDIO
+explorar_vah.py | - | - | B | Script suelto de raíz; no lo importa ningún módulo vivo | MEDIO
+fix_db_name.py | - | - | B | Script suelto de raíz; no lo importa ningún módulo vivo | MEDIO
+identificar_bd.py | - | - | B | Script suelto de raíz; no lo importa ningún módulo vivo | MEDIO
+test_conexion.py | - | - | B | Script de prueba suelto; no lo importa ningún módulo vivo | MEDIO
+test_erp.py | - | - | B | Script de prueba suelto; solo referencia erp_manager.py, no lo importa ningún módulo vivo | MEDIO
+test_xiyan.py | - | - | B | Script de prueba suelto; no lo importa ningún módulo vivo | MEDIO
+importar_paquetes_herrajes.py | - | - | B | Script suelto de raíz; no lo importa ningún módulo vivo | MEDIO
+
+--------------------------------------------------------------------------------
+CATEGORÍA [C] - REVISAR_HUMANO (sin evidencia clara o requiere decisión)
+--------------------------------------------------------------------------------
+erp_manager.py | - | - | C | Script suelto de raíz; solo lo referencian otros scripts sueltos (explorar_datos.py, explorar_modulos_con_datos.py, test_erp.py). No lo importa ningún módulo vivo. Requiere confirmación humana antes de mover. | MEDIO
+servidor_sql.py | - | - | C | Script suelto de raíz; no lo importa ningún módulo vivo. No está en la lista B explícita. Requiere revisión. | MEDIO
+run_presupuestos.py | - | - | C | Script suelto de raíz; no lo importa ningún módulo vivo. Requiere revisión. | MEDIO
+logo.svg | - | - | C | No referenciado en ningún .py/.bat/.ps1/.spec. No está en la lista de exclusión de logos. Requiere revisión. | MEDIO
+cache/** | - | - | C | Caché de navegador QtWebEngine (History, GPUCache, Local Storage, Session Storage). Regenerable, pero listado en C por decisión explícita. | MEDIO
+pdfs/** | - | - | C | Reportes PDF/Excel generados (CXC, explosión, presupuestos). Salida de ejecución, pero puede contener datos de negocio. Requiere revisión. | MEDIO
+vah.spec.backup | - | - | C | Respaldo del spec de compilación. Requiere revisión antes de mover. | MEDIO
+dist/modulos_onedir/** | - | - | C | Salida ONEDIR temporal de módulos. Requiere revisión (puede ser intermedia del pipeline). | MEDIO
+tools/** | - | - | C | tools/load_sql.py, tools/__init__.py. Requiere revisión. | MEDIO
+scripts/** | - | - | C | scripts/generar_requirements_erp.py. Referenciado por compilar_erp_principal.bat (pipeline viejo). Requiere revisión. | MEDIO
+soporteria/** | - | - | C | soporteria/convertir_py_a_pdf.py, soporteria/flujo_materiales.py. Requiere revisión. | MEDIO
+tests/smoke_test_erp.py | - | - | C | Test de humo. tests es módulo vivo (exclusión), pero este archivo no lo importa código de producción. Requiere revisión. | MEDIO
+db/_snapshots/** | - | - | C | Snapshots de esquema SQL (8 archivos) + db/_snapshots.zip. Respaldo de esquema, no claramente regenerable. Requiere revisión. | MEDIO
+logs/*.csv | - | - | C | CSVs de datos de importación (duplicados_profilo, rechazados_herralum, rechazados_profilo, herrajes_column_mapping.json). Datos de negocio, no solo logs. Requiere revisión. | MEDIO
+
+================================================================================
+RESUMEN POR CATEGORÍA
+================================================================================
+[A] ELIMINAR_SEGURO: ~2 GB estimados (build/**, dist/modulos_temp/**, dist/ERP_VAH.exe,
+    __pycache__/**, *.pyc, logs/*.log, archivos de inventario generados). Riesgo BAJO.
+[B] MOVER_A_RESPALDO: deprecated/**, respaldos/**, *.bak, y 10 scripts sueltos de raíz
+    sin imports de módulos vivos. Riesgo MEDIO.
+[C] REVISAR_HUMANO: erp_manager.py, servidor_sql.py, run_presupuestos.py, logo.svg,
+    cache/**, pdfs/**, vah.spec.backup, dist/modulos_onedir/**, tools/**, scripts/**,
+    soporteria/**, tests/smoke_test_erp.py, db/_snapshots/**, logs/*.csv. Riesgo MEDIO.
+
+================================================================================
+RESPUESTAS A DUDAS ESPECÍFICAS (D1-D6)
+================================================================================
+
+--------------------------------------------------------------------------------
+D1. ¿Quién referencia erp_manager.py, servidor_sql.py, test_*.py, xiyan_vah*.yml?
+--------------------------------------------------------------------------------
+- erp_manager.py: SOLO lo referencian otros scripts sueltos de raíz:
+    * explorar_datos.py
+    * explorar_modulos_con_datos.py
+    * test_erp.py
+  NINGÚN módulo vivo (clientes, common, presupuestos, materiales, etc.) lo importa.
+  CONCLUSIÓN: es un script de diagnóstico/gestión standalone, no parte del runtime.
+  Categoría C (revisar) por no estar en la lista B explícita.
+
+- servidor_sql.py: SOLO se referencia a sí mismo. NINGÚN módulo vivo lo importa.
+  CONCLUSIÓN: script standalone de gestión de servidor SQL. Categoría C.
+
+- test_*.py (test_conexion.py, test_erp.py, test_xiyan.py): SOLO se referencian a
+  sí mismos (y test_erp.py referencia erp_manager.py). NINGÚN módulo vivo los importa.
+  CONCLUSIÓN: scripts de prueba standalone. Categoría B (mover a respaldo).
+
+- xiyan_vah.yml / xiyan_vah_odbc.yml: Son archivos de configuración (EXCLUIDOS de la
+  lista de purga por regla absoluta). No se listan para borrar. Se tratan aparte.
+
+--------------------------------------------------------------------------------
+D2. Inventario de scripts de compilación (*.bat/*.ps1): pipeline VIVO vs redundantes
+--------------------------------------------------------------------------------
+PIPELINE VIVO (RECOMENDADO - mantener):
+  compilar_final.bat  ->  recompilar_modulos_onedir.bat
+  - Usa .venv_aider_312 (Python 3.12.10, funcional).
+  - compilar_final.bat compila el principal onefile -> dist\ERP_VAH\ERP_VAH.exe
+  - recompilar_modulos_onedir.bat compila 14 módulos ONEDIR -> dist\ERP_VAH\<Modulo>\
+  - Referencia logos: logo_00001.ico, logo.jpg, logo.png, logo_principal.jpg,
+    logo_principal_pagina.jpg, manuales\imagenes\comunes\logo_vah.png
+
+REDUNDANTES / OBSOLETOS (NO eliminar, solo inventariar):
+  - compilar_erp_principal.bat : usa "ERP_VAH.spec" que NO EXISTE (el real es vah.spec).
+    Pipeline viejo basado en spec. Redundante.
+  - compilar_limpio.bat : usa vah.spec, genera dist\ERP_VAH.exe (raíz). Pipeline viejo.
+  - compilar_rapido.bat : usa vah.spec, genera dist\ERP_VAH.exe (raíz). Pipeline viejo.
+  - compilar_modulos.bat : compila onefile a dist\ERP_VAH\*.exe (vía dist\modulos_temp).
+    Superado por recompilar_modulos_onedir.bat (ONEDIR). Redundante.
+  - compilar_modulos_backup.bat : versión anterior de compilar_modulos.bat. Redundante.
+  - compilar_modulos_faltantes.bat : compila solo Materiales*/Paquetes*. Redundante.
+  - compilar_todo.ps1 : pipeline PowerShell viejo (vah.spec + onefile). Redundante.
+  - compilar_erp_principal.ps1 : pipeline PowerShell viejo (vah.spec). Redundante.
+  - validar_y_probar.ps1 : valida contra compilar_todo.ps1 y vah.spec. Redundante.
+  - ejecutar_rapido.bat : ejecución en desarrollo (usa .venv_aider_312). Util, mantener.
+  - vah_bd.bat : genera estructura de BD con sqlcmd (no es compilación). Util, mantener.
+
+RECOMENDACIÓN: conservar SOLO compilar_final.bat + recompilar_modulos_onedir.bat como
+pipeline de compilación. Los demás son redundantes y candidatos a mover a respaldo
+(no se eliminan en esta pasada).
+
+--------------------------------------------------------------------------------
+D3. Obsolescencia de dist\ERP_VAH.exe (raíz) vs dist\ERP_VAH\ERP_VAH.exe
+--------------------------------------------------------------------------------
+- dist\ERP_VAH.exe (raíz): 126,548,913 bytes (~121 MB), fecha 2026-08-10 14:02.
+  Es el build MONOLÍTICO generado por vah.spec (pipeline viejo: compilar_limpio/
+  compilar_rapido/compilar_todo). Contiene TODOS los módulos embebidos
+  (modulo_presupuestos, concentrador_materiales, pantalla_catalogo_general,
+  presupuesto_pdf_service, pantalla_cxc, pantalla_clientes, pantalla_proveedores).
+
+- dist\ERP_VAH\ERP_VAH.exe: 195,342,305 bytes (~186 MB), fecha 2026-08-12 11:14.
+  Es el build PRINCIPAL generado por compilar_final.bat (pipeline vivo). Contiene
+  SOLO pantalla_principal; los módulos se compilan por separado como carpetas ONEDIR
+  (Presupuestos\, Clientes\, Proveedores\, CXC\, Concentrador\, etc.).
+
+- Sobre el string "Funcionalidad: Abrir Presupuesto": NO se encontró en NINGUNO de
+  los dos EXE (no es un string real del código). No puede usarse como discriminador.
+
+CONCLUSIÓN: dist\ERP_VAH.exe (raíz, 10/08) es el build monolítico OBSOLETO del
+pipeline viejo. dist\ERP_VAH\ERP_VAH.exe (12/08) es el build VIVO del pipeline
+actual. El EXE raíz es candidato a ELIMINAR_SEGURO (categoría A), confirmado por
+ser más antiguo y pertenecer al pipeline reemplazado.
+
+--------------------------------------------------------------------------------
+D4. .venv apunta a Python 3.13 INEXISTENTE; lanzar_erp.bat y lanzar_presupuestos.bat
+--------------------------------------------------------------------------------
+- .venv\Scripts\python.exe apunta a:
+  C:\Users\Personal\AppData\Local\Programs\Python\Python313\python.exe
+  -> NO EXISTE ("El sistema no puede encontrar el archivo especificado").
+  CONCLUSIÓN: .venv está ROTO (apunta a Python 3.13 no instalado).
+
+- .venv_aider_312\Scripts\python.exe -> Python 3.12.10 (FUNCIONAL).
+
+- lanzar_erp.bat y lanzar_presupuestos.bat usan ".venv\Scripts\activate.bat" (ROTO).
+- ejecutar_rapido.bat usa ".venv_aider_312\Scripts\activate.bat" (FUNCIONAL).
+
+RECOMENDACIÓN: migrar lanzar_erp.bat y lanzar_presupuestos.bat para usar
+.venv_aider_312 (cambiar "call .venv\Scripts\activate.bat" por
+"call .venv_aider_312\Scripts\activate.bat") ANTES de tocar .venv.
+NO eliminar .venv en esta pasada (se trata en D4 del plan de entornos).
+
+--------------------------------------------------------------------------------
+D5. Rutas referenciadas en código que YA NO EXISTEN
+--------------------------------------------------------------------------------
+- D:\vah\catalogos\catalogo_materiales.py
+  Referenciada en: presupuestos\modulo_presupuestos.py (línea: catalogo_path =
+  r"D:\vah\catalogos\catalogo_materiales.py").
+  VERIFICADO: la carpeta D:\vah\catalogos\ NO EXISTE y el archivo NO EXISTE.
+  CONCLUSIÓN: referencia huérfana a un catálogo de materiales que ya no está en el
+  repo. Posible código muerto o dependencia externa faltante. Requiere revisión.
+
+  (Nota: las referencias a "catalogos" en paquetes\aluminio\pantalla_paquete_aluminio.py
+  son etiquetas de menú de UI "&Catálogos", NO rutas de archivo. No son D5.)
+
+--------------------------------------------------------------------------------
+D6. Código muerto dentro de módulos vivos (SOLO listar, NO proponer eliminación)
+--------------------------------------------------------------------------------
+- presupuestos\service_mapi.py : NO lo importa ningún módulo vivo. Solo se referencia
+  a sí mismo y a manuales\scripts_generadores\generar_manual_tecnico_presupuestos.py
+  (generación de documentación, no runtime). Código muerto en módulo vivo.
+- presupuestos\service_outlook.py : NO lo importa ningún módulo vivo. Solo se referencia
+  a sí mismo y al generador de manual técnico. Código muerto en módulo vivo.
+- presupuestos\integrations\external_launchers_backup.py : NO lo referencia NINGÚN
+  archivo .py del repo. Código muerto (backup) dentro de módulo vivo.
+
+  (Nota: estos archivos NO se listan para purga en esta pasada por regla de exclusión
+  de módulos vivos; solo se reportan como hallazgos D6.)
+
+================================================================================
+PIPELINE DE COMPILACIÓN RECOMENDADO
+================================================================================
+1. compilar_final.bat (pipeline VIVO):
+   - Activa .venv_aider_312 (Python 3.12.10).
+   - Llama a recompilar_modulos_onedir.bat (compila 14 módulos ONEDIR a dist\ERP_VAH\).
+   - Compila el principal onefile a dist\ERP_VAH\ERP_VAH.exe.
+   - Salida final: dist\ERP_VAH\ERP_VAH.exe + dist\ERP_VAH\<Modulo>\*.
+
+2. Eliminar del flujo (mover a respaldo, NO borrar): compilar_erp_principal.bat,
+   compilar_limpio.bat, compilar_rapido.bat, compilar_modulos.bat,
+   compilar_modulos_backup.bat, compilar_modulos_faltantes.bat, compilar_todo.ps1,
+   compilar_erp_principal.ps1, validar_y_probar.ps1.
+
+3. Mantener: ejecutar_rapido.bat (dev), vah_bd.bat (BD), lanzar_erp.bat y
+   lanzar_presupuestos.bat (tras migrarlos a .venv_aider_312, ver D4).
+
+================================================================================
+FIN DEL INVENTARIO - CERO MODIFICACIONES AL REPOSITORIO
+================================================================================

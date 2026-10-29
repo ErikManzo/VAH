@@ -1,0 +1,2 @@
+2026-08-25 08:48:10 - presupuestos.services.config_service - WARNING - Se intento guardar configuracion de correo sin contrasena
+2026-08-25 08:48:10 - presupuestos.services.config_service - WARNING - No se pudo persistir la configuracion de correo en config.json despues del guardado en BD

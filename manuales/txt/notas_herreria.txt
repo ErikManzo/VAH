@@ -1,0 +1,92 @@
+================================================================================
+                    NOTAS - MÓDULO HERRERÍA (MATERIALES)
+================================================================================
+
+📅 ÚLTIMA ACTUALIZACIÓN: 22/05/2026
+
+================================================================================
+📸 CAPTURAS PENDIENTES
+================================================================================
+
+[ ] pantalla_principal.png       - Ventana completa en estado inicial
+[ ] botones_principales.png      - Fila de 7 botones (Guardar, Editar, Eliminar, Limpiar, Refresh, Imprimir, Salir)
+[ ] campos_datos.png             - GroupBox "Datos del material" (Clave, Descripción, Kilogramos)
+[ ] tabla_registros.png          - Tabla con datos cargados (3 columnas)
+[ ] barra_busqueda.png           - Barra "Buscar por clave:" con filtro
+[ ] mensaje_guardar.png          - QMessageBox "Información guardada con éxito"
+[ ] mensaje_editar.png           - QMessageBox "Registro actualizado con éxito"
+[ ] modo_eliminar.png            - Pantalla en modo eliminar con mensaje de confirmación
+[ ] importar_dialog.png          - Captura de consola o diálogo de importación
+[ ] impresion_dialog.png         - Diálogo "¿Dónde deseas imprimir?" con 3 opciones
+[ ] arquitectura_sistema.png     - Diagrama 3 capas
+[ ] estructura_modulos.png       - Árbol de archivos .py del módulo Herrería
+[ ] diagrama_bd.png              - Esquema tabla materiales_herreria
+[ ] flujo_datos.png              - Diagrama de flujo guardado manual
+
+================================================================================
+🔧 PENDIENTES / MEJORAS (PARA VERSIÓN 2.0)
+================================================================================
+
+- ✅ Módulo funcional (guardar, editar, eliminar, buscar, importar, imprimir)
+- ✅ Importador Excel robusto con MERGE set-based
+- ✅ Edición permite cambiar CLAVE (con validación)
+- ⬜ Agregar búsqueda también por descripción (actualmente solo por clave)
+- ⬜ Permitir exportar listado a Excel
+- ⬜ Mostrar mensaje de éxito al guardar/editar (ya implementado)
+- ⬜ Validar que kilogramos no sea negativo (ya >0)
+- ⬜ Integración con Presupuestos para cálculo de costos (ya implementada en módulo presupuestos)
+
+================================================================================
+🐛 ERRORES CONOCIDOS (ACTUALES)
+================================================================================
+
+- Ninguno reportado hasta el momento (módulo funciona correctamente)
+
+================================================================================
+📁 ESTRUCTURA DE ARCHIVOS DEL MÓDULO
+================================================================================
+
+D:\vah\materiales\herreria\
+├── __init__.py
+├── cargar_excel_herreria.py   (Importador Excel)
+├── db_manager.py               (CRUD principal)
+├── imprimir.py                 (Generación de PDF)
+├── pantalla_herreria.py        (UI principal)
+└── utils.py                    (Funciones comunes)
+
+================================================================================
+🔑 DIFERENCIAS CON ALUMINIO
+================================================================================
+
+| Aspecto               | Aluminio                          | Herrería                         |
+|-----------------------|-----------------------------------|----------------------------------|
+| Campos                | Clave, Descripción, Largo + 14 precios | Clave, Descripción, Kilogramos   |
+| Precio                | Por tramo/color                   | Por kg (se asigna en presupuestos) |
+| Largo                 | Sí (seleccionable)                | No aplica                        |
+| Parsers               | Excel, PDF, CSV                   | Solo Excel                       |
+| Edición de Clave      | No permitida                      | Sí permitida                     |
+| Búsqueda              | Clave o descripción (contiene)    | Solo clave (empieza con)         |
+| Refresh               | Solo ping a BD                    | Limpia pantalla completamente    |
+| Importador            | En GUI (botón Importar)           | Por línea de comandos            |
+
+================================================================================
+💡 IDEAS FUTURAS (VERSIÓN 2.0)
+================================================================================
+
+- Unificar la interfaz de importación (botón en GUI como Aluminio)
+- Agregar validación de kilogramos por metro (rango lógico)
+- Mostrar precio sugerido por kg desde tabla de parámetros
+- Historial de cambios de kilogramos (auditoría)
+- Vista previa de impresión antes de generar PDF
+
+================================================================================
+📊 MÉTRICAS DEL MÓDULO
+================================================================================
+
+- Líneas de código (pantalla_herreria.py): ~350
+- Líneas de código (db_manager.py): ~80
+- Líneas de código (cargar_excel_herreria.py): ~200
+- Número de clases: 3 (PantallaHerreria, DBManager, NavLineEdit, UpperLineEdit)
+- Campos en BD: 3 (Clave, Descripcion, kilogramos)
+- Botones en UI: 7
+- Atajos de teclado: 7

@@ -1,0 +1,28 @@
+Lista de imágenes a capturar y dónde pegarlas
+Crea esta carpeta si no existe: D:\vah\manuales\imagenes\herrajes\
+
+Copia tu logo VAH a: D:\vah\manuales\imagenes\comunes\logo_vah.png
+
+#	Nombre archivo	Sección del manual	Qué capturar
+1	pantalla_principal.png	3. Inicio del Módulo	Ventana completa del módulo Herrajes recién abierta (estado inicial)
+2	botones_principales.png	4.1 Barra de Botones	Recortar solo la fila de 8 botones (Guardar, Editar, Eliminar, Limpiar, Refresh, Imprimir, Salir, Importar)
+3	campos_datos.png	4.2 Campos de Datos	Recortar el GroupBox "Datos del Herraje" con los campos Clave, Descripción y Precio
+4	tabla_registros.png	4.3 Tabla de Registros	Tabla con datos cargados (después de una búsqueda), mostrar varias filas
+5	barra_busqueda.png	4.4 Barra de Búsqueda	Recortar la barra "Buscar por clave" con texto ingresado y resultados filtrados
+6	mensaje_guardar.png	5.1 Registrar Nuevo	El QMessageBox "Información guardada con éxito"
+7	mensaje_editar.png	5.2 Editar Registro	El QMessageBox "Registro actualizado con éxito"
+8	modo_eliminar.png	5.3 Eliminar Registro	Pantalla en modo eliminar con tabla llena + mensaje en statusbar
+9	mapeo_columnas.png	6.2 Configuración Importación	El diálogo ImportDialog completo (hojas, mapeo, previsualización)
+10	ventana_divisora.png	6.3 Ventana Cantidad Divisora	La VentanaDivisora mostrando registros rechazados con columna "Cantidad divisora"
+11	mensaje_final_importacion.png	6.4 Resultados Importación	El QMessageBox final con ✅ Importación completada y totales
+12	rl_pendientes.png	6.4 Resultados Importación	La sección de "REGISTROS RL PENDIENTES" del mensaje final (hacer scroll)
+13	menu_imprimir.png	7. Generación de Reportes	El QMessageBox con botones: Pantalla, PDF, Impresora
+14	pdf_generado.png	7.2 Exportar a PDF	El PDF abierto en visor mostrando encabezados, datos y pie de página
+15	arquitectura_sistema.png	1. Arquitectura (Técnico)	Diagrama: Usuario → PyQt6 → Python → pyodbc → SQL Server
+16	estructura_modulos.png	2. Estructura Archivos (Técnico)	Árbol de carpetas/archivos del módulo Herrajes
+17	diagrama_bd.png	3.1 Esquema Tabla (Técnico)	Esquema visual de la tabla materiales_herraje con columnas y tipos
+18	flujo_importacion.png	6. Flujo Importación (Técnico)	Diagrama de flujo: selección archivo → parser → MERGE → resultado
+Ubicación de todas las imágenes: D:\vah\manuales\imagenes\herrajes\
+
+Ubicación del logo: D:\vah\manuales\imagenes\comunes\logo_vah.png
+

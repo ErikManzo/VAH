@@ -1,0 +1,40 @@
+﻿row,clave,descripcion,unidad,precio,motivo
+3,,PROFILO ALUMINIO.,,nan,clave_vacia
+4,,Lista de Precios  Marzo 2025.,,nan,clave_vacia
+5,,Los precios  NO incluyen iva y estan sujetos a cambios sin previo aviso.,,nan,clave_vacia
+7,,PICCOLA,,PRECIO,clave_vacia
+14,,SERIE  3500,,nan,clave_vacia
+21,,FINESTRA,,nan,clave_vacia
+33,,RAGAZZA,,nan,clave_vacia
+53,,SERIE  10000,,nan,clave_vacia
+76,,SERIE  6000,,nan,clave_vacia
+92,,FISARMONICA,,nan,clave_vacia
+107,,PORTA GRIGLIAS,,nan,clave_vacia
+111,,SERIE  1400,,nan,clave_vacia
+146,,SERIE  4600,,nan,clave_vacia
+160,,SERIE 10500,,nan,clave_vacia
+165,HP5006,KIT DE ESTANQUEIDAD S-10500,,0,precio_invalido_o_cero
+177,HP5019,MANILLA CREMONA DOBLE LLAVE S-10500,,nan,precio_invalido_o_cero
+178,HP5020,KIT SUPLEMENTO HOJA FIJA S-10500,,0,precio_invalido_o_cero
+179,,HERRAJES CANCEL DE BAÑO TORINO,,nan,clave_vacia
+180,V1063SA,KIT HERRAJES CANCEL DE BAÑO TORINO,,nan,precio_invalido_o_cero
+181,,LLAVES  ALLEN,,nan,clave_vacia
+187,,VARIOS,,nan,clave_vacia
+194,,HERRAJES  VIDRIO TEMPLADO,,nan,clave_vacia
+195,,BISAGRA MURO VIDRIO,,nan,clave_vacia
+201,,BISAGRA CRISTAL-CRISTAL,,nan,clave_vacia
+208,,CLIP CUADRADO,,nan,clave_vacia
+213,,CONECTORES,,nan,clave_vacia
+223,,CLIP CRISTAL-MURO,,nan,clave_vacia
+226,,JALADERA PARA CRISTAL,,nan,clave_vacia
+231,,PERILLA LINEA,,nan,clave_vacia
+236,,PERILLA CUÑA,,nan,clave_vacia
+241,,BISAGRA PIVOTANTE Y MURO VIDRIO,,nan,clave_vacia
+244,BMVLS,BISAGRA MURO VIDRIO LATON SATIN,,nan,precio_invalido_o_cero
+245,BMVLC,BISAGRA MURO VIDRIO LATON CROMO,,nan,precio_invalido_o_cero
+246,,CLIP CRISTAL-CRISTAL,,nan,clave_vacia
+255,,VARIOS,,nan,clave_vacia
+262,MPDS,MINIPOSTE DAWH SOLIDO SATIN,,0,precio_invalido_o_cero
+263,,VENTOSAS,,nan,clave_vacia
+264,V12,VENTOSA IMPORTADA 2 CHUPONES (80 KG),,nan,precio_invalido_o_cero
+265,V13,VENTOSA IMPORTADA 3 CHUPONES (130 KG),,nan,precio_invalido_o_cero

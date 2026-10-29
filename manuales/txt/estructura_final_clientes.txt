@@ -1,0 +1,47 @@
+D:\vah\manuales\
+├── scripts_generadores\
+│   ├── generar_manual_operativo_clientes.py
+│   ├── generar_manual_tecnico_clientes.py
+│   ├── generar_manual_operativo_proveedores.py
+│   ├── generar_manual_tecnico_proveedores.py
+│   └── auxiliar_prompt_base_manuales_generales.txt
+│
+├── imagenes\
+│   ├── clientes\
+│   │   ├── pantalla_principal.png
+│   │   ├── botones_principales.png
+│   │   ├── campos_datos.png
+│   │   ├── tabla_registros.png
+│   │   ├── barra_busqueda.png
+│   │   ├── mensaje_guardar.png
+│   │   ├── mensaje_editar.png
+│   │   ├── modo_eliminar.png
+│   │   ├── menu_pantalla.png
+│   │   ├── arquitectura_sistema.png
+│   │   ├── estructura_modulos.png
+│   │   ├── diagrama_bd.png
+│   │   └── flujo_datos.png
+│   ├── proveedores\
+│   │   ├── pantalla_principal.png
+│   │   ├── botones_principales.png
+│   │   ├── campos_datos.png
+│   │   ├── tabla_registros.png
+│   │   ├── barra_busqueda.png
+│   │   ├── mensaje_guardar.png
+│   │   ├── mensaje_editar.png
+│   │   ├── modo_eliminar.png
+│   │   ├── unificar_dialog.png
+│   │   ├── menu_pantalla.png
+│   │   ├── arquitectura_sistema.png
+│   │   ├── estructura_modulos.png
+│   │   ├── diagrama_bd.png
+│   │   ├── flujo_datos.png
+│   │   └── flujo_agrupar.png
+│   └── comunes\
+│       └── logo_vah.png
+│
+└── pdf\
+    ├── VAH_Manual_Operativo_Clientes.pdf
+    ├── VAH_Manual_Tecnico_Clientes.pdf
+    ├── VAH_Manual_Operativo_Proveedores.pdf
+    └── VAH_Manual_Tecnico_Proveedores.pdf

@@ -1,0 +1,6 @@
+2026-08-14 08:18:29 - proveedores.data.db - INFO - Conectando a SQL Server (DESKTOP-AE60PIU\SQLEXPRESS -> proveedores)
+2026-08-14 08:49:00 - paquetes.herrajes.imprimir - INFO - Iniciando proceso de impresión
+2026-08-14 08:49:04 - paquetes.herrajes.imprimir - INFO - Tipo de reporte seleccionado: Desglosado
+2026-08-14 08:49:05 - paquetes.herrajes.imprimir - INFO - Destino seleccionado: Pantalla
+2026-08-14 08:49:35 - paquetes.herrajes.imprimir - INFO - Reporte generado exitosamente: Desglosado -> Pantalla
+2026-08-14 08:50:48 - presupuestos.services.config_service - WARNING - No hay configuracion de correo definida en config.json

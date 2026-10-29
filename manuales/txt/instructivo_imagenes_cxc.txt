@@ -1,0 +1,20 @@
+Lista de imagenes a capturar y donde usarlas
+============================================
+
+Carpeta destino: D:\vah\manuales\imagenes\cxc\
+
+# | Nombre archivo                    | Seccion del manual              | Que capturar
+--|-----------------------------------|---------------------------------|------------------------------------------------------------
+1 | cxc_ventana_principal.png         | 1. Panorama del modulo          | Ventana principal completa con tabs y filtros visibles
+2 | nuevo_cxc_dialog.png              | 2. Crear CXC desde presupuesto  | Dialogo completo con presupuesto, partidas y total
+3 | editar_cantidad_partida.png       | 2. Crear CXC desde presupuesto  | Celda de cantidad editada y total recalculado
+4 | registrar_abono_dialog.png        | 3. Operaciones principales      | Dialogo de registro de abono/finiquito
+5 | reportes_listado_general.png      | 3. Operaciones principales      | Menu Reportes abierto con opciones PDF/Excel
+6 | estado_cliente_tab.png            | 3. Operaciones principales      | Tab de estado por cliente con totales
+7 | arquitectura_cxc.png              | 1. Arquitectura tecnica         | Diagrama de capas UI / Servicio / Repositorio / BD
+8 | flujo_creacion_cxc.png            | 4. Flujo tecnico                | Diagrama del flujo crear_cxc_desde_presupuesto
+
+Notas:
+- Guardar las imagenes en PNG.
+- Si una imagen no existe, el generador insertara un placeholder.
+- Mantener nombres exactos para que el manual pueda referenciarlas.

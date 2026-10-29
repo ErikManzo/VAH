@@ -1,0 +1,8 @@
+[2026-09-11 11:51:16] [INFO] Log iniciado: D:\vah\concentrador_materiales\logs\concentrador_20260911_115116.log
+[2026-09-11 11:52:51] [INFO] [INFO] INICIO_PROCESO - Iniciando proceso de concentración de materiales
+[2026-09-11 11:52:51] [INFO] [INFO] DIAGNOSTICO_INICIO - Iniciando diagnóstico de tipos de paquete
+[2026-09-11 11:52:51] [WARNING] [ADVERTENCIA] CONSULTA_TIPOS_PAQUETE_ERROR - No se pudieron obtener tipos de paquete: cannot import name 'get_connection' from 'db.conn' (D:\vah\db\conn.py)
+[2026-09-11 11:52:51] [INFO] [INFO] TIPOS_PAQUETE_ENCONTRADOS - Tipos encontrados: ninguno | {'tipos': []}
+[2026-09-11 11:52:51] [INFO] [INFO] DIAGNOSTICO_FIN - Diagnóstico completado. 0 advertencias. | {'total_tipos': 0, 'advertencias': 0}
+[2026-09-11 11:52:51] [INFO] [INFO] DIAGNOSTICO_COMPLETADO - Diagnóstico completado. Tipos encontrados: []
+[2026-09-11 11:52:51] [INFO] [INFO] SIN_PRESUPUESTOS - No se encontraron presupuestos aceptados

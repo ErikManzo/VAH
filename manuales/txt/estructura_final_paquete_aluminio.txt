@@ -1,0 +1,38 @@
+D:\vah\paquetes\aluminio\
+├── __init__.py                       # Marcador de paquete Python (vacío)
+├── pantalla_paquete_aluminio.py      # UI principal (QMainWindow) con lógica completa
+└── imprimir.py                       # Generación de reportes (General/Desglosado)
+
+D:\vah\manuales\
+├── scripts_generadores\
+│   ├── generar_manual_operativo_paquete_aluminio.py
+│   └── generar_manual_tecnico_paquete_aluminio.py
+│
+├── imagenes\
+│   └── paquete_aluminio\
+│       ├── pantalla_principal.png
+│       ├── botones_principales.png
+│       ├── campos_paquete.png
+│       ├── campos_items.png
+│       ├── tabla_items.png
+│       ├── autocompletado.png
+│       ├── agregar_item.png
+│       ├── mensaje_guardar.png
+│       ├── selector_paquetes.png
+│       ├── impresion_dialog.png
+│       ├── arquitectura_sistema.png
+│       ├── estructura_modulos.png
+│       ├── diagrama_bd.png
+│       └── flujo_datos_crear.png
+│
+├── pdf\
+│   ├── operativo\
+│   │   └── VAH_Manual_Operativo_Paquete_Aluminio.pdf
+│   │
+│   └── técnico\
+│       └── VAH_Manual_Tecnico_Paquete_Aluminio.pdf
+│
+└── txt\
+    ├── estructura_final_paquete_aluminio.txt
+    ├── instructivo_imagenes_paquete_aluminio.txt
+    └── notas_paquete_aluminio.txt

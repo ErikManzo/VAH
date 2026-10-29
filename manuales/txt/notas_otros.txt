@@ -1,0 +1,91 @@
+================================================================================
+                    NOTAS - MÓDULO OTROS (MATERIALES)
+================================================================================
+
+📅 ÚLTIMA ACTUALIZACIÓN: 22/05/2026
+
+================================================================================
+📸 CAPTURAS PENDIENTES
+================================================================================
+
+[ ] pantalla_principal.png       - Ventana completa en estado inicial
+[ ] botones_principales.png      - Fila de 7 botones (Guardar, Editar, Eliminar, Limpiar, Refresh, Imprimir, Salir)
+[ ] campos_datos.png             - GroupBox "Datos" (Clave, Descripción, Precio)
+[ ] tabla_registros.png          - Tabla con datos cargados (3 columnas)
+[ ] barra_busqueda.png           - Barra "Buscar por clave:" con filtro
+[ ] mensaje_guardar.png          - QMessageBox "Información guardada con éxito"
+[ ] mensaje_editar.png           - QMessageBox "Registro actualizado con éxito"
+[ ] modo_eliminar.png            - Pantalla en modo eliminar con mensaje de confirmación
+[ ] impresion_dialog.png         - Diálogo "¿Dónde deseas imprimir?" con 3 opciones
+[ ] arquitectura_sistema.png     - Diagrama 3 capas
+[ ] estructura_modulos.png       - Árbol de archivos .py del módulo Otros
+[ ] diagrama_bd.png              - Esquema tabla materiales_otros
+[ ] flujo_datos.png              - Diagrama de flujo guardado manual
+
+================================================================================
+🔧 PENDIENTES / MEJORAS (PARA VERSIÓN 2.0)
+================================================================================
+
+- ✅ Módulo funcional (guardar, editar, eliminar, buscar, imprimir)
+- ✅ Eliminación directa desde inputs (característica única)
+- ✅ Selección automática en tabla (un solo clic)
+- ✅ Validación de clave duplicada al salir del campo
+- ⬜ Agregar búsqueda también por descripción
+- ⬜ Permitir exportar listado a Excel
+- ⬜ Agregar importación desde Excel (opcional)
+
+================================================================================
+🐛 ERRORES CONOCIDOS (ACTUALES)
+================================================================================
+
+- Ninguno reportado hasta el momento (módulo funciona correctamente)
+
+================================================================================
+📁 ESTRUCTURA DE ARCHIVOS DEL MÓDULO
+================================================================================
+
+D:\vah\materiales\otros\
+├── __init__.py
+├── db_manager.py               (CRUD principal)
+├── imprimir.py                 (Generación de PDF)
+├── pantalla_otros.py           (UI principal)
+└── utils.py                    (Funciones comunes)
+
+================================================================================
+🔑 DIFERENCIAS CON OTROS MÓDULOS
+================================================================================
+
+| Aspecto               | Aluminio                          | Herrería                         | Otros                            |
+|-----------------------|-----------------------------------|----------------------------------|----------------------------------|
+| Campos                | Clave, Desc, Largo + 14 precios   | Clave, Desc, Kilogramos          | Clave, Desc, Precio              |
+| Tipo de valor         | Precios por tramo                 | Peso (kg/m)                      | Precio unitario directo          |
+| Validación            | Precios pueden ser 0              | kg > 0                           | Precio > 0                       |
+| Búsqueda              | Clave o descripción (contiene)    | Solo clave (empieza con)         | Solo clave (empieza con)         |
+| Eliminación           | Desde tabla + doble clic          | Desde tabla + segundo Delete     | Directa desde inputs             |
+| Selección en tabla    | Doble clic                        | Doble clic                       | Un solo clic (automática)        |
+| Importación           | Excel, PDF, CSV (GUI)             | Excel (CLI)                      | ❌ Ninguna                        |
+| Edición de Clave      | No permitida                      | Sí permitida                     | Sí permitida                     |
+
+================================================================================
+💡 IDEAS FUTURAS (VERSIÓN 2.0)
+================================================================================
+
+- Agregar búsqueda también por descripción
+- Permitir exportar listado a Excel
+- Agregar importación desde Excel (similar a Herrería)
+- Mostrar precio con formato de moneda ($)
+- Historial de cambios de precios (auditoría)
+- Vista previa de impresión antes de generar PDF
+- Agregar campo de categoría/subcategoría para organización
+
+================================================================================
+📊 MÉTRICAS DEL MÓDULO
+================================================================================
+
+- Líneas de código (pantalla_otros.py): ~400
+- Líneas de código (db_manager.py): ~80
+- Número de clases: 3 (PantallaOtros, DBManager, NavLineEdit, UpperLineEdit)
+- Campos en BD: 3 (Clave, Descripcion, Precio)
+- Botones en UI: 7
+- Atajos de teclado: 7
+- Características únicas: 3 (eliminación directa, selección automática, sin importación)

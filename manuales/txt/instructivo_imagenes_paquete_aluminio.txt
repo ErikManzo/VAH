@@ -1,0 +1,47 @@
+Lista de imágenes a capturar y dónde pegarlas
+===============================================
+
+Carpeta: D:\vah\manuales\imagenes\paquete_aluminio\
+
+Logo VAH: D:\vah\manuales\imagenes\comunes\logo_vah.png
+
+# | Nombre archivo                          | Sección del manual                    | Qué capturar
+---|-----------------------------------------|---------------------------------------|-----------------------------------------------------------------------------------------
+1  | pantalla_principal.png                 | 3. Inicio del Módulo                  | Ventana completa del módulo recién abierta (estado inicial, campos vacíos)
+2  | botones_principales.png                 | 4.1 Barra de Botones                  | Recortar la fila de 10 botones (Guardar, Editar, Eliminar, Limpiar, Refresh, Imprimir, Quitar item, Perfil Aluminio, Paq. Herrajes, Salir)
+3  | campos_paquete.png                      | 4.2 Datos del Paquete                 | GroupBox "Datos del Paquete" con Clave y Descripción
+4  | campos_items.png                        | 4.3 Agregar Ítems                     | GroupBox "Agregar ítems al paquete" con Tipo (ComboBox), Clave, Descripción, Horizontal, Vertical, Cantidad
+5  | tabla_items.png                         | 4.4 Tabla de Ítems                    | Tabla con 6 columnas (TIPO, CLAVE, DESCRIPCIÓN, H, V, CANT) y datos cargados
+6  | autocompletado.png                      | 7. Búsqueda y Autocompletado          | Popup de autocompletado mostrando opciones al escribir en Clave
+7  | agregar_item.png                        | 6.2 Agregar Ítems                     | Captura mostrando el mensaje "¿Quieres insertar otro ítem al paquete?"
+8  | mensaje_guardar.png                     | 6.1 Crear Nuevo Paquete               | QMessageBox "Paquete guardado con éxito"
+9  | selector_paquetes.png                   | 6.3 Editar Paquete Existente          | Diálogo "Seleccionar paquete (aluminio)" con tabla de paquetes
+10 | impresion_dialog.png                    | 6.6 Imprimir Listado                  | Diálogo "Opciones de impresión" con Destino (Pantalla/PDF/Impresora) y Tipo (General/Desglosado)
+11 | arquitectura_sistema.png                | 1. Arquitectura (Técnico)             | Diagrama de 3 capas (Presentación, Lógica, Datos)
+12 | estructura_modulos.png                  | 2. Estructura Archivos (Técnico)      | Árbol de carpetas/archivos del módulo Paquete Aluminio
+13 | diagrama_bd.png                         | 3.3 Relaciones (Técnico)              | Diagrama ER con tablas: paquetes_aluminio, paquete_aluminio_items
+14 | flujo_datos_crear.png                   | 6.1 Creación de Paquete (Técnico)     | Diagrama de flujo del proceso de creación de paquete
+
+================================================================================
+NOTAS PARA LA CAPTURA DE IMÁGENES
+================================================================================
+
+1. Use la herramienta "Recortes" de Windows (Win + Shift + S) o similar.
+2. Para ventanas completas: recorte toda la pantalla del módulo.
+3. Para botones/campos: recorte SOLO el área relevante (sin bordes innecesarios).
+4. Para diálogos: asegúrese de que el diálogo esté visible y enfocado.
+5. Guarde cada imagen con el nombre exacto indicado en la columna "Nombre archivo".
+6. Formato recomendado: PNG (fondo transparente o blanco, alta calidad).
+7. Las imágenes se insertan automáticamente en los PDF generados.
+8. Si falta una imagen, el manual mostrará "[Imagen pendiente: nombre.png]".
+
+================================================================================
+CARACTERÍSTICAS ÚNICAS A CAPTURAR
+================================================================================
+
+- ComboBox Tipo: Muestre los 6 tipos disponibles (Aluminio, Herraje, Paquete herrajes, Herrería, Plásticos, Otros)
+- Campos dinámicos: Muestre cómo al seleccionar Aluminio se habilitan Horizontal/Vertical
+- Autocompletado: Muestre el popup con opciones al escribir en Clave o Descripción
+- Suma de cantidades: Muestre cómo al agregar un ítem ya existente, la cantidad se suma
+- Edición de ítem: Muestre cómo al seleccionar una fila, los datos se cargan para edición
+- Módulos externos: Muestre los botones "Perfil Aluminio" y "Paq. Herrajes"

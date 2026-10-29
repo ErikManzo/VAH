@@ -1,0 +1,41 @@
+D:\vah\materiales\herreria\
+├── __init__.py
+├── cargar_excel_herreria.py      # Importador Excel (MERGE set-based)
+├── db_manager.py                 # CRUD con context manager
+├── imprimir.py                   # Generación de PDF
+├── pantalla_herreria.py          # UI principal con PyQt6
+└── utils.py                      # dec2() y utilidades
+
+D:\vah\manuales\
+├── scripts_generadores\
+│   ├── generar_manual_operativo_herreria.py
+│   └── generar_manual_tecnico_herreria.py
+│
+├── imagenes\
+│   └── herreria\
+│       ├── pantalla_principal.png
+│       ├── botones_principales.png
+│       ├── campos_datos.png
+│       ├── tabla_registros.png
+│       ├── barra_busqueda.png
+│       ├── mensaje_guardar.png
+│       ├── mensaje_editar.png
+│       ├── modo_eliminar.png
+│       ├── importar_dialog.png
+│       ├── impresion_dialog.png
+│       ├── arquitectura_sistema.png
+│       ├── estructura_modulos.png
+│       ├── diagrama_bd.png
+│       └── flujo_datos.png
+│
+├── pdf\
+│   ├── operativo\
+│   │   └── VAH_Manual_Operativo_Herrería.pdf
+│   │
+│   └── técnico\
+│       └── VAH_Manual_Tecnico_Herrería.pdf
+│
+└── txt\
+    ├── estructura_final_herreria.txt
+    ├── instructivo_imagenes_herreria.txt
+    └── notas_herreria.txt

@@ -1,0 +1,39 @@
+D:\vah\paquetes\herrajes\
+├── __init__.py                       # Marcador de paquete Python (vacío)
+├── pantalla_paquete_herrajes.py      # UI principal con PyQt6 (QMainWindow)
+└── imprimir.py                       # Generación de reportes (General/Desglosado)
+
+D:\vah\manuales\
+├── scripts_generadores\
+│   ├── generar_manual_operativo_paquete_herrajes.py
+│   └── generar_manual_tecnico_paquete_herrajes.py
+│
+├── imagenes\
+│   └── paquete_herrajes\
+│       ├── pantalla_principal.png
+│       ├── botones_principales.png
+│       ├── campos_paquete.png
+│       ├── campos_herrajes.png
+│       ├── tabla_items.png
+│       ├── autocompletado.png
+│       ├── agregar_herraje.png
+│       ├── mensaje_guardar.png
+│       ├── selector_paquetes.png
+│       ├── impresion_dialog.png
+│       ├── boton_herraje.png
+│       ├── arquitectura_sistema.png
+│       ├── estructura_modulos.png
+│       ├── diagrama_bd.png
+│       └── flujo_datos_crear.png
+│
+├── pdf\
+│   ├── operativo\
+│   │   └── VAH_Manual_Operativo_Paquete_Herrajes.pdf
+│   │
+│   └── técnico\
+│       └── VAH_Manual_Tecnico_Paquete_Herrajes.pdf
+│
+└── txt\
+    ├── estructura_final_paquete_herrajes.txt
+    ├── instructivo_imagenes_paquete_herrajes.txt
+    └── notas_paquete_herrajes.txt

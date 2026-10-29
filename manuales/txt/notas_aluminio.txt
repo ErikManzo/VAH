@@ -1,0 +1,95 @@
+================================================================================
+                    NOTAS - MÓDULO ALUMINIO (MATERIALES)
+================================================================================
+
+📅 ÚLTIMA ACTUALIZACIÓN: 22/05/2026
+
+================================================================================
+📸 CAPTURAS PENDIENTES
+================================================================================
+
+[ ] pantalla_principal.png       - Ventana completa en estado inicial
+[ ] botones_principales.png      - Fila de 8 botones (Guardar, Editar, Eliminar, Limpiar, Refresh, Imprimir, Salir, Importar)
+[ ] campos_datos.png             - GroupBox "Datos del Material" (Clave, Descripción, Largo)
+[ ] campos_precios.png           - GroupBox "Precios" (14 campos de precio)
+[ ] tabla_registros.png          - Tabla con datos cargados
+[ ] barra_busqueda.png           - Barra de búsqueda con filtro
+[ ] mensaje_guardar.png          - (Opcional) No hay mensaje explícito, capturar pantalla limpia
+[ ] mensaje_editar.png           - (Opcional) No hay mensaje explícito, capturar pantalla limpia
+[ ] modo_eliminar.png            - Pantalla en modo eliminar con mensaje de confirmación
+[ ] importar_dialog.png          - Diálogo QFileDialog para seleccionar archivo
+[ ] impresion_dialog.png         - Diálogo "¿Dónde deseas imprimir?" con 3 opciones
+[ ] menu_pantalla.png            - Pantalla mostrando todos los registros
+[ ] arquitectura_sistema.png     - Diagrama 3 capas
+[ ] estructura_modulos.png       - Árbol de archivos .py del módulo Aluminio
+[ ] diagrama_bd.png              - Esquema tabla materiales_aluminio
+[ ] flujo_datos.png              - Diagrama de flujo guardado manual
+[ ] flujo_importar.png           - Diagrama de flujo importación
+
+================================================================================
+🔧 PENDIENTES / MEJORAS (PARA VERSIÓN 2.0)
+================================================================================
+
+- ✅ Manuales generados correctamente (operativo y técnico)
+- ✅ Módulo funcional (guardar, editar, eliminar, buscar, importar, imprimir)
+- ⬜ Bug latente: merge_max en db_manager.py recibe 2 argumentos pero la función espera 3
+      → Solo afecta si use_merge=True (importación con clave existente)
+      → Por ahora funciona porque no se ejecuta ese branch
+      → Corregir en versión 2.0
+- ⬜ Unificar conexión a BD con DbConfig (presupuestos/db/conn.py)
+- ⬜ Implementar guardado automático silencioso al cerrar ventana
+- ⬜ Agregar barra de progreso en importaciones largas
+- ⬜ Agregar atajo Ctrl+E para Editar
+- ⬜ Validar que el largo seleccionado coincida con el rango real del perfil
+- ⬜ Mejorar impresión a impresora física (evitar dependencia de Adobe Reader)
+
+================================================================================
+🐛 ERRORES CONOCIDOS (ACTUALES)
+================================================================================
+
+- Ninguno reportado hasta el momento (módulo funciona correctamente)
+
+================================================================================
+📁 ESTRUCTURA DE ARCHIVOS DEL MÓDULO
+================================================================================
+
+D:\vah\materiales\aluminio\
+├── __init__.py (vacío)
+├── db.py (OBSOLETO - No se usa, pero mantener por compatibilidad)
+├── db_manager.py (ACTIVO - CRUD principal)
+├── imprimir.py (Generación de PDF)
+├── pantalla_materiales_aluminio.py (UI principal)
+├── parser_pdf.py (OBSOLETO - Usar parsers/parse_pdf.py)
+├── restricciones.py (Reglas de negocio)
+├── utils.py (Funciones comunes)
+└── parsers/
+    ├── __init__.py
+    ├── parse_csv.py
+    ├── parse_excel.py
+    └── parse_pdf.py
+
+================================================================================
+💡 IDEAS FUTURAS (VERSIÓN 2.0)
+================================================================================
+
+- Exportar listado a Excel
+- Buscar también por precio o rango de precios
+- Mostrar más información en la tabla (destacar precios bajos)
+- Permitir modificar CLAVE y DESCRIPCIÓN en modo edición (con advertencia)
+- Historial de cambios de precios (auditoría)
+- Copiar precios de un material a otro
+- Vista previa de impresión antes de generar PDF
+- Sincronización con módulo de Presupuestos (actualizar precios automáticamente)
+
+================================================================================
+📊 MÉTRICAS DEL MÓDULO
+================================================================================
+
+- Líneas de código (pantalla_materiales_aluminio.py): ~900
+- Líneas de código (db_manager.py): ~120
+- Número de clases: 3 (PantallaMaterialesAluminio, DBManager, NavLineEdit, etc.)
+- Número de funciones en parsers: 6
+- Campos de precio: 14
+- Largos disponibles: 5
+- Botones en UI: 8
+- Atajos de teclado: 8

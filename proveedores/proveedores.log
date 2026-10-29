@@ -1,0 +1,215 @@
+2025-08-18 11:36:02,477 | ERROR | Excepción no controlada:
+Traceback (most recent call last):
+  File "<frozen runpy>", line 198, in _run_module_as_main
+  File "<frozen runpy>", line 88, in _run_code
+  File "D:\vah\proveedores\main.py", line 174, in <module>
+    main()
+    ~~~~^^
+  File "D:\vah\proveedores\main.py", line 130, in main
+    QApplication.setAttribute(Qt.ApplicationAttribute.AA_EnableHighDpiScaling, True)
+                              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+AttributeError: type object 'ApplicationAttribute' has no attribute 'AA_EnableHighDpiScaling'
+
+2025-08-18 11:37:42,513 | ERROR | Excepción no controlada:
+Traceback (most recent call last):
+  File "<frozen runpy>", line 198, in _run_module_as_main
+  File "<frozen runpy>", line 88, in _run_code
+  File "D:\vah\proveedores\main.py", line 174, in <module>
+    main()
+    ~~~~^^
+  File "D:\vah\proveedores\main.py", line 130, in main
+    QApplication.setAttribute(Qt.ApplicationAttribute.AA_EnableHighDpiScaling, True)
+                              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+AttributeError: type object 'ApplicationAttribute' has no attribute 'AA_EnableHighDpiScaling'
+
+2025-08-18 11:48:56,130 | ERROR | Excepción no controlada:
+Traceback (most recent call last):
+  File "<frozen runpy>", line 198, in _run_module_as_main
+  File "<frozen runpy>", line 88, in _run_code
+  File "D:\vah\proveedores\main.py", line 174, in <module>
+    main()
+    ~~~~^^
+  File "D:\vah\proveedores\main.py", line 130, in main
+    QApplication.setAttribute(Qt.ApplicationAttribute.AA_EnableHighDpiScaling, True)
+                              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+AttributeError: type object 'ApplicationAttribute' has no attribute 'AA_EnableHighDpiScaling'
+
+2025-08-18 11:50:44,850 | ERROR | Excepción no controlada:
+Traceback (most recent call last):
+  File "<frozen runpy>", line 198, in _run_module_as_main
+  File "<frozen runpy>", line 88, in _run_code
+  File "D:\vah\proveedores\main.py", line 174, in <module>
+    main()
+    ~~~~^^
+  File "D:\vah\proveedores\main.py", line 130, in main
+    QApplication.setAttribute(Qt.ApplicationAttribute.AA_EnableHighDpiScaling, True)
+                              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+AttributeError: type object 'ApplicationAttribute' has no attribute 'AA_EnableHighDpiScaling'
+
+2025-08-18 12:02:54,742 | ERROR | Excepción no controlada:
+Traceback (most recent call last):
+  File "<frozen runpy>", line 198, in _run_module_as_main
+  File "<frozen runpy>", line 88, in _run_code
+  File "D:\vah\proveedores\main.py", line 174, in <module>
+    main()
+    ~~~~^^
+  File "D:\vah\proveedores\main.py", line 130, in main
+    QApplication.setAttribute(Qt.ApplicationAttribute.AA_EnableHighDpiScaling, True)
+                              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+AttributeError: type object 'ApplicationAttribute' has no attribute 'AA_EnableHighDpiScaling'
+
+2025-08-18 15:45:44,509 | INFO | Conectando a SQL Server (.\SQLEXPRESS -> proveedores) con Trusted
+2025-08-18 15:45:44,723 | INFO | Insertado proveedor id=1 empresa=CRIFIN
+2025-08-18 15:45:55,757 | INFO | Conectando a SQL Server (.\SQLEXPRESS -> proveedores) con Trusted
+2025-08-18 15:45:55,844 | INFO | Conectando a SQL Server (.\SQLEXPRESS -> proveedores) con Trusted
+2025-08-18 15:45:56,052 | INFO | Conectando a SQL Server (.\SQLEXPRESS -> proveedores) con Trusted
+2025-08-18 15:45:56,332 | INFO | Conectando a SQL Server (.\SQLEXPRESS -> proveedores) con Trusted
+2025-08-18 15:45:56,436 | INFO | Conectando a SQL Server (.\SQLEXPRESS -> proveedores) con Trusted
+2025-08-18 15:45:56,660 | INFO | Conectando a SQL Server (.\SQLEXPRESS -> proveedores) con Trusted
+2025-08-18 15:46:00,948 | INFO | Conectando a SQL Server (.\SQLEXPRESS -> proveedores) con Trusted
+2025-08-18 15:46:07,558 | INFO | Conectando a SQL Server (.\SQLEXPRESS -> proveedores) con Trusted
+2025-08-18 15:46:07,565 | INFO | Actualizado proveedor id=1 rc=1
+2025-08-18 15:46:21,028 | INFO | Conectando a SQL Server (.\SQLEXPRESS -> proveedores) con Trusted
+2025-08-18 15:46:25,745 | INFO | Conectando a SQL Server (.\SQLEXPRESS -> proveedores) con Trusted
+2025-08-18 15:46:25,749 | INFO | Eliminado proveedor id=1 rc=1
+2025-08-18 15:46:26,897 | INFO | Conectando a SQL Server (.\SQLEXPRESS -> proveedores) con Trusted
+2025-08-18 15:46:45,380 | INFO | Conectando a SQL Server (.\SQLEXPRESS -> proveedores) con Trusted
+2025-08-18 15:47:14,846 | INFO | Conectando a SQL Server (.\SQLEXPRESS -> proveedores) con Trusted
+2025-08-18 15:47:14,849 | INFO | Insertado proveedor id=2 empresa=FIERRO MATECO
+2025-08-19 10:47:01,096 | INFO | Conectando a SQL Server (.\SQLEXPRESS -> proveedores) con Trusted
+2025-08-19 10:47:01,242 | INFO | Insertado proveedor id=3 empresa=VIDRIOS MODERNOS
+2025-09-23 13:32:19,171 | INFO | Conectando a SQL Server (.\SQLEXPRESS -> proveedores) con Trusted
+2025-12-04 09:20:14,793 | INFO | Conectando a SQL Server (.\SQLEXPRESS -> proveedores) con Trusted
+2025-12-04 09:20:40,336 | INFO | Conectando a SQL Server (.\SQLEXPRESS -> proveedores) con Trusted
+2026-02-20 10:47:49,047 | INFO | Conectando a SQL Server (.\SQLEXPRESS -> proveedores) con Trusted
+2026-02-20 10:48:04,727 | INFO | Conectando a SQL Server (.\SQLEXPRESS -> proveedores) con Trusted
+2026-02-20 10:48:50,542 | INFO | Conectando a SQL Server (.\SQLEXPRESS -> proveedores) con Trusted
+2026-02-20 10:48:50,552 | INFO | Insertado proveedor id=4 empresa=CRISTA CURVA
+2026-02-20 10:49:00,991 | INFO | Conectando a SQL Server (.\SQLEXPRESS -> proveedores) con Trusted
+2026-02-20 10:49:01,127 | INFO | Conectando a SQL Server (.\SQLEXPRESS -> proveedores) con Trusted
+2026-02-20 10:49:01,454 | INFO | Conectando a SQL Server (.\SQLEXPRESS -> proveedores) con Trusted
+2026-02-20 10:49:01,543 | INFO | Conectando a SQL Server (.\SQLEXPRESS -> proveedores) con Trusted
+2026-02-20 10:49:06,725 | INFO | Conectando a SQL Server (.\SQLEXPRESS -> proveedores) con Trusted
+2026-02-20 10:49:16,270 | INFO | Conectando a SQL Server (.\SQLEXPRESS -> proveedores) con Trusted
+2026-02-20 10:49:16,275 | INFO | Actualizado proveedor id=4 rc=1
+2026-02-20 10:49:26,822 | INFO | Conectando a SQL Server (.\SQLEXPRESS -> proveedores) con Trusted
+2026-02-20 10:49:27,031 | INFO | Conectando a SQL Server (.\SQLEXPRESS -> proveedores) con Trusted
+2026-02-20 10:49:33,259 | INFO | Conectando a SQL Server (.\SQLEXPRESS -> proveedores) con Trusted
+2026-02-20 10:49:33,261 | INFO | Eliminado proveedor id=4 rc=1
+2026-02-20 10:49:34,500 | INFO | Conectando a SQL Server (.\SQLEXPRESS -> proveedores) con Trusted
+2026-02-20 11:11:52,110 | INFO | Conectando a SQL Server (.\SQLEXPRESS -> proveedores) con Trusted
+2026-02-20 11:12:01,101 | INFO | Conectando a SQL Server (.\SQLEXPRESS -> proveedores) con Trusted
+2026-02-20 11:12:04,661 | INFO | Conectando a SQL Server (.\SQLEXPRESS -> proveedores) con Trusted
+2026-02-20 12:06:17,299 | INFO | Conectando a SQL Server (.\SQLEXPRESS -> proveedores) con Trusted
+2026-02-20 12:06:28,923 | INFO | Conectando a SQL Server (.\SQLEXPRESS -> proveedores) con Trusted
+2026-05-21 13:39:00,533 | INFO | Conectando a SQL Server (.\SQLEXPRESS -> proveedores) con Trusted
+2026-05-21 13:39:00,713 | ERROR | Conexión sql falló: ('42S22', "[42S22] [Microsoft][ODBC Driver 18 for SQL Server][SQL Server]Invalid column name 'n_agente'. (207) (SQLExecDirectW); [42S22] [Microsoft][ODBC Driver 18 for SQL Server][SQL Server]Invalid column name 'n_ext'. (207); [42S22] [Microsoft][ODBC Driver 18 for SQL Server][SQL Server]Invalid column name 'n_int'. (207); [42S22] [Microsoft][ODBC Driver 18 for SQL Server][SQL Server]Invalid column name 'cp'. (207)")
+2026-05-21 13:39:00,713 | INFO | Conectando a SQL Server (.\SQLEXPRESS -> proveedores) con Trusted
+2026-05-21 13:39:00,713 | ERROR | Imprimir: listar_todos() | generator didn't stop after throw()
+Traceback (most recent call last):
+  File "D:\VAH\proveedores\data\db.py", line 116, in db_conn
+    yield conn
+  File "D:\VAH\proveedores\data\db.py", line 133, in fetch_all
+    cur.execute(sql, params)
+pyodbc.ProgrammingError: ('42S22', "[42S22] [Microsoft][ODBC Driver 18 for SQL Server][SQL Server]Invalid column name 'n_agente'. (207) (SQLExecDirectW); [42S22] [Microsoft][ODBC Driver 18 for SQL Server][SQL Server]Invalid column name 'n_ext'. (207); [42S22] [Microsoft][ODBC Driver 18 for SQL Server][SQL Server]Invalid column name 'n_int'. (207); [42S22] [Microsoft][ODBC Driver 18 for SQL Server][SQL Server]Invalid column name 'cp'. (207)")
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "D:\VAH\proveedores\art\pantalla_proveedores.py", line 558, in _modo_imprimir
+    registros = self.service.listar_todos()
+                ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\VAH\proveedores\repositories\proveedor_repository.py", line 130, in listar_todos
+    rows = fetch_all(sql)
+           ^^^^^^^^^^^^^^
+  File "D:\VAH\proveedores\data\db.py", line 131, in fetch_all
+    with db_conn(database) as conn:
+         ^^^^^^^^^^^^^^^^^
+  File "C:\Users\Personal\AppData\Local\Programs\Python\Python312\Lib\contextlib.py", line 194, in __exit__
+    raise RuntimeError("generator didn't stop after throw()")
+RuntimeError: generator didn't stop after throw()
+
+2026-05-21 13:39:18,015 | INFO | Conectando a SQL Server (.\SQLEXPRESS -> proveedores) con Trusted
+2026-05-21 13:39:18,015 | ERROR | Conexión sql falló: ('42S22', "[42S22] [Microsoft][ODBC Driver 18 for SQL Server][SQL Server]Invalid column name 'n_agente'. (207) (SQLExecDirectW); [42S22] [Microsoft][ODBC Driver 18 for SQL Server][SQL Server]Invalid column name 'n_ext'. (207); [42S22] [Microsoft][ODBC Driver 18 for SQL Server][SQL Server]Invalid column name 'n_int'. (207); [42S22] [Microsoft][ODBC Driver 18 for SQL Server][SQL Server]Invalid column name 'cp'. (207)")
+2026-05-21 13:39:18,015 | INFO | Conectando a SQL Server (.\SQLEXPRESS -> proveedores) con Trusted
+2026-05-21 13:39:18,015 | ERROR | Refrescar: listar_todos() | generator didn't stop after throw()
+Traceback (most recent call last):
+  File "D:\VAH\proveedores\data\db.py", line 116, in db_conn
+    yield conn
+  File "D:\VAH\proveedores\data\db.py", line 133, in fetch_all
+    cur.execute(sql, params)
+pyodbc.ProgrammingError: ('42S22', "[42S22] [Microsoft][ODBC Driver 18 for SQL Server][SQL Server]Invalid column name 'n_agente'. (207) (SQLExecDirectW); [42S22] [Microsoft][ODBC Driver 18 for SQL Server][SQL Server]Invalid column name 'n_ext'. (207); [42S22] [Microsoft][ODBC Driver 18 for SQL Server][SQL Server]Invalid column name 'n_int'. (207); [42S22] [Microsoft][ODBC Driver 18 for SQL Server][SQL Server]Invalid column name 'cp'. (207)")
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "D:\VAH\proveedores\art\pantalla_proveedores.py", line 697, in _refrescar
+    registros = self.service.listar_todos()
+                ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\VAH\proveedores\repositories\proveedor_repository.py", line 130, in listar_todos
+    rows = fetch_all(sql)
+           ^^^^^^^^^^^^^^
+  File "D:\VAH\proveedores\data\db.py", line 131, in fetch_all
+    with db_conn(database) as conn:
+         ^^^^^^^^^^^^^^^^^
+  File "C:\Users\Personal\AppData\Local\Programs\Python\Python312\Lib\contextlib.py", line 194, in __exit__
+    raise RuntimeError("generator didn't stop after throw()")
+RuntimeError: generator didn't stop after throw()
+
+2026-05-21 13:59:51,267 | INFO | Insertando proveedor: empresa=FIERRO MATECO
+2026-05-21 13:59:51,267 | INFO | Conectando a SQL Server (.\SQLEXPRESS -> proveedores) con Trusted
+2026-05-21 13:59:51,311 | ERROR | Error al insertar proveedor: FIERRO MATECO
+2026-05-21 14:02:48,971 | INFO | Insertando proveedor: empresa=FIERRO MATECO
+2026-05-21 14:02:48,971 | INFO | Conectando a SQL Server (.\SQLEXPRESS -> proveedores) con Trusted
+2026-05-21 14:02:49,016 | ERROR | Error al insertar proveedor: FIERRO MATECO
+2026-05-21 14:04:17,507 | INFO | Conectando a SQL Server (.\SQLEXPRESS -> proveedores) con Trusted
+2026-05-21 14:04:22,219 | INFO | Conectando a SQL Server (.\SQLEXPRESS -> proveedores) con Trusted
+2026-05-21 14:14:27,020 | INFO | Insertando proveedor: empresa=OTRO CAMPO
+2026-05-21 14:14:27,020 | ERROR | ❌ Excepción al insertar: cannot import name 'insert_and_get_id' from 'proveedores.data.db' (D:\VAH\proveedores\data\db.py)
+2026-05-21 14:14:55,868 | INFO | Conectando a SQL Server (.\SQLEXPRESS -> proveedores) con Trusted
+2026-05-21 16:13:53,050 | INFO | Conectando a SQL Server (DESKTOP-AE60PIU\SQLEXPRESS -> proveedores)
+2026-05-21 16:15:31,107 | INFO | Insertando proveedor: empresa=ACEROS BUGAMBILIAS
+2026-05-21 16:15:31,107 | INFO | Conectando a SQL Server (DESKTOP-AE60PIU\SQLEXPRESS -> proveedores)
+2026-05-21 16:15:31,126 | ERROR | ❌ Error al insertar proveedor (no se generó ID)
+2026-05-21 16:16:16,761 | INFO | Conectando a SQL Server (DESKTOP-AE60PIU\SQLEXPRESS -> proveedores)
+2026-05-21 16:22:27,522 | INFO | Insertando proveedor: empresa=DISTRIBUIDORA DE VIDRIO DE GUADALAJARA
+2026-05-21 16:22:27,522 | INFO | Conectando a SQL Server (DESKTOP-AE60PIU\SQLEXPRESS -> proveedores)
+2026-05-21 16:22:27,564 | INFO | Conectando a SQL Server (DESKTOP-AE60PIU\SQLEXPRESS -> proveedores)
+2026-05-21 16:22:27,565 | INFO | ✅ Insertado proveedor (sin ID) filas=1
+2026-05-21 16:22:33,802 | INFO | Conectando a SQL Server (DESKTOP-AE60PIU\SQLEXPRESS -> proveedores)
+2026-05-21 16:22:54,548 | INFO | Conectando a SQL Server (DESKTOP-AE60PIU\SQLEXPRESS -> proveedores)
+2026-05-21 16:22:54,793 | INFO | Conectando a SQL Server (DESKTOP-AE60PIU\SQLEXPRESS -> proveedores)
+2026-05-21 16:22:54,883 | INFO | Conectando a SQL Server (DESKTOP-AE60PIU\SQLEXPRESS -> proveedores)
+2026-05-21 16:23:02,163 | INFO | Conectando a SQL Server (DESKTOP-AE60PIU\SQLEXPRESS -> proveedores)
+2026-05-21 16:23:15,274 | INFO | Conectando a SQL Server (DESKTOP-AE60PIU\SQLEXPRESS -> proveedores)
+2026-05-21 16:23:15,284 | INFO | ✅ Actualizado proveedor id=5
+2026-05-21 16:30:37,289 | INFO | Conectando a SQL Server (DESKTOP-AE60PIU\SQLEXPRESS -> proveedores)
+2026-05-21 16:32:17,386 | ERROR | Agrupar click | name 'QDialog' is not defined
+Traceback (most recent call last):
+  File "D:\VAH\proveedores\art\pantalla_proveedores.py", line 804, in _agrupar_click
+    if dialog.exec() == QDialog.DialogCode.Accepted:
+                        ^^^^^^^
+NameError: name 'QDialog' is not defined. Did you mean: 'dialog'?
+
+2026-05-21 16:39:25,050 | INFO | Conectando a SQL Server (DESKTOP-AE60PIU\SQLEXPRESS -> proveedores)
+2026-05-21 16:39:34,847 | INFO | Conectando a SQL Server (DESKTOP-AE60PIU\SQLEXPRESS -> proveedores)
+2026-05-21 16:39:34,855 | INFO | ✅ Actualizado proveedor id=4
+2026-05-21 16:39:34,856 | INFO | Conectando a SQL Server (DESKTOP-AE60PIU\SQLEXPRESS -> proveedores)
+2026-05-21 16:39:34,857 | INFO | Eliminado proveedor id=5 -> True
+2026-05-21 16:39:38,994 | INFO | Conectando a SQL Server (DESKTOP-AE60PIU\SQLEXPRESS -> proveedores)
+2026-05-21 16:39:48,631 | INFO | Conectando a SQL Server (DESKTOP-AE60PIU\SQLEXPRESS -> proveedores)
+2026-05-21 16:39:48,636 | INFO | ✅ Actualizado proveedor id=1
+2026-05-21 16:39:48,636 | INFO | Conectando a SQL Server (DESKTOP-AE60PIU\SQLEXPRESS -> proveedores)
+2026-05-21 16:39:48,637 | INFO | Eliminado proveedor id=2 -> True
+2026-05-21 16:39:53,225 | INFO | Conectando a SQL Server (DESKTOP-AE60PIU\SQLEXPRESS -> proveedores)
+2026-05-21 16:39:55,651 | INFO | Conectando a SQL Server (DESKTOP-AE60PIU\SQLEXPRESS -> proveedores)
+2026-05-21 16:41:09,721 | INFO | Conectando a SQL Server (DESKTOP-AE60PIU\SQLEXPRESS -> proveedores)
+2026-05-21 16:41:14,438 | INFO | Conectando a SQL Server (DESKTOP-AE60PIU\SQLEXPRESS -> proveedores)
+2026-05-21 16:41:14,441 | INFO | Eliminado proveedor id=4 -> True
+2026-05-21 16:41:15,685 | INFO | Conectando a SQL Server (DESKTOP-AE60PIU\SQLEXPRESS -> proveedores)
+2026-05-21 16:41:16,858 | INFO | Conectando a SQL Server (DESKTOP-AE60PIU\SQLEXPRESS -> proveedores)
+2026-05-21 16:41:23,706 | INFO | Conectando a SQL Server (DESKTOP-AE60PIU\SQLEXPRESS -> proveedores)
+2026-05-21 16:46:45,683 | INFO | Conectando a SQL Server (DESKTOP-AE60PIU\SQLEXPRESS -> proveedores)
+2026-05-21 16:46:50,650 | INFO | Conectando a SQL Server (DESKTOP-AE60PIU\SQLEXPRESS -> proveedores)
+2026-05-21 17:00:45,603 | INFO | Conectando a SQL Server (DESKTOP-AE60PIU\SQLEXPRESS -> proveedores)
+2026-05-21 17:00:55,043 | INFO | Conectando a SQL Server (DESKTOP-AE60PIU\SQLEXPRESS -> proveedores)

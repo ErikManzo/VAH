@@ -1,0 +1,16 @@
+model:
+  name: "XGenerationLab/XiYanSQL-QwenCoder-32B-2412"
+  key: "TU_API_KEY_DE_MODELSCOPE_AQUI"
+  url: "https://api-inference.modelscope.cn/v1/"
+
+database:
+  dialect: "mssql"
+  host: "DESKTOP-AE60PIU\\SQLEXPRESS"
+  port: 1433
+  user: "DESKTOP-AE60PIU\\Personal"
+  password: ""
+  database: "vah"
+  driver: "ODBC Driver 17 for SQL Server"
+  trust_server_certificate: true
+  encrypt: true
+  authentication: "windows"

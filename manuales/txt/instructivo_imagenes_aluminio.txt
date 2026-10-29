@@ -1,0 +1,39 @@
+Lista de imágenes a capturar y dónde pegarlas
+===============================================
+
+Carpeta: D:\vah\manuales\imagenes\aluminio\
+
+Logo VAH: D:\vah\manuales\imagenes\comunes\logo_vah.png
+
+# | Nombre archivo                    | Sección del manual              | Qué capturar
+---|-----------------------------------|---------------------------------|-----------------------------------------------------------------------------------------
+1  | pantalla_principal.png           | 3. Inicio del Módulo            | Ventana completa del módulo Aluminio recién abierta (estado inicial, campos vacíos)
+2  | botones_principales.png           | 4.1 Barra de Botones            | Recortar la fila de botones (Guardar, Editar, Eliminar, Limpiar, Refresh, Imprimir, Salir, Importar)
+3  | campos_datos.png                  | 4.2 Campos de Datos             | Recortar el GroupBox "Datos del Material" con Clave, Descripción y Largo
+4  | campos_precios.png                | 4.3 Campos de Precios           | Recortar el GroupBox "Precios" con los 14 campos (S/A, NAT, BMO, E-100, E-200, E-400, BCO, HUESO, NP, GRIS, CHO, ACE, MAD L, MAD T)
+5  | tabla_registros.png               | 4.4 Tabla de Registros          | Tabla con datos cargados (mostrar Clave, Descripción, Largo y varios precios)
+6  | barra_busqueda.png                | 4.5 Barra de Búsqueda           | Barra "Buscar por clave o descripción" con texto ingresado y resultados filtrados
+7  | mensaje_guardar.png               | 5.1 Registrar Nuevo             | (Opcional) No hay mensaje explícito, capturar pantalla después de guardar (limpia)
+8  | mensaje_editar.png                | 5.2 Editar Registro             | (Opcional) No hay mensaje explícito, capturar pantalla después de editar (limpia)
+9  | modo_eliminar.png                 | 5.3 Eliminar Registro           | Pantalla en modo eliminar con tabla llena y mensaje de confirmación "¿Seguro que deseas eliminar la clave X?"
+10 | importar_dialog.png               | 5.5 Importar desde Archivo      | Diálogo QFileDialog para seleccionar archivo (Excel, PDF o CSV)
+11 | impresion_dialog.png              | 5.6 Imprimir Listado            | Diálogo "¿Dónde deseas imprimir?" con opciones Pantalla, PDF, Impresora
+12 | menu_pantalla.png                 | 5.6 Imprimir → Pantalla         | Pantalla mostrando todos los materiales en tabla
+13 | arquitectura_sistema.png          | 1. Arquitectura (Técnico)       | Diagrama de 3 capas (Presentación, Lógica, Datos)
+14 | estructura_modulos.png            | 2. Estructura Archivos (Técnico)| Árbol de carpetas/archivos del módulo Aluminio (desde D:\vah\materiales\aluminio)
+15 | diagrama_bd.png                   | 3.1 Esquema Tabla (Técnico)     | Esquema visual de la tabla materiales_aluminio con columnas y tipos
+16 | flujo_datos.png                   | 6.1 Guardado Manual (Técnico)   | Diagrama de flujo del guardado de materiales
+17 | flujo_importar.png                | 6.2 Importación (Técnico)       | Diagrama de flujo de importación desde Excel/PDF/CSV
+
+================================================================================
+NOTAS PARA LA CAPTURA DE IMÁGENES
+================================================================================
+
+1. Use la herramienta "Recortes" de Windows (Win + Shift + S) o similar.
+2. Para ventanas completas: recorte toda la pantalla del módulo.
+3. Para botones/campos: recorte SOLO el área relevante (sin bordes innecesarios).
+4. Para diálogos: asegúrese de que el diálogo esté visible y enfocado.
+5. Guarde cada imagen con el nombre exacto indicado en la columna "Nombre archivo".
+6. Formato recomendado: PNG (fondo transparente o blanco, alta calidad).
+7. Las imágenes se insertan automáticamente en los PDF generados.
+8. Si falta una imagen, el manual mostrará "[Imagen pendiente: nombre.png]".

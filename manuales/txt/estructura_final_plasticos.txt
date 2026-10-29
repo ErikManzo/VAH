@@ -1,0 +1,43 @@
+D:\vah\materiales\plasticos\
+├── __init__.py
+├── db_manager.py                 # CRUD con context manager
+├── imprimir.py                   # Generación de PDF
+├── pantalla_plasticos.py         # UI principal con PyQt6
+└── utils.py                      # dec2() y utilidades
+
+⚠️ ARCHIVOS OBSOLETOS (ELIMINAR):
+D:\vah\materiales\plasticos_init_.py
+D:\vah\materiales\plasticos\plasticos_init_.py
+
+D:\vah\manuales\
+├── scripts_generadores\
+│   ├── generar_manual_operativo_plasticos.py
+│   └── generar_manual_tecnico_plasticos.py
+│
+├── imagenes\
+│   └── plasticos\
+│       ├── pantalla_principal.png
+│       ├── botones_principales.png
+│       ├── campos_datos.png
+│       ├── tabla_registros.png
+│       ├── barra_busqueda.png
+│       ├── mensaje_guardar.png
+│       ├── mensaje_editar.png
+│       ├── modo_eliminar.png
+│       ├── impresion_dialog.png
+│       ├── arquitectura_sistema.png
+│       ├── estructura_modulos.png
+│       ├── diagrama_bd.png
+│       └── flujo_datos.png
+│
+├── pdf\
+│   ├── operativo\
+│   │   └── VAH_Manual_Operativo_Plásticos.pdf
+│   │
+│   └── técnico\
+│       └── VAH_Manual_Tecnico_Plásticos.pdf
+│
+└── txt\
+    ├── estructura_final_plasticos.txt
+    ├── instructivo_imagenes_plasticos.txt
+    └── notas_plasticos.txt

@@ -1,0 +1,13 @@
+{
+  "LISTA DE PRECIOS MAY-26.xlsx": {
+    "sheets": [
+      "Sin Diferencias"
+    ],
+    "mapping": {
+      "clave": "Parte",
+      "descripcion": "Descripción",
+      "um": "UM",
+      "precio": "Nuevo"
+    }
+  }
+}

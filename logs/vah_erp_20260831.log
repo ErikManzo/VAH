@@ -1,0 +1,14 @@
+2026-08-31 13:24:43 - presupuestos.controllers.presupuesto_controller - ERROR - guardar_partida_actual_silencioso: Excepcion
+Traceback (most recent call last):
+  File "D:\vah\presupuestos\controllers\presupuesto_controller.py", line 105, in guardar_partida_actual_silencioso
+    self.presupuesto_id = self.svc.guardar_presupuesto(datos_presupuesto)
+                          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\vah\presupuestos\service.py", line 107, in guardar_presupuesto
+    return self.presupuesto_repo.guardar_presupuesto(datos)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\vah\presupuestos\services\presupuesto_repository.py", line 29, in guardar_presupuesto
+    return self._insertar(datos)
+           ^^^^^^^^^^^^^^^^^^^^^
+  File "D:\vah\presupuestos\services\presupuesto_repository.py", line 48, in _insertar
+    cur.execute(sql, vals)
+pyodbc.IntegrityError: ('23000', '[23000] [Microsoft][ODBC Driver 18 for SQL Server][SQL Server]The INSERT statement conflicted with the CHECK constraint "CHK_color_global". The conflict occurred in database "presupuestos", table "dbo.presupuestos", column \'color_global\'. (547) (SQLExecDirectW); [23000] [Microsoft][ODBC Driver 18 for SQL Server][SQL Server]The statement has been terminated. (3621)')

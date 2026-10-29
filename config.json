@@ -1,0 +1,12 @@
+{
+  "sql_server": "DESKTOP-AE60PIU\\SQLEXPRESS",
+  "database": "presupuestos",
+  "timeout": 10,
+  "clave_admin": "VAH2026",
+  "numero_presupuesto_inicial": 6952,
+  "descripcion": "Configuración de conexión a SQL Server. Cambia 'sql_server' según tu entorno.",
+  "correo_remitente": "ventanasdealuminioyherreria@hotmail.com",
+  "contrasena_correo": "zumsgyuxlqegndmi",
+  "servidor_smtp": "smtp-mail.outlook.com",
+  "puerto_smtp": 587
+}

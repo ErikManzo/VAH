@@ -1,0 +1,109 @@
+================================================================================
+                    NOTAS - MÓDULO PAQUETE HERRAJES
+================================================================================
+
+📅 ÚLTIMA ACTUALIZACIÓN: 22/05/2026
+
+================================================================================
+📸 CAPTURAS PENDIENTES
+================================================================================
+
+[ ] pantalla_principal.png           - Ventana completa en estado inicial
+[ ] botones_principales.png          - Fila de 10 botones
+[ ] campos_paquete.png               - GroupBox "Datos del Paquete"
+[ ] campos_herrajes.png              - GroupBox "Agregar herrajes al paquete"
+[ ] tabla_items.png                  - Tabla con 3 columnas
+[ ] autocompletado.png               - Popup de autocompletado
+[ ] agregar_herraje.png              - Mensaje "¿Quieres insertar otro herraje?"
+[ ] mensaje_guardar.png              - QMessageBox "Paquete guardado con éxito"
+[ ] selector_paquetes.png            - Diálogo "Seleccionar paquete"
+[ ] impresion_dialog.png             - Diálogo "Opciones de impresión"
+[ ] boton_herraje.png                - Botón "Herraje"
+[ ] arquitectura_sistema.png         - Diagrama 3 capas
+[ ] estructura_modulos.png           - Árbol de archivos del módulo
+[ ] diagrama_bd.png                  - Diagrama ER (3 tablas)
+[ ] flujo_datos_crear.png            - Diagrama de flujo creación
+
+================================================================================
+🔧 PENDIENTES / MEJORAS (PARA VERSIÓN 2.0)
+================================================================================
+
+- ✅ Módulo funcional (crear, editar, eliminar paquetes)
+- ✅ Agregar/Quitar herrajes individuales
+- ✅ Impresión General y Desglosada (Pantalla/PDF/Impresora)
+- ✅ Autocompletado por clave y descripción
+- ✅ Integración con Presupuestos (partida_paquetes)
+- ⬜ Permitir copiar paquetes (duplicar)
+- ⬜ Agregar vista previa de paquete antes de guardar
+- ⬜ Exportar lista de paquetes a Excel
+- ⬜ Permitir reordenar herrajes dentro del paquete
+- ⬜ Agregar campo "observaciones" al paquete
+
+================================================================================
+🐛 ERRORES CONOCIDOS (ACTUALES)
+================================================================================
+
+- ⚠️ Bug latente en parse_args(): el servidor por defecto debe ser "DESKTOP-AE60PIU\SQLEXPRESS"
+  (no "DESKTOP-AE60PUN\SQLEXPRESS"). Verificar en línea 722 del archivo original.
+
+================================================================================
+📁 ESTRUCTURA DE ARCHIVOS DEL MÓDULO
+================================================================================
+
+D:\vah\paquetes\herrajes\
+├── __init__.py
+├── pantalla_paquete_herrajes.py      (UI principal + DBManager embebido)
+└── imprimir.py                       (Generación de reportes)
+
+================================================================================
+🔑 DIFERENCIAS CON OTROS MÓDULOS
+================================================================================
+
+| Aspecto               | Paquete Herrajes                    | Otros módulos                      |
+|-----------------------|-------------------------------------|------------------------------------|
+| Propósito             | Agrupar herrajes en paquetes        | Gestión individual de materiales   |
+| Estructura de datos   | Cabecera + items (relación 1:N)     | Registros independientes           |
+| Autocompletado        | Por clave (prefijo) y descripción   | Solo por clave (prefijo)           |
+| Impresión             | General (solo cabeceras) o Desglosado| Listado plano                      |
+| Integración           | Con Presupuestos (partida_paquetes) | Sin integración directa            |
+| Importación           | ❌ Ninguna (captura manual)          | Variable según módulo              |
+| BD                    | 3 tablas (paquetes, items, herrajes)| 1 tabla                            |
+
+================================================================================
+💡 IDEAS FUTURAS (VERSIÓN 2.0)
+================================================================================
+
+- Permitir copiar paquetes (duplicar con nueva clave)
+- Vista previa de paquete (mostrar imagen o resumen)
+- Exportar lista de paquetes a Excel
+- Importar paquetes desde Excel
+- Historial de versiones de paquetes (auditoría de cambios)
+- Validación de compatibilidad entre herrajes
+- Calcular costo total del paquete (suma de precios * cantidades)
+- Agregar campo "tipo_paquete" para clasificar
+
+================================================================================
+📊 MÉTRICAS DEL MÓDULO
+================================================================================
+
+- Líneas de código (pantalla_paquete_herrajes.py): ~900
+- Líneas de código (imprimir.py): ~250
+- Número de clases: 6 (PaqueteHerrajesUI, DBManager, PaquetePicker, QInputDialogText, PrintOptionsDialog, ScreenReportGeneral, ScreenReportDesglosado)
+- Tablas en BD: 3 (paquetes_herrajes, paquete_herraje_items, materiales_herraje)
+- Botones en UI: 10
+- Atajos de teclado: 7
+- Tipos de reporte: 2 (General, Desglosado)
+- Destinos de impresión: 3 (Pantalla, PDF, Impresora)
+
+================================================================================
+🔗 INTEGRACIÓN CON PRESUPUESTOS
+================================================================================
+
+El módulo de Presupuestos utiliza los paquetes creados aquí a través de la tabla
+'partida_paquetes'. Los campos clave son:
+- tipo_paquete = 'herrajes'
+- clave_paquete = clave del paquete
+- ancho, alto, piezas = dimensiones del vano/puerta/ventana
+
+La relación es semántica (no hay FK explícita por diseño) y se maneja a nivel
+de aplicación en el módulo de Presupuestos.

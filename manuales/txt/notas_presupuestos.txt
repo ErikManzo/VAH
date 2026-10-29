@@ -1,0 +1,160 @@
+================================================================================
+                    NOTAS - MÓDULO PRESUPUESTOS
+================================================================================
+
+📅 ÚLTIMA ACTUALIZACIÓN: 22/05/2026
+
+================================================================================
+📸 CAPTURAS PENDIENTES
+================================================================================
+
+[ ] pantalla_principal.png           - Ventana completa
+[ ] panel_izquierdo.png              - Panel izquierdo completo
+[ ] panel_derecho.png                - Panel derecho con tablas
+[ ] buscar_cliente.png               - Lista desplegable de clientes
+[ ] nuevo_cliente.png                - Diálogo nuevo cliente
+[ ] abrir_presupuesto.png            - Diálogo abrir presupuesto
+[ ] navegacion_partidas.png          - ComboBox y botones de navegación
+[ ] busqueda_materiales.png          - Barra de búsqueda con resultados
+[ ] agregar_paquete.png              - Tabla de paquetes
+[ ] tabla_anidada.png                - Tabla anidada de componentes
+[ ] dimensiones_globales.png         - Botón aplicar dimensiones
+[ ] notas_dialog.png                 - Diálogo notas, forma de pago, plazo
+[ ] enviar_correo.png                - Diálogo envío de correo
+[ ] corrector.png                    - Corrector ortográfico
+[ ] arquitectura_sistema.png         - Diagrama arquitectura
+[ ] estructura_modulos.png           - Estructura de archivos
+[ ] diagrama_bd.png                  - Diagrama de BD
+
+================================================================================
+🔧 PENDIENTES / MEJORAS (PARA VERSIÓN 2.0)
+================================================================================
+
+- ✅ Módulo completamente funcional
+- ✅ Guardado automático al cambiar de partida
+- ✅ Expansión recursiva de paquetes (PH dentro de PH)
+- ✅ Corrector ortográfico con diccionario personalizado
+- ✅ Generación de PDF profesional
+- ✅ Envío de correos (Outlook + SMTP)
+- ⬜ Mejorar rendimiento de búsqueda en tablas grandes
+- ⬜ Agregar importación/exportación masiva de presupuestos
+- ⬜ Reporte de ventas por período
+- ⬜ Gráficos de análisis de costos
+- ⬜ Módulo de Cuentas por Cobrar (CxC) integrado
+- ⬜ Versión portable con config centralizada
+
+================================================================================
+🐛 ERRORES CONOCIDOS (ACTUALES)
+================================================================================
+
+- ⚠️ El servidor por defecto está hardcodeado en CANDIDATE_SERVERS
+  Solución v2.0: usar archivo config.py o variable de entorno VAH_SQLSERVER
+
+================================================================================
+📁 ESTRUCTURA DE ARCHIVOS DEL MÓDULO
+================================================================================
+
+D:\vah\presupuestos\ (50+ archivos .py)
+
+Subcarpetas:
+- calculators/    (12 archivos) - Cálculos por tipo de material
+- controllers/    (3 archivos)  - Controladores
+- core/           (3 archivos)  - Constantes y utilidades
+- models/         (3 archivos)  - Modelos de datos
+- reports/        (12 archivos) - PDF y corrector ortográfico
+- ui/             (1 + 2 + 8 archivos) - MessageManager, tablas, diálogos
+
+================================================================================
+🔑 DIFERENCIAS CON OTROS MÓDULOS
+================================================================================
+
+| Aspecto               | Presupuestos                          | Otros módulos                      |
+|-----------------------|---------------------------------------|------------------------------------|
+| Complejidad           | MUY ALTA (más de 50 archivos)         | Media (5-10 archivos)              |
+| Bases de datos        | 8 bases diferentes                    | 1-2 bases                         |
+| Tipos de materiales   | 8 tipos                               | 1 tipo por módulo                  |
+| Cálculos              | Dispatch por tipo (Strategy)          | Fórmulas fijas                     |
+| Paquetes              | Expansión recursiva                   | No aplica                          |
+| Impresión             | PDF profesional con membrete          | PDF simple o listado               |
+| Correo                | Outlook + SMTP + MAPI                 | No aplica                          |
+| Corrector ortográfico | Sí (pyspellchecker)                   | No                                 |
+| Guardado              | Automático al cambiar partida         | Manual                             |
+
+================================================================================
+💡 IDEAS FUTURAS (VERSIÓN 2.0)
+================================================================================
+
+1. Configuración centralizada (archivo config.py o variables de entorno)
+2. Logging centralizado en archivo
+3. Mejorar rendimiento de búsqueda (índices, caché)
+4. Reporte de ventas por período con gráficos
+5. Módulo de Cuentas por Cobrar integrado
+6. Importación/exportación de presupuestos a Excel/CSV
+7. Plantillas de presupuestos (copiar estructura)
+8. Historial de cambios de precios
+9. Vista previa de impresión antes de generar PDF
+10. Versión web (proyecto futuro)
+
+================================================================================
+📊 MÉTRICAS DEL MÓDULO
+================================================================================
+
+- Líneas de código (modulo_presupuestos.py): ~2500
+- Líneas de código totales del módulo: ~8000
+- Número de clases: 20+
+- Número de archivos .py: 50+
+- Bases de datos conectadas: 8
+- Tablas principales: 8
+- Tipos de materiales soportados: 8
+- Calculadoras: 12
+- Diálogos: 8
+- Atajos de teclado: 20+
+
+================================================================================
+🔗 INTEGRACIÓN CON OTROS MÓDULOS
+================================================================================
+
+El módulo de Presupuestos es el CENTRO del ERP VAH. Se integra con:
+
+1. Clientes - Para selección y creación de clientes
+2. Materiales Aluminio - Para precios por color y largo
+3. Materiales Herrajes - Para precios de herrajes
+4. Materiales Herrería - Para kg/m de perfiles
+5. Materiales Vidrio - Para precio por m²
+6. Materiales Plásticos - Para precio unitario
+7. Materiales Otros - Para precio unitario
+8. Paquetes Aluminio - Expansión de paquetes
+9. Paquetes Herrajes - Expansión recursiva de herrajes
+10. Parámetros Sistema - Configuración de correo y números iniciales
+
+================================================================================
+⚠️ NOTA SOBRE EL SERVIDOR POR DEFECTO
+================================================================================
+
+En service.py, CANDIDATE_SERVERS incluye:
+    r"DESKTOP-AE60PIU\SQLEXPRESS"
+
+Para cambiar el servidor sin modificar código:
+    set VAH_SQLSERVER=servidor\instancia
+
+================================================================================
+✅ CORRECTOR ORTOGRÁFICO
+================================================================================
+
+El corrector ortográfico profesional incluye:
+- Subrayado en ROJO de palabras mal escritas
+- Sugerencias automáticas al hacer clic derecho
+- Agregar palabras al diccionario personalizado
+- Gestión del diccionario desde menú Ayuda
+- Soporte para español (México) con diccionario es_MX
+- Alto rendimiento incluso con textos largos
+- CORREGIDO: Manejo correcto de mayúsculas
+- CORREGIDO: Palabras en MAYÚSCULAS ya no se marcan todas como error
+
+Para instalar el diccionario es_MX:
+    1. Ejecutar reports/instalar_diccionario_espanol.py
+    2. Instalación automática o manual
+
+Para usar language_tool_python (más preciso):
+    pip install language-tool-python
+    (requiere Java instalado)

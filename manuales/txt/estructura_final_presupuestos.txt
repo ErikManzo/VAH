@@ -1,0 +1,110 @@
+D:\vah\presupuestos\
+├── __init__.py                       # Inicializador con importación robusta
+├── modulo_presupuestos.py            # UI principal (PresupuestosWindow)
+├── service.py                        # Capa de datos (CRUD, precios, conexiones)
+├── busquedas.py                      # Búsqueda de clientes y materiales
+├── foco.py                           # FocusManager (navegación por teclado)
+├── rules_zero_price.py               # Validación de precios > 0
+├── service_outlook.py                # Envío de correos con Outlook COM
+├── service_mapi.py                   # Envío de correos con MAPI
+├── prueba_outlook.py                 # Prueba de conexión a Outlook
+│
+├── calculators\                      # Cálculos por tipo de material
+│   ├── __init__.py                   # Dispatch central
+│   ├── aluminio.py                   # Cálculo de perfiles de aluminio
+│   ├── herrajes.py                   # Cálculo de herrajes
+│   ├── herreria.py                   # Cálculo de herrería (kg/m, metros)
+│   ├── otros.py                      # Cálculo de otros
+│   ├── plasticos.py                  # Cálculo de plásticos
+│   ├── vidrio.py                     # Cálculo de vidrio (m²)
+│   ├── paquete_aluminio.py           # Expansión de paquete aluminio
+│   ├── paquete_herrajes.py           # Expansión de paquete herrajes
+│   ├── paquete_processor.py          # Procesamiento y consolidación
+│   ├── dimensioning.py               # Redondeo industrial (múltiplo 0.05)
+│   └── vista_previa_calculator.py    # Totales para vista previa
+│
+├── controllers\                      # Controladores
+│   ├── __init__.py
+│   ├── paquetes_controller.py        # Lógica de paquetes (expansión, consolidación)
+│   └── presupuesto_controller.py     # CRUD de presupuestos y partidas
+│
+├── core\                             # Utilidades y constantes
+│   ├── __init__.py
+│   ├── constants.py                  # Índices de columnas, reglas, colores
+│   └── utils.py                      # Conversión, UI, validación, ajuste industrial
+│
+├── models\                           # Modelos de datos
+│   ├── __init__.py
+│   ├── componente_base.py            # ComponenteBase (sin multiplicadores)
+│   └── paquete.py                    # ComponentePaquete, Paquete
+│
+├── reports\                          # Generación de PDF y corrector ortográfico
+│   ├── __init__.py
+│   ├── pdf_generator.py              # Generador PDF profesional
+│   ├── presupuesto_pdf_service.py    # Servicio de PDF desde BD
+│   ├── pdf_integration.py            # Integración con ERP
+│   ├── pdf_styles.py                 # Estilos para PDF
+│   ├── pdf_models.py                 # Modelos de datos para PDF
+│   ├── pdf_notas_manager.py          # Gestor de notas, forma de pago, plazo
+│   ├── pdf_partida_manager.py        # Gestor de saltos de página
+│   ├── corrector_ortografico.py      # Corrector ortográfico (pyspellchecker)
+│   ├── instalar_diccionario_espanol.py # Instalador de diccionario es_MX
+│   ├── textedit_con_corrector.py     # QTextEdit con corrector integrado
+│   └── test_pdf_generator.py         # Pruebas del generador
+│
+├── ui\                               # Interfaz de usuario
+│   ├── __init__.py
+│   ├── message_manager.py            # Gestor centralizado de mensajes
+│   ├── tables\                       # Tablas especializadas
+│   │   ├── __init__.py
+│   │   ├── anidada.py                # Tabla anidada (componentes de paquete)
+│   │   └── paquetes.py               # Tabla de paquetes con señales
+│   └── dialogs\                      # Diálogos modales
+│       ├── __init__.py
+│       ├── abrir_presupuesto_dialog.py    # Búsqueda y selección
+│       ├── nuevo_cliente_dialog.py       # Captura de nuevo cliente
+│       ├── parametros_sistema_dialog.py  # Configuración de correo
+│       ├── notas_presupuesto_dialog.py   # Notas, forma de pago, plazo
+│       ├── enviar_correo_dialog.py       # Envío por correo (SMTP)
+│       ├── editar_correo_cliente_dialog.py # Edición de correo del cliente
+│       └── configuracion_impresion_dialog.py # Configuración de descuento/IVA
+│
+└── data\
+    └── presupuestos.db               # SQLite (fallback, no usado)
+
+D:\vah\manuales\
+├── scripts_generadores\
+│   ├── generar_manual_operativo_presupuestos.py
+│   └── generar_manual_tecnico_presupuestos.py
+│
+├── imagenes\
+│   └── presupuestos\
+│       ├── pantalla_principal.png
+│       ├── panel_izquierdo.png
+│       ├── panel_derecho.png
+│       ├── buscar_cliente.png
+│       ├── nuevo_cliente.png
+│       ├── abrir_presupuesto.png
+│       ├── navegacion_partidas.png
+│       ├── busqueda_materiales.png
+│       ├── agregar_paquete.png
+│       ├── tabla_anidada.png
+│       ├── dimensiones_globales.png
+│       ├── notas_dialog.png
+│       ├── enviar_correo.png
+│       ├── corrector.png
+│       ├── arquitectura_sistema.png
+│       ├── estructura_modulos.png
+│       └── diagrama_bd.png
+│
+├── pdf\
+│   ├── operativo\
+│   │   └── VAH_Manual_Operativo_Presupuestos.pdf
+│   │
+│   └── técnico\
+│       └── VAH_Manual_Tecnico_Presupuestos.pdf
+│
+└── txt\
+    ├── estructura_final_presupuestos.txt
+    ├── instructivo_imagenes_presupuestos.txt
+    └── notas_presupuestos.txt

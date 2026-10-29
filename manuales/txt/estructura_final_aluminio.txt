@@ -1,0 +1,86 @@
+D:\vah\manuales\
+├── scripts_generadores\
+│   ├── generar_manual_operativo_aluminio.py
+│   ├── generar_manual_tecnico_aluminio.py
+│   ├── generar_manual_operativo_clientes.py
+│   ├── generar_manual_tecnico_clientes.py
+│   ├── generar_manual_operativo_proveedores.py
+│   ├── generar_manual_tecnico_proveedores.py
+│   └── auxiliar_prompt_base_manuales_generales.txt
+│
+├── imagenes\
+│   ├── aluminio\
+│   │   ├── pantalla_principal.png
+│   │   ├── botones_principales.png
+│   │   ├── campos_datos.png
+│   │   ├── campos_precios.png
+│   │   ├── tabla_registros.png
+│   │   ├── barra_busqueda.png
+│   │   ├── mensaje_guardar.png
+│   │   ├── mensaje_editar.png
+│   │   ├── modo_eliminar.png
+│   │   ├── importar_dialog.png
+│   │   ├── impresion_dialog.png
+│   │   ├── menu_pantalla.png
+│   │   ├── arquitectura_sistema.png
+│   │   ├── estructura_modulos.png
+│   │   ├── diagrama_bd.png
+│   │   ├── flujo_datos.png
+│   │   └── flujo_importar.png
+│   │
+│   ├── clientes\
+│   │   ├── pantalla_principal.png
+│   │   ├── botones_principales.png
+│   │   ├── campos_datos.png
+│   │   ├── tabla_registros.png
+│   │   ├── barra_busqueda.png
+│   │   ├── mensaje_guardar.png
+│   │   ├── mensaje_editar.png
+│   │   ├── modo_eliminar.png
+│   │   ├── menu_pantalla.png
+│   │   ├── arquitectura_sistema.png
+│   │   ├── estructura_modulos.png
+│   │   ├── diagrama_bd.png
+│   │   └── flujo_datos.png
+│   │
+│   ├── proveedores\
+│   │   ├── pantalla_principal.png
+│   │   ├── botones_principales.png
+│   │   ├── campos_datos.png
+│   │   ├── tabla_registros.png
+│   │   ├── barra_busqueda.png
+│   │   ├── mensaje_guardar.png
+│   │   ├── mensaje_editar.png
+│   │   ├── modo_eliminar.png
+│   │   ├── unificar_dialog.png
+│   │   ├── menu_pantalla.png
+│   │   ├── arquitectura_sistema.png
+│   │   ├── estructura_modulos.png
+│   │   ├── diagrama_bd.png
+│   │   ├── flujo_datos.png
+│   │   └── flujo_agrupar.png
+│   │
+│   └── comunes\
+│       └── logo_vah.png
+│
+├── pdf\
+│   ├── operativo\
+│   │   ├── VAH_Manual_Operativo_Aluminio.pdf
+│   │   ├── VAH_Manual_Operativo_Clientes.pdf
+│   │   └── VAH_Manual_Operativo_Proveedores.pdf
+│   │
+│   └── técnico\
+│       ├── VAH_Manual_Tecnico_Aluminio.pdf
+│       ├── VAH_Manual_Tecnico_Clientes.pdf
+│       └── VAH_Manual_Tecnico_Proveedores.pdf
+│
+└── txt\
+    ├── estructura_final_aluminio.txt
+    ├── estructura_final_clientes.txt
+    ├── estructura_final_proveedores.txt
+    ├── instructivo_imagenes_aluminio.txt
+    ├── instructivo_imagenes_clientes.txt
+    ├── instructivo_imagenes_proveedores.txt
+    ├── notas_aluminio.txt
+    ├── notas_clientes.txt
+    └── notas_proveedores.txt
